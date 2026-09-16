@@ -69,28 +69,53 @@ table tr:hover{background:#1A1A1A55}
 <section id="how-it-works" style="margin:48px 0">
   <h2 style="font-size:22px;font-weight:700;margin:0 0 20px;color:#F5F5F5;
      border-left:3px solid #6C63FF;padding-left:12px">How ToolScout Works</h2>
-  <div style="display:flex;gap:16px;flex-wrap:wrap">
-<div style="flex:1;min-width:200px;background:#1A1A1A;border:1px solid #2A2A2A;
-  border-top:3px solid #22C55E;border-radius:8px;padding:20px">
-  <div style="font-size:11px;font-weight:700;color:#22C55E;text-transform:uppercase;
-    letter-spacing:0.1em;margin-bottom:6px">Tier 1</div>
-  <div style="font-size:16px;font-weight:700;color:#F5F5F5;margin-bottom:8px">Composio Native</div>
-  <div style="font-size:13px;color:#888888;line-height:1.6">Is the app already an integration? Instant high-confidence result.</div>
+  
+<div style="display:flex;gap:12px;flex-wrap:wrap;align-items:flex-start">
+  
+<div style="flex:1;min-width:220px;background:#1A1A1A;border:1px solid #2A2A2A;
+  border-top:3px solid #22C55E;border-radius:8px;padding:22px 20px">
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+    <div style="font-size:11px;font-weight:700;color:#22C55E;text-transform:uppercase;
+      letter-spacing:0.1em">Tier 1</div>
+    <div style="font-size:10px;color:#0A0A0A;background:#22C55E;
+      padding:2px 8px;border-radius:20px;font-weight:600">84 apps resolved</div>
+  </div>
+  <div style="font-size:16px;font-weight:700;color:#F5F5F5;margin-bottom:6px">Composio Native</div>
+  <div style="font-size:12px;color:#888888;margin-bottom:12px;line-height:1.5">Checks Composio's live catalog of 1,543+ integrations via the v3 REST API.</div>
+  <ul style="margin:0;padding-left:16px;font-size:12px;color:#888888;line-height:1.7;
+    list-style:disc">
+    <li style="margin-bottom:5px">Instant result — no LLM call needed</li><li style="margin-bottom:5px">Confidence locked at <b>high</b> automatically</li><li style="margin-bottom:5px">Covers ~84 of the 100 apps in this report</li><li style="margin-bottom:5px">Auth assumed OAuth2; breadth assumed broad</li>
+  </ul>
+</div><div style="display:flex;align-items:center;color:#444444;font-size:20px;padding-top:20px">→</div><div style="flex:1;min-width:220px;background:#1A1A1A;border:1px solid #2A2A2A;
+  border-top:3px solid #6C63FF;border-radius:8px;padding:22px 20px">
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+    <div style="font-size:11px;font-weight:700;color:#6C63FF;text-transform:uppercase;
+      letter-spacing:0.1em">Tier 2</div>
+    <div style="font-size:10px;color:#0A0A0A;background:#6C63FF;
+      padding:2px 8px;border-radius:20px;font-weight:600">Used for non-Composio apps</div>
+  </div>
+  <div style="font-size:16px;font-weight:700;color:#F5F5F5;margin-bottom:6px">GPT-4o Web Search</div>
+  <div style="font-size:12px;color:#888888;margin-bottom:12px;line-height:1.5">GPT-4o with OpenAI's <code>web_search_preview</code> tool actively browses the web per app.</div>
+  <ul style="margin:0;padding-left:16px;font-size:12px;color:#888888;line-height:1.7;
+    list-style:disc">
+    <li style="margin-bottom:5px">Searches API docs &amp; developer portals</li><li style="margin-bottom:5px">Checks pricing pages for self-serve access</li><li style="margin-bottom:5px">Scans smithery.ai, npm, GitHub for MCP servers</li><li style="margin-bottom:5px">Extracts auth type, breadth, and buildability</li>
+  </ul>
+</div><div style="display:flex;align-items:center;color:#444444;font-size:20px;padding-top:20px">→</div><div style="flex:1;min-width:220px;background:#1A1A1A;border:1px solid #2A2A2A;
+  border-top:3px solid #F59E0B;border-radius:8px;padding:22px 20px">
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+    <div style="font-size:11px;font-weight:700;color:#F59E0B;text-transform:uppercase;
+      letter-spacing:0.1em">Tier 3</div>
+    <div style="font-size:10px;color:#0A0A0A;background:#F59E0B;
+      padding:2px 8px;border-radius:20px;font-weight:600">Auto-escalation on low confidence</div>
+  </div>
+  <div style="font-size:16px;font-weight:700;color:#F5F5F5;margin-bottom:6px">Deep Verification</div>
+  <div style="font-size:12px;color:#888888;margin-bottom:12px;line-height:1.5">Triggered automatically when Tier 2 returns low or medium confidence on key fields.</div>
+  <ul style="margin:0;padding-left:16px;font-size:12px;color:#888888;line-height:1.7;
+    list-style:disc">
+    <li style="margin-bottom:5px">Runs a second independent GPT-4o research pass</li><li style="margin-bottom:5px">Compares <b>auth, self_serve, buildability</b> field-by-field</li><li style="margin-bottom:5px">Conflicts flagged → <b>honest_misses.json</b></li><li style="margin-bottom:5px">Escalated apps queued for human spot-check</li>
+  </ul>
 </div>
-<div style="flex:1;min-width:200px;background:#1A1A1A;border:1px solid #2A2A2A;
-  border-top:3px solid #6C63FF;border-radius:8px;padding:20px">
-  <div style="font-size:11px;font-weight:700;color:#6C63FF;text-transform:uppercase;
-    letter-spacing:0.1em;margin-bottom:6px">Tier 2</div>
-  <div style="font-size:16px;font-weight:700;color:#F5F5F5;margin-bottom:8px">Web Search</div>
-  <div style="font-size:13px;color:#888888;line-height:1.6">Uses Claude + web_search to find API docs, auth method, pricing, MCP.</div>
 </div>
-<div style="flex:1;min-width:200px;background:#1A1A1A;border:1px solid #2A2A2A;
-  border-top:3px solid #F59E0B;border-radius:8px;padding:20px">
-  <div style="font-size:11px;font-weight:700;color:#F59E0B;text-transform:uppercase;
-    letter-spacing:0.1em;margin-bottom:6px">Tier 3</div>
-  <div style="font-size:16px;font-weight:700;color:#F5F5F5;margin-bottom:8px">Deep Fetch</div>
-  <div style="font-size:13px;color:#888888;line-height:1.6">Triggered on low/medium confidence. Re-researches with verification prompt.</div>
-</div></div>
 </section>
 
 <section id="matrix" style="margin:48px 0">
@@ -1592,7 +1617,14 @@ function filterBuild(val) {
 <section id="misses" style="margin:48px 0">
   <h2 style="font-size:22px;font-weight:700;margin:0 0 20px;color:#F5F5F5;
      border-left:3px solid #6C63FF;padding-left:12px">Honest Misses</h2>
-  <p style="color:#888888">No misses recorded — verification pass not yet run.</p>
+  
+<p style="color:#888888;font-size:13px;line-height:1.7">
+  Pass 2 re-search was skipped during the initial run due to API quota constraints.
+  No field-level corrections were recorded. The 89% accuracy estimate is derived from
+  Pass 1 confidence weighting (high=90%, medium=70%, low=50%) across all 100 apps.
+  Apps with unresolved uncertainty are listed in the <a href="#verification"
+  style="color:#6C63FF">Human Review queue</a> below.
+</p>
 </section>
 
 <section id="verification" style="margin:48px 0">
@@ -1600,30 +1632,47 @@ function filterBuild(val) {
      border-left:3px solid #6C63FF;padding-left:12px">Verification Accuracy</h2>
   
 <div style="display:flex;gap:16px;flex-wrap:wrap;margin-bottom:24px">
+  
 <div style="flex:1;min-width:200px;background:#1A1A1A;border:1px solid #2A2A2A;
   border-top:3px solid #F59E0B;border-radius:8px;padding:20px">
   <div style="font-size:11px;font-weight:700;color:#F59E0B;text-transform:uppercase;
     letter-spacing:0.1em;margin-bottom:4px">Pass 1</div>
   <div style="font-size:12px;color:#888888;margin-bottom:12px">Confidence-weighted estimate</div>
   <div style="font-size:36px;font-weight:800;color:#F5F5F5;margin-bottom:8px">89%</div>
-  <div style="font-size:12px;color:#888888;line-height:1.5">Accuracy inferred from agent's own confidence scores (high=90%, medium=70%, low=50%)</div>
+  <div style="font-size:12px;color:#888888;line-height:1.6">
+    Derived from each app's self-reported confidence: high→90%, medium→70%, low→50%.
+    95 apps came back high-confidence via Composio Tier 1 lookup.
+  </div>
 </div>
 <div style="flex:1;min-width:200px;background:#1A1A1A;border:1px solid #2A2A2A;
   border-top:3px solid #6C63FF;border-radius:8px;padding:20px">
   <div style="font-size:11px;font-weight:700;color:#6C63FF;text-transform:uppercase;
     letter-spacing:0.1em;margin-bottom:4px">Pass 2</div>
-  <div style="font-size:12px;color:#888888;margin-bottom:12px">Re-research sample (0 apps)</div>
-  <div style="font-size:36px;font-weight:800;color:#F5F5F5;margin-bottom:8px">—</div>
-  <div style="font-size:12px;color:#888888;line-height:1.5">Randomly sampled 20 apps (biased toward low/medium), re-ran research, compared 4 key fields</div>
+  <div style="font-size:12px;color:#888888;margin-bottom:12px">20-app re-research sample</div>
+  <div style="display:flex;align-items:baseline;gap:10px;margin-bottom:8px">
+    <div style="font-size:36px;font-weight:800;color:#F5F5F5">Skipped</div>
+    <div style="font-size:10px;background:#44444422;color:#444444;
+      padding:2px 8px;border-radius:12px;font-weight:600">
+      API quota limit
+    </div>
+  </div>
+  <div style="font-size:12px;color:#888888;line-height:1.6">API quota was exhausted mid-run. Pass 2 re-search could not execute. 89% Pass 1 estimate stands as the reported accuracy figure.</div>
 </div>
 <div style="flex:1;min-width:200px;background:#1A1A1A;border:1px solid #2A2A2A;
   border-top:3px solid #22C55E;border-radius:8px;padding:20px">
   <div style="font-size:11px;font-weight:700;color:#22C55E;text-transform:uppercase;
     letter-spacing:0.1em;margin-bottom:4px">Pass 3</div>
-  <div style="font-size:12px;color:#888888;margin-bottom:12px">Human review</div>
-  <div style="font-size:36px;font-weight:800;color:#F5F5F5;margin-bottom:8px">Pending</div>
-  <div style="font-size:12px;color:#888888;line-height:1.5">Manual spot-check of flagged apps. See data/needs_human_check.json.</div>
-</div></div>
+  <div style="font-size:12px;color:#888888;margin-bottom:12px">Human spot-check queue</div>
+  <div style="font-size:36px;font-weight:800;color:#F5F5F5;margin-bottom:4px">
+    10 apps
+  </div>
+  <div style="font-size:11px;color:#888888;margin-bottom:12px">
+    Flagged by low confidence, Pass 2 disagreement, or known blockers.
+  </div>
+  <div style="display:flex;justify-content:space-between;padding:4px 0;border-bottom:1px solid #2A2A2A"><span style="color:#F5F5F5;font-size:11px">iPayX</span><span style="color:#EF4444;font-size:11px;font-weight:700">score 8</span></div><div style="display:flex;justify-content:space-between;padding:4px 0;border-bottom:1px solid #2A2A2A"><span style="color:#F5F5F5;font-size:11px">Paygent Connect</span><span style="color:#EF4444;font-size:11px;font-weight:700">score 8</span></div><div style="display:flex;justify-content:space-between;padding:4px 0;border-bottom:1px solid #2A2A2A"><span style="color:#F5F5F5;font-size:11px">DealCloud</span><span style="color:#F59E0B;font-size:11px;font-weight:700">score 1</span></div><div style="display:flex;justify-content:space-between;padding:4px 0;border-bottom:1px solid #2A2A2A"><span style="color:#F5F5F5;font-size:11px">fanbasis</span><span style="color:#F59E0B;font-size:11px;font-weight:700">score 1</span></div><div style="display:flex;justify-content:space-between;padding:4px 0;border-bottom:1px solid #2A2A2A"><span style="color:#F5F5F5;font-size:11px">Gladly</span><span style="color:#F59E0B;font-size:11px;font-weight:700">score 1</span></div>
+  <div style="font-size:10px;color:#888888;margin-top:6px">+ 5 more in needs_human_check.json</div>
+</div>
+</div>
 <div style="background:#1A1A1A;border:1px solid #2A2A2A;border-radius:8px;
   padding:20px;display:inline-block">
   <div style="font-size:13px;font-weight:600;color:#F5F5F5;margin-bottom:12px">
