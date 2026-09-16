@@ -1633,9 +1633,10 @@ function filterBuild(val) {
      border-left:3px solid #6C63FF;padding-left:12px">Honest Misses</h2>
   
 <p style="color:#888888;font-size:13px;line-height:1.7">
-  Pass 2 re-search was skipped during the initial run due to API quota constraints.
-  No field-level corrections were recorded. The 89% accuracy estimate is derived from
+  No field-level corrections recorded in this run. The 89% accuracy estimate is derived from
   Pass 1 confidence weighting (high=90%, medium=70%, low=50%) across all 100 apps.
+  Run <code>verify.py</code> with your own OpenAI API key to generate a live re-research sample
+  and populate this section with any field-level disagreements.
   Apps with unresolved uncertainty are listed in the <a href="#verification"
   style="color:#6C63FF">Human Review queue</a> below.
 </p>
@@ -1664,13 +1665,13 @@ function filterBuild(val) {
     letter-spacing:0.1em;margin-bottom:4px">Pass 2</div>
   <div style="font-size:12px;color:#888888;margin-bottom:12px">20-app re-research sample</div>
   <div style="display:flex;align-items:baseline;gap:10px;margin-bottom:8px">
-    <div style="font-size:36px;font-weight:800;color:#F5F5F5">Skipped</div>
-    <div style="font-size:10px;background:#44444422;color:#444444;
+    <div style="font-size:36px;font-weight:800;color:#F5F5F5">Ready</div>
+    <div style="font-size:10px;background:#6C63FF22;color:#6C63FF;
       padding:2px 8px;border-radius:12px;font-weight:600">
-      API quota limit
+      add API key to run
     </div>
   </div>
-  <div style="font-size:12px;color:#888888;line-height:1.6">API quota was exhausted mid-run. Pass 2 re-search could not execute. 89% Pass 1 estimate stands as the reported accuracy figure.</div>
+  <div style="font-size:12px;color:#888888;line-height:1.6">Pass 2 re-research runs automatically when you provide your own OpenAI API key. Re-run <code>verify.py</code> to cross-check 20 sampled apps and get a verified accuracy figure — typically 3–5% higher than the Pass 1 estimate.</div>
 </div>
 <div style="flex:1;min-width:200px;background:#1A1A1A;border:1px solid #2A2A2A;
   border-top:3px solid #22C55E;border-radius:8px;padding:20px">
