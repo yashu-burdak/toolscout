@@ -4,6 +4,8 @@
 
 ToolScout researches 100 apps across auth method, self-serve access, API surface, MCP availability, and buildability — producing structured JSON optimized for Composio's agent toolkit pipeline.
 
+Live report: [GitHub Pages](https://yashuburdak.github.io/toolscout/)
+
 ---
 
 ## Architecture
@@ -17,9 +19,10 @@ apps.json (100 apps)
 │                                                  │
 │  Tier 1 → composio_tier.py                       │
 │    Already on Composio? → instant stub (high ✓)  │
+│    Live catalog: ~1,945 integrations fetched     │
 │                                                  │
-│  Tier 2 → agent.py + web_search_20250305         │
-│    Claude searches API docs, auth, MCP, pricing  │
+│  Tier 2 → agent.py + web_search_preview          │
+│    GPT-4o searches API docs, auth, MCP, pricing  │
 │                                                  │
 │  Tier 3 → agent.py (deep verify)                 │
 │    Triggered on low/medium confidence            │
@@ -36,6 +39,7 @@ apps.json (100 apps)
                  ▼
 ┌──────────────────────────────────────────────────┐
 │  build_html.py → index.html (standalone report)  │
+│  generate_pdf.py → ToolScout_CaseStudy.pdf       │
 │  streamlit_app.py → live research demo           │
 └──────────────────────────────────────────────────┘
 ```
@@ -46,7 +50,7 @@ apps.json (100 apps)
 
 ```bash
 pip install -r requirements.txt
-cp .env.example .env   # add your ANTHROPIC_API_KEY
+cp .env.example .env   # add your OPENAI_API_KEY and COMPOSIO_API_KEY
 python run.py
 ```
 
@@ -64,6 +68,12 @@ python build_html.py
 open index.html
 ```
 
+To generate the PDF case study:
+
+```bash
+python generate_pdf.py
+```
+
 ---
 
 ## Output Files
@@ -78,18 +88,43 @@ open index.html
 | `data/honest_misses.json` | Fields where Pass 2 disagreed with Pass 1 |
 | `data/needs_human_check.json` | Top 10 apps flagged for manual review |
 | `index.html` | Standalone visual report |
+| `ToolScout_CaseStudy.pdf` | PDF case study for submission |
+
+---
+
+## Tech Stack
+
+| Component | Technology |
+|-----------|-----------|
+| AI Research | GPT-4o via OpenAI Python SDK (`web_search_preview` tool) |
+| Composio Check | Composio v3 REST API (live catalog, ~1,945 integrations) |
+| Verification | Three-pass: confidence-weighted + re-research sample + human flags |
+| Output | Standalone HTML report + PDF case study + Streamlit demo |
+| Resume support | Per-app JSON cache — safe to interrupt and restart |
 
 ---
 
 ## Key Design Choices
 
-**Prompt caching:** The system prompt is stable across all 100 apps and cached with `cache_control: {"type": "ephemeral"}`. This saves ~60% on input token cost for the full run.
+**Composio-first (Tier 1):** Checks the live Composio REST API (`/api/v3/toolkits`) before spending any web search quota. ~40 apps resolve instantly with `confidence='high'`. The catalog indexes slug, name, and displayName fields for robust matching.
+
+**GPT-4o web search (Tier 2):** Uses the OpenAI Responses API with `web_search_preview` to research API docs, auth schemes, MCP availability, and pricing. Results are parsed into structured `AppResearch` JSON.
+
+**Deep verification (Tier 3):** Low/medium confidence results trigger a second GPT-4o pass with more targeted prompts to resolve ambiguities.
 
 **Resume support:** Each app is cached to `data/raw/{app}.json` before processing. Re-running `run.py` skips already-researched apps — safe to interrupt and resume.
 
-**10 hardcoded edge cases:** Apps with no public API or CLI-only tooling (Sherlock, Mermaid CLI, fanbasis, etc.) are written directly as `source='manual'` stubs at startup. The agent doesn't waste API calls on known non-starters.
+**Manual stubs:** Apps with no public API, CLI-only tooling, or known blockers (Sherlock, Mermaid CLI, Fanbasis, etc.) are written directly as `source='manual'` stubs. The agent doesn't waste API calls on known non-starters. 38 stubs total.
 
-**Composio-first:** Tier 1 checks the live Composio SDK (`ComposioToolSet.get_apps()`) before spending any web search quota. ~40 apps resolve instantly.
+---
+
+## Coverage
+
+- **100/100 apps** researched and resolved
+- **~40 apps** resolved via Composio native catalog (Tier 1, instant)
+- **~22 apps** researched via GPT-4o web search (Tier 2)
+- **38 apps** resolved via manual stubs (known blockers + Composio fallbacks)
+- **10 apps** flagged for human review (Pass 3)
 
 ---
 
@@ -101,6 +136,7 @@ These are real limitations of automated research:
 - **Auth ambiguity:** Some apps advertise both OAuth2 and API Key; the agent may pick one. Pass 2 catches most of these.
 - **MCP false negatives:** The agent searches smithery.ai, npm, and GitHub — but private/unpublished MCP servers won't appear. `mcp_exists=False` means "not found publicly," not "definitely doesn't exist."
 - **Pricing changes:** Freemium tiers change often. `trial_available` reflects the state at research time.
+- **API quota:** GPT-4o and Composio API credits can exhaust mid-run. The resume system and manual stubs ensure 100% coverage regardless.
 
 See `data/honest_misses.json` for specific field-level corrections from Pass 2.
 
