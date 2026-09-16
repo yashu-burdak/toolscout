@@ -82,12 +82,12 @@ def _live_composio_apps() -> set[str] | None:
                 data = json.loads(resp.read().decode())
 
             for item in data.get("items", []):
-                slug = item.get("slug") or item.get("name") or ""
-                display = item.get("displayName") or item.get("display_name") or slug
-                if slug:
-                    names.add(_normalize(slug))
-                if display:
-                    names.add(_normalize(display))
+                slug = item.get("slug") or ""
+                name_val = item.get("name") or ""
+                display = item.get("displayName") or item.get("display_name") or ""
+                for val in (slug, name_val, display):
+                    if val:
+                        names.add(_normalize(val))
 
             cursor = data.get("next_cursor")
             if not cursor or not data.get("items"):

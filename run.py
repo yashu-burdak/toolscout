@@ -314,7 +314,7 @@ PREVALIDATION_APPS = ["Stripe", "GitHub", "Notion", "Slack", "Salesforce"]
 # ---------------------------------------------------------------------------
 
 def _app_cache_path(app_name: str) -> Path:
-    safe = app_name.lower().replace(" ", "_").replace("/", "_")
+    safe = app_name.lower().replace(" ", "_").replace("/", "_").replace(".", "_")
     return RAW_DIR / f"{safe}.json"
 
 

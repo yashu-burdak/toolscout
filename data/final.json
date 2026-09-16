@@ -2,32 +2,33 @@
   {
     "app_name": "Ahrefs",
     "category": "Data SEO and Scraping",
-    "one_liner": "Ahrefs \u2014 already on Composio's integration catalog.",
+    "one_liner": "SEO toolset for backlink analysis, keyword research, and site audits with a REST API on paid plans.",
     "auth_methods": [
-      "OAuth2"
+      "API Key"
     ],
-    "self_serve": true,
-    "trial_available": true,
-    "gating_note": "Available as Composio integration \u2014 self-serve via Composio SDK",
+    "self_serve": false,
+    "trial_available": false,
+    "gating_note": "API access requires Advanced or Enterprise plan ($399+/mo). No free tier for API.",
     "api_type": "REST",
-    "api_breadth": "broad",
+    "api_breadth": "moderate",
     "mcp_exists": false,
     "mcp_url": null,
-    "buildability": "ready",
-    "blocker": null,
-    "opportunity_score": 4,
-    "evidence_url": "https://app.composio.dev/apps",
+    "buildability": "needs_outreach",
+    "blocker": "API only available on Advanced ($399/mo) or Enterprise plans \u2014 no trial or self-serve API access.",
+    "opportunity_score": 3,
+    "evidence_url": "https://ahrefs.com/api",
     "confidence": "high",
     "confidence_per_field": {
-      "auth_methods": "medium",
+      "auth_methods": "high",
       "self_serve": "high",
-      "api_breadth": "high",
-      "mcp_exists": "medium",
+      "api_breadth": "medium",
+      "mcp_exists": "high",
       "buildability": "high"
     },
-    "source": "composio_native",
-    "tier_used": 1,
-    "run_timestamp": "2026-09-16T18:44:56.980079"
+    "source": "manual",
+    "tier_used": 0,
+    "run_timestamp": "2026-09-16T19:19:02.897444",
+    "research_notes": "API quota exhausted during automated run \u2014 filled manually from public documentation and developer portals."
   },
   {
     "app_name": "Aircall",
@@ -57,7 +58,7 @@
     },
     "source": "composio_native",
     "tier_used": 1,
-    "run_timestamp": "2026-09-16T17:59:38.405749"
+    "run_timestamp": "2026-09-16T19:07:33.368184"
   },
   {
     "app_name": "Airtable",
@@ -87,7 +88,7 @@
     },
     "source": "composio_native",
     "tier_used": 1,
-    "run_timestamp": "2026-09-16T17:59:48.466017"
+    "run_timestamp": "2026-09-16T19:12:11.460900"
   },
   {
     "app_name": "Amazon Selling Partner",
@@ -117,7 +118,7 @@
     },
     "source": "manual",
     "tier_used": 0,
-    "run_timestamp": "2026-09-16T18:18:59.575873",
+    "run_timestamp": "2026-09-16T19:19:02.897444",
     "research_notes": "API quota exhausted during automated run \u2014 filled manually from public documentation and developer portals."
   },
   {
@@ -148,7 +149,7 @@
     },
     "source": "composio_native",
     "tier_used": 1,
-    "run_timestamp": "2026-09-16T17:59:44.449388"
+    "run_timestamp": "2026-09-16T19:11:10.460615"
   },
   {
     "app_name": "Asana",
@@ -178,7 +179,7 @@
     },
     "source": "composio_native",
     "tier_used": 1,
-    "run_timestamp": "2026-09-16T17:59:48.467361"
+    "run_timestamp": "2026-09-16T19:12:11.462423"
   },
   {
     "app_name": "Attio",
@@ -208,7 +209,7 @@
     },
     "source": "composio_native",
     "tier_used": 1,
-    "run_timestamp": "2026-09-16T17:59:34.376536"
+    "run_timestamp": "2026-09-16T19:05:00.896340"
   },
   {
     "app_name": "BigCommerce",
@@ -239,7 +240,7 @@
     },
     "source": "manual",
     "tier_used": 0,
-    "run_timestamp": "2026-09-16T18:18:59.575873",
+    "run_timestamp": "2026-09-16T19:19:02.897444",
     "research_notes": "API quota exhausted during automated run \u2014 filled manually from public documentation and developer portals."
   },
   {
@@ -270,7 +271,7 @@
     },
     "source": "manual",
     "tier_used": 0,
-    "run_timestamp": "2026-09-16T18:18:59.575873",
+    "run_timestamp": "2026-09-16T19:19:02.897444",
     "research_notes": "API quota exhausted during automated run \u2014 filled manually from public documentation and developer portals."
   },
   {
@@ -301,7 +302,7 @@
     },
     "source": "composio_native",
     "tier_used": 1,
-    "run_timestamp": "2026-09-16T17:59:50.480844"
+    "run_timestamp": "2026-09-16T19:12:51.933596"
   },
   {
     "app_name": "Bright Data",
@@ -331,37 +332,38 @@
     },
     "source": "composio_native",
     "tier_used": 1,
-    "run_timestamp": "2026-09-16T17:59:44.450250"
+    "run_timestamp": "2026-09-16T19:19:52.006809"
   },
   {
     "app_name": "Clay",
     "category": "Data SEO and Scraping",
-    "one_liner": "Clay \u2014 already on Composio's integration catalog.",
+    "one_liner": "Data enrichment and outreach automation platform with REST API for table management and enrichment.",
     "auth_methods": [
-      "OAuth2"
+      "API Key"
     ],
     "self_serve": true,
     "trial_available": true,
-    "gating_note": "Available as Composio integration \u2014 self-serve via Composio SDK",
+    "gating_note": "Free plan with 100 credits. API key from account settings. Paid plans from $149/mo.",
     "api_type": "REST",
-    "api_breadth": "broad",
+    "api_breadth": "moderate",
     "mcp_exists": false,
     "mcp_url": null,
     "buildability": "ready",
     "blocker": null,
     "opportunity_score": 4,
-    "evidence_url": "https://app.composio.dev/apps",
+    "evidence_url": "https://docs.clay.com/api-reference/introduction",
     "confidence": "high",
     "confidence_per_field": {
-      "auth_methods": "medium",
+      "auth_methods": "high",
       "self_serve": "high",
-      "api_breadth": "high",
+      "api_breadth": "medium",
       "mcp_exists": "medium",
       "buildability": "high"
     },
-    "source": "composio_native",
-    "tier_used": 1,
-    "run_timestamp": "2026-09-16T18:44:56.981874"
+    "source": "manual",
+    "tier_used": 0,
+    "run_timestamp": "2026-09-16T19:19:02.897444",
+    "research_notes": "API quota exhausted during automated run \u2014 filled manually from public documentation and developer portals."
   },
   {
     "app_name": "ClickUp",
@@ -391,7 +393,7 @@
     },
     "source": "composio_native",
     "tier_used": 1,
-    "run_timestamp": "2026-09-16T17:59:48.468059"
+    "run_timestamp": "2026-09-16T19:12:11.463363"
   },
   {
     "app_name": "Close",
@@ -421,7 +423,7 @@
     },
     "source": "composio_native",
     "tier_used": 1,
-    "run_timestamp": "2026-09-16T17:59:34.380737"
+    "run_timestamp": "2026-09-16T19:05:27.945250"
   },
   {
     "app_name": "Cloudflare",
@@ -451,108 +453,111 @@
     },
     "source": "composio_native",
     "tier_used": 1,
-    "run_timestamp": "2026-09-16T17:59:46.457096"
+    "run_timestamp": "2026-09-16T19:11:52.089965"
   },
   {
     "app_name": "Coda",
     "category": "Productivity and Project Management",
-    "one_liner": "Coda \u2014 already on Composio's integration catalog.",
+    "one_liner": "Collaborative doc and database platform with a REST API for docs, tables, rows, and formulas.",
     "auth_methods": [
-      "OAuth2"
+      "API Key"
     ],
     "self_serve": true,
     "trial_available": true,
-    "gating_note": "Available as Composio integration \u2014 self-serve via Composio SDK",
+    "gating_note": "Free plan available. API key generated from account settings at coda.io/account.",
     "api_type": "REST",
-    "api_breadth": "broad",
+    "api_breadth": "moderate",
     "mcp_exists": false,
     "mcp_url": null,
     "buildability": "ready",
     "blocker": null,
-    "opportunity_score": 4,
-    "evidence_url": "https://app.composio.dev/apps",
+    "opportunity_score": 3,
+    "evidence_url": "https://coda.io/developers/apis/v1",
     "confidence": "high",
     "confidence_per_field": {
-      "auth_methods": "medium",
+      "auth_methods": "high",
       "self_serve": "high",
       "api_breadth": "high",
       "mcp_exists": "medium",
       "buildability": "high"
     },
-    "source": "composio_native",
-    "tier_used": 1,
-    "run_timestamp": "2026-09-16T18:45:00.998503"
+    "source": "manual",
+    "tier_used": 0,
+    "run_timestamp": "2026-09-16T19:19:02.897444",
+    "research_notes": "API quota exhausted during automated run \u2014 filled manually from public documentation and developer portals."
   },
   {
     "app_name": "Consensus",
     "category": "AI Research and Media",
-    "one_liner": "Consensus \u2014 already on Composio's integration catalog.",
+    "one_liner": "AI-powered academic search engine that finds evidence in research papers \u2014 offers a REST API.",
     "auth_methods": [
-      "OAuth2"
+      "API Key"
     ],
     "self_serve": true,
     "trial_available": true,
-    "gating_note": "Available as Composio integration \u2014 self-serve via Composio SDK",
+    "gating_note": "API available on paid plans. Free tier for web app; API access from $9.99/mo premium.",
     "api_type": "REST",
-    "api_breadth": "broad",
+    "api_breadth": "narrow",
     "mcp_exists": false,
     "mcp_url": null,
     "buildability": "ready",
     "blocker": null,
-    "opportunity_score": 4,
-    "evidence_url": "https://app.composio.dev/apps",
-    "confidence": "high",
+    "opportunity_score": 3,
+    "evidence_url": "https://consensus.app/home/blog/consensus-api/",
+    "confidence": "medium",
     "confidence_per_field": {
-      "auth_methods": "medium",
-      "self_serve": "high",
-      "api_breadth": "high",
+      "auth_methods": "high",
+      "self_serve": "medium",
+      "api_breadth": "medium",
       "mcp_exists": "medium",
-      "buildability": "high"
+      "buildability": "medium"
     },
-    "source": "composio_native",
-    "tier_used": 1,
-    "run_timestamp": "2026-09-16T18:45:05.014636"
+    "source": "manual",
+    "tier_used": 0,
+    "run_timestamp": "2026-09-16T19:19:02.897444",
+    "research_notes": "API quota exhausted during automated run \u2014 filled manually from public documentation and developer portals."
   },
   {
     "app_name": "Copper",
     "category": "CRM and Sales",
-    "one_liner": "Copper \u2014 already on Composio's integration catalog.",
+    "one_liner": "CRM built natively for Google Workspace with a REST API covering contacts, leads, and opportunities.",
     "auth_methods": [
-      "OAuth2"
+      "API Key"
     ],
     "self_serve": true,
     "trial_available": true,
-    "gating_note": "Available as Composio integration \u2014 self-serve via Composio SDK",
+    "gating_note": "14-day free trial. API key generated from Copper account settings after signup.",
     "api_type": "REST",
-    "api_breadth": "broad",
+    "api_breadth": "moderate",
     "mcp_exists": false,
     "mcp_url": null,
     "buildability": "ready",
     "blocker": null,
-    "opportunity_score": 4,
-    "evidence_url": "https://app.composio.dev/apps",
+    "opportunity_score": 3,
+    "evidence_url": "https://developer.copper.com/",
     "confidence": "high",
     "confidence_per_field": {
-      "auth_methods": "medium",
+      "auth_methods": "high",
       "self_serve": "high",
-      "api_breadth": "high",
+      "api_breadth": "medium",
       "mcp_exists": "medium",
       "buildability": "high"
     },
-    "source": "composio_native",
-    "tier_used": 1,
-    "run_timestamp": "2026-09-16T17:59:34.381070"
+    "source": "manual",
+    "tier_used": 0,
+    "run_timestamp": "2026-09-16T19:19:02.897444",
+    "research_notes": "API quota exhausted during automated run \u2014 filled manually from public documentation and developer portals."
   },
   {
     "app_name": "DataForSEO",
     "category": "Data SEO and Scraping",
-    "one_liner": "DataForSEO \u2014 already on Composio's integration catalog.",
+    "one_liner": "SEO data API covering SERP, keywords, backlinks, on-page data with pay-per-use pricing.",
     "auth_methods": [
-      "OAuth2"
+      "Basic Auth"
     ],
     "self_serve": true,
     "trial_available": true,
-    "gating_note": "Available as Composio integration \u2014 self-serve via Composio SDK",
+    "gating_note": "Free trial with $1 credit on signup. Pay-per-use after that. Credentials generated immediately.",
     "api_type": "REST",
     "api_breadth": "broad",
     "mcp_exists": false,
@@ -560,18 +565,19 @@
     "buildability": "ready",
     "blocker": null,
     "opportunity_score": 4,
-    "evidence_url": "https://app.composio.dev/apps",
+    "evidence_url": "https://docs.dataforseo.com/",
     "confidence": "high",
     "confidence_per_field": {
-      "auth_methods": "medium",
+      "auth_methods": "high",
       "self_serve": "high",
       "api_breadth": "high",
       "mcp_exists": "medium",
       "buildability": "high"
     },
-    "source": "composio_native",
-    "tier_used": 1,
-    "run_timestamp": "2026-09-16T18:44:56.972806"
+    "source": "manual",
+    "tier_used": 0,
+    "run_timestamp": "2026-09-16T19:19:02.897444",
+    "research_notes": "API quota exhausted during automated run \u2014 filled manually from public documentation and developer portals."
   },
   {
     "app_name": "Datadog",
@@ -601,7 +607,7 @@
     },
     "source": "composio_native",
     "tier_used": 1,
-    "run_timestamp": "2026-09-16T17:59:46.459759"
+    "run_timestamp": "2026-09-16T19:12:09.453883"
   },
   {
     "app_name": "DealCloud",
@@ -631,7 +637,7 @@
     },
     "source": "manual",
     "tier_used": 0,
-    "run_timestamp": "2026-09-16T17:59:24.953487"
+    "run_timestamp": "2026-09-16T19:04:49.307541"
   },
   {
     "app_name": "Devin",
@@ -661,7 +667,7 @@
     },
     "source": "composio_native",
     "tier_used": 1,
-    "run_timestamp": "2026-09-16T17:59:52.492654"
+    "run_timestamp": "2026-09-16T19:13:30.294615"
   },
   {
     "app_name": "Discord",
@@ -691,7 +697,7 @@
     },
     "source": "composio_native",
     "tier_used": 1,
-    "run_timestamp": "2026-09-16T17:59:38.403881"
+    "run_timestamp": "2026-09-16T19:07:33.366844"
   },
   {
     "app_name": "Ecwid",
@@ -722,38 +728,39 @@
     },
     "source": "manual",
     "tier_used": 0,
-    "run_timestamp": "2026-09-16T18:18:59.575873",
+    "run_timestamp": "2026-09-16T19:19:02.897444",
     "research_notes": "API quota exhausted during automated run \u2014 filled manually from public documentation and developer portals."
   },
   {
     "app_name": "Fathom",
     "category": "AI Research and Media",
-    "one_liner": "Fathom \u2014 already on Composio's integration catalog.",
+    "one_liner": "AI meeting recorder and highlight tool \u2014 no public API; export via integrations only.",
     "auth_methods": [
-      "OAuth2"
+      "None"
     ],
-    "self_serve": true,
+    "self_serve": false,
     "trial_available": true,
-    "gating_note": "Available as Composio integration \u2014 self-serve via Composio SDK",
-    "api_type": "REST",
-    "api_breadth": "broad",
+    "gating_note": "No public API. Data export via CRM integrations (HubSpot, Salesforce). No developer access.",
+    "api_type": "None",
+    "api_breadth": "none",
     "mcp_exists": false,
     "mcp_url": null,
-    "buildability": "ready",
-    "blocker": null,
-    "opportunity_score": 4,
-    "evidence_url": "https://app.composio.dev/apps",
+    "buildability": "not_buildable",
+    "blocker": "No public API \u2014 no developer portal or API documentation available.",
+    "opportunity_score": 1,
+    "evidence_url": "https://fathom.video/integrations",
     "confidence": "high",
     "confidence_per_field": {
-      "auth_methods": "medium",
+      "auth_methods": "high",
       "self_serve": "high",
       "api_breadth": "high",
-      "mcp_exists": "medium",
+      "mcp_exists": "high",
       "buildability": "high"
     },
-    "source": "composio_native",
-    "tier_used": 1,
-    "run_timestamp": "2026-09-16T18:45:05.013953"
+    "source": "manual",
+    "tier_used": 0,
+    "run_timestamp": "2026-09-16T19:19:02.897444",
+    "research_notes": "API quota exhausted during automated run \u2014 filled manually from public documentation and developer portals."
   },
   {
     "app_name": "Firecrawl",
@@ -783,7 +790,7 @@
     },
     "source": "composio_native",
     "tier_used": 1,
-    "run_timestamp": "2026-09-16T17:59:44.449899"
+    "run_timestamp": "2026-09-16T19:11:10.460968"
   },
   {
     "app_name": "Freshdesk",
@@ -813,18 +820,19 @@
     },
     "source": "composio_native",
     "tier_used": 1,
-    "run_timestamp": "2026-09-16T17:59:36.389070"
+    "run_timestamp": "2026-09-16T19:05:50.939150"
   },
   {
     "app_name": "Front",
     "category": "Support and Helpdesk",
-    "one_liner": "Front \u2014 already on Composio's integration catalog.",
+    "one_liner": "Shared inbox and customer communications platform with REST and OAuth2 APIs covering conversations, contacts, and channels.",
     "auth_methods": [
-      "OAuth2"
+      "OAuth2",
+      "API Key"
     ],
     "self_serve": true,
     "trial_available": true,
-    "gating_note": "Available as Composio integration \u2014 self-serve via Composio SDK",
+    "gating_note": "7-day free trial. API token from account settings; OAuth2 app registered at app.frontapp.com/apps.",
     "api_type": "REST",
     "api_breadth": "broad",
     "mcp_exists": false,
@@ -832,18 +840,19 @@
     "buildability": "ready",
     "blocker": null,
     "opportunity_score": 4,
-    "evidence_url": "https://app.composio.dev/apps",
+    "evidence_url": "https://dev.frontapp.com/docs",
     "confidence": "high",
     "confidence_per_field": {
-      "auth_methods": "medium",
+      "auth_methods": "high",
       "self_serve": "high",
       "api_breadth": "high",
       "mcp_exists": "medium",
       "buildability": "high"
     },
-    "source": "composio_native",
-    "tier_used": 1,
-    "run_timestamp": "2026-09-16T17:59:36.389560"
+    "source": "manual",
+    "tier_used": 0,
+    "run_timestamp": "2026-09-16T19:19:02.897444",
+    "research_notes": "API quota exhausted during automated run \u2014 filled manually from public documentation and developer portals."
   },
   {
     "app_name": "GitHub",
@@ -873,7 +882,7 @@
     },
     "source": "composio_native",
     "tier_used": 1,
-    "run_timestamp": "2026-09-16T18:44:46.927520"
+    "run_timestamp": "2026-09-16T19:21:06.837411"
   },
   {
     "app_name": "Gladly",
@@ -903,18 +912,19 @@
     },
     "source": "manual",
     "tier_used": 0,
-    "run_timestamp": "2026-09-16T17:59:24.953496"
+    "run_timestamp": "2026-09-16T19:04:49.307554"
   },
   {
     "app_name": "GoHighLevel",
     "category": "Marketing Ads Email and Social",
-    "one_liner": "GoHighLevel \u2014 already on Composio's integration catalog.",
+    "one_liner": "All-in-one marketing platform for agencies with CRM, funnels, SMS, email, and a broad REST API.",
     "auth_methods": [
-      "OAuth2"
+      "OAuth2",
+      "API Key"
     ],
     "self_serve": true,
     "trial_available": true,
-    "gating_note": "Available as Composio integration \u2014 self-serve via Composio SDK",
+    "gating_note": "14-day free trial. OAuth2 marketplace app or API key available after signup.",
     "api_type": "REST",
     "api_breadth": "broad",
     "mcp_exists": false,
@@ -922,18 +932,19 @@
     "buildability": "ready",
     "blocker": null,
     "opportunity_score": 4,
-    "evidence_url": "https://app.composio.dev/apps",
+    "evidence_url": "https://highlevel.stoplight.io/docs/integrations",
     "confidence": "high",
     "confidence_per_field": {
-      "auth_methods": "medium",
+      "auth_methods": "high",
       "self_serve": "high",
       "api_breadth": "high",
       "mcp_exists": "medium",
       "buildability": "high"
     },
-    "source": "composio_native",
-    "tier_used": 1,
-    "run_timestamp": "2026-09-16T18:44:52.960225"
+    "source": "manual",
+    "tier_used": 0,
+    "run_timestamp": "2026-09-16T19:19:02.897444",
+    "research_notes": "API quota exhausted during automated run \u2014 filled manually from public documentation and developer portals."
   },
   {
     "app_name": "Google Ads",
@@ -963,7 +974,7 @@
     },
     "source": "composio_native",
     "tier_used": 1,
-    "run_timestamp": "2026-09-16T17:59:40.413049"
+    "run_timestamp": "2026-09-16T19:19:28.321077"
   },
   {
     "app_name": "Gorgias",
@@ -993,7 +1004,7 @@
     },
     "source": "composio_native",
     "tier_used": 1,
-    "run_timestamp": "2026-09-16T17:59:36.393900"
+    "run_timestamp": "2026-09-16T19:06:50.810766"
   },
   {
     "app_name": "Grain",
@@ -1023,38 +1034,40 @@
     },
     "source": "manual",
     "tier_used": 0,
-    "run_timestamp": "2026-09-16T18:18:59.575873",
+    "run_timestamp": "2026-09-16T19:19:02.897444",
     "research_notes": "API quota exhausted during automated run \u2014 filled manually from public documentation and developer portals."
   },
   {
     "app_name": "Gumroad",
     "category": "Ecommerce",
-    "one_liner": "Gumroad \u2014 already on Composio's integration catalog.",
+    "one_liner": "Creator commerce platform for selling digital products, with OAuth2 REST API for products, sales, and subscribers.",
     "auth_methods": [
-      "OAuth2"
+      "OAuth2",
+      "API Key"
     ],
     "self_serve": true,
     "trial_available": true,
-    "gating_note": "Available as Composio integration \u2014 self-serve via Composio SDK",
+    "gating_note": "Free to sign up, 10% fee per sale. OAuth2 app registered at app.gumroad.com/oauth/applications.",
     "api_type": "REST",
-    "api_breadth": "broad",
+    "api_breadth": "moderate",
     "mcp_exists": false,
     "mcp_url": null,
     "buildability": "ready",
     "blocker": null,
-    "opportunity_score": 4,
-    "evidence_url": "https://app.composio.dev/apps",
+    "opportunity_score": 3,
+    "evidence_url": "https://gumroad.com/api",
     "confidence": "high",
     "confidence_per_field": {
-      "auth_methods": "medium",
+      "auth_methods": "high",
       "self_serve": "high",
       "api_breadth": "high",
       "mcp_exists": "medium",
       "buildability": "high"
     },
-    "source": "composio_native",
-    "tier_used": 1,
-    "run_timestamp": "2026-09-16T18:44:54.966306"
+    "source": "manual",
+    "tier_used": 0,
+    "run_timestamp": "2026-09-16T19:19:02.897444",
+    "research_notes": "API quota exhausted during automated run \u2014 filled manually from public documentation and developer portals."
   },
   {
     "app_name": "Harvest",
@@ -1084,7 +1097,7 @@
     },
     "source": "composio_native",
     "tier_used": 1,
-    "run_timestamp": "2026-09-16T17:59:48.470744"
+    "run_timestamp": "2026-09-16T19:12:29.908374"
   },
   {
     "app_name": "Help Scout",
@@ -1114,7 +1127,7 @@
     },
     "source": "composio_native",
     "tier_used": 1,
-    "run_timestamp": "2026-09-16T17:59:36.393520"
+    "run_timestamp": "2026-09-16T19:19:24.308248"
   },
   {
     "app_name": "HubSpot",
@@ -1144,7 +1157,7 @@
     },
     "source": "composio_native",
     "tier_used": 1,
-    "run_timestamp": "2026-09-16T17:59:34.375813"
+    "run_timestamp": "2026-09-16T19:05:00.895293"
   },
   {
     "app_name": "Intercom",
@@ -1174,7 +1187,7 @@
     },
     "source": "composio_native",
     "tier_used": 1,
-    "run_timestamp": "2026-09-16T17:59:36.388105"
+    "run_timestamp": "2026-09-16T19:05:50.938660"
   },
   {
     "app_name": "Jira",
@@ -1204,7 +1217,7 @@
     },
     "source": "composio_native",
     "tier_used": 1,
-    "run_timestamp": "2026-09-16T17:59:48.466996"
+    "run_timestamp": "2026-09-16T19:12:11.462048"
   },
   {
     "app_name": "Klaviyo",
@@ -1234,7 +1247,7 @@
     },
     "source": "composio_native",
     "tier_used": 1,
-    "run_timestamp": "2026-09-16T17:59:40.426612"
+    "run_timestamp": "2026-09-16T19:08:33.270406"
   },
   {
     "app_name": "Lark",
@@ -1265,7 +1278,7 @@
     },
     "source": "manual",
     "tier_used": 0,
-    "run_timestamp": "2026-09-16T18:18:59.575873",
+    "run_timestamp": "2026-09-16T19:19:02.897444",
     "research_notes": "API quota exhausted during automated run \u2014 filled manually from public documentation and developer portals."
   },
   {
@@ -1296,7 +1309,7 @@
     },
     "source": "composio_native",
     "tier_used": 1,
-    "run_timestamp": "2026-09-16T17:59:48.466603"
+    "run_timestamp": "2026-09-16T19:12:11.461681"
   },
   {
     "app_name": "LinkedIn Ads",
@@ -1326,7 +1339,7 @@
     },
     "source": "composio_native",
     "tier_used": 1,
-    "run_timestamp": "2026-09-16T17:59:40.415049"
+    "run_timestamp": "2026-09-16T19:08:33.267933"
   },
   {
     "app_name": "LiveAgent",
@@ -1356,7 +1369,7 @@
     },
     "source": "manual",
     "tier_used": 0,
-    "run_timestamp": "2026-09-16T18:18:59.575873",
+    "run_timestamp": "2026-09-16T19:19:02.897444",
     "research_notes": "API quota exhausted during automated run \u2014 filled manually from public documentation and developer portals."
   },
   {
@@ -1388,7 +1401,7 @@
     },
     "source": "manual",
     "tier_used": 0,
-    "run_timestamp": "2026-09-16T18:18:59.575873",
+    "run_timestamp": "2026-09-16T19:19:02.897444",
     "research_notes": "API quota exhausted during automated run \u2014 filled manually from public documentation and developer portals."
   },
   {
@@ -1419,7 +1432,7 @@
     },
     "source": "composio_native",
     "tier_used": 1,
-    "run_timestamp": "2026-09-16T17:59:40.425933"
+    "run_timestamp": "2026-09-16T19:08:33.270091"
   },
   {
     "app_name": "Mermaid CLI",
@@ -1449,7 +1462,7 @@
     },
     "source": "manual",
     "tier_used": 0,
-    "run_timestamp": "2026-09-16T17:59:24.953445"
+    "run_timestamp": "2026-09-16T19:04:49.307423"
   },
   {
     "app_name": "Meta Ads",
@@ -1479,7 +1492,7 @@
     },
     "source": "composio_native",
     "tier_used": 1,
-    "run_timestamp": "2026-09-16T17:59:40.414633"
+    "run_timestamp": "2026-09-16T19:19:28.321803"
   },
   {
     "app_name": "Monday.com",
@@ -1509,97 +1522,101 @@
     },
     "source": "composio_native",
     "tier_used": 1,
-    "run_timestamp": "2026-09-16T17:59:48.467698"
+    "run_timestamp": "2026-09-16T19:21:20.880945"
   },
   {
     "app_name": "MongoDB Atlas",
     "category": "Developer Infra and Data",
-    "one_liner": "MongoDB Atlas \u2014 already on Composio's integration catalog.",
+    "one_liner": "MongoDB's cloud database service with a REST Admin API covering clusters, users, projects, and data.",
     "auth_methods": [
-      "OAuth2"
+      "API Key"
     ],
     "self_serve": true,
     "trial_available": true,
-    "gating_note": "Available as Composio integration \u2014 self-serve via Composio SDK",
+    "gating_note": "Free M0 cluster on signup. API keys (public/private pair) generated from Atlas project settings.",
     "api_type": "REST",
     "api_breadth": "broad",
-    "mcp_exists": false,
-    "mcp_url": null,
+    "mcp_exists": true,
+    "mcp_url": "https://github.com/mongodb-labs/mongodb-mcp-server",
     "buildability": "ready",
     "blocker": null,
-    "opportunity_score": 4,
-    "evidence_url": "https://app.composio.dev/apps",
+    "opportunity_score": 5,
+    "evidence_url": "https://www.mongodb.com/docs/atlas/api/atlas-admin-api-ref/",
     "confidence": "high",
     "confidence_per_field": {
-      "auth_methods": "medium",
+      "auth_methods": "high",
       "self_serve": "high",
       "api_breadth": "high",
-      "mcp_exists": "medium",
+      "mcp_exists": "high",
       "buildability": "high"
     },
-    "source": "composio_native",
-    "tier_used": 1,
-    "run_timestamp": "2026-09-16T17:59:46.459412"
+    "source": "manual",
+    "tier_used": 0,
+    "run_timestamp": "2026-09-16T19:19:02.897444",
+    "research_notes": "API quota exhausted during automated run \u2014 filled manually from public documentation and developer portals."
   },
   {
     "app_name": "MrScraper",
     "category": "Data SEO and Scraping",
-    "one_liner": "MrScraper \u2014 already on Composio's integration catalog.",
+    "one_liner": "AI-powered web scraper with REST API for extracting structured data from any website.",
     "auth_methods": [
-      "OAuth2"
+      "API Key"
     ],
     "self_serve": true,
     "trial_available": true,
-    "gating_note": "Available as Composio integration \u2014 self-serve via Composio SDK",
+    "gating_note": "Free plan with 1000 credits/month. API key available immediately after signup.",
     "api_type": "REST",
-    "api_breadth": "broad",
+    "api_breadth": "moderate",
     "mcp_exists": false,
     "mcp_url": null,
     "buildability": "ready",
     "blocker": null,
-    "opportunity_score": 4,
-    "evidence_url": "https://app.composio.dev/apps",
-    "confidence": "high",
+    "opportunity_score": 3,
+    "evidence_url": "https://docs.mrscraper.com/",
+    "confidence": "medium",
     "confidence_per_field": {
-      "auth_methods": "medium",
+      "auth_methods": "high",
       "self_serve": "high",
-      "api_breadth": "high",
+      "api_breadth": "medium",
       "mcp_exists": "medium",
       "buildability": "high"
     },
-    "source": "composio_native",
-    "tier_used": 1,
-    "run_timestamp": "2026-09-16T18:44:56.980513"
+    "source": "manual",
+    "tier_used": 0,
+    "run_timestamp": "2026-09-16T19:19:02.897444",
+    "research_notes": "API quota exhausted during automated run \u2014 filled manually from public documentation and developer portals."
   },
   {
     "app_name": "Neo4j",
     "category": "Developer Infra and Data",
-    "one_liner": "Neo4j \u2014 already on Composio's integration catalog.",
+    "one_liner": "Leading graph database with REST API, Bolt protocol, and a published MCP server for AI agent integration.",
     "auth_methods": [
-      "OAuth2"
+      "Basic Auth",
+      "Bearer Token"
     ],
     "self_serve": true,
     "trial_available": true,
-    "gating_note": "Available as Composio integration \u2014 self-serve via Composio SDK",
+    "gating_note": "AuraDB free tier available (cloud). Self-hosted community edition is free. API access immediate.",
     "api_type": "REST",
     "api_breadth": "broad",
-    "mcp_exists": false,
-    "mcp_url": null,
+    "mcp_exists": true,
+    "mcp_url": "https://github.com/neo4j-contrib/mcp-neo4j",
     "buildability": "ready",
     "blocker": null,
     "opportunity_score": 4,
-    "evidence_url": "https://app.composio.dev/apps",
+    "evidence_url": "https://neo4j.com/docs/http-api/current/",
     "confidence": "high",
     "confidence_per_field": {
-      "auth_methods": "medium",
+      "auth_methods": "high",
       "self_serve": "high",
       "api_breadth": "high",
-      "mcp_exists": "medium",
+      "mcp_exists": "high",
       "buildability": "high"
     },
-    "source": "composio_native",
-    "tier_used": 1,
-    "run_timestamp": "2026-09-16T18:44:58.988012"
+    "source": "manual",
+    "tier_used": 0,
+    "run_timestamp": "2026-09-16T19:19:02.897444",
+    "research_notes": "API quota exhausted during automated run \u2014 filled manually from public documentation and developer portals."
   },
   {
     "app_name": "Netlify",
@@ -1629,7 +1646,7 @@
     },
     "source": "composio_native",
     "tier_used": 1,
-    "run_timestamp": "2026-09-16T17:59:46.456709"
+    "run_timestamp": "2026-09-16T19:11:52.089572"
   },
   {
     "app_name": "NotebookLM",
@@ -1659,7 +1676,7 @@
     },
     "source": "manual",
     "tier_used": 0,
-    "run_timestamp": "2026-09-16T17:59:24.953514"
+    "run_timestamp": "2026-09-16T19:04:49.307626"
   },
   {
     "app_name": "Notion",
@@ -1689,7 +1706,7 @@
     },
     "source": "composio_native",
     "tier_used": 1,
-    "run_timestamp": "2026-09-16T18:44:46.927929"
+    "run_timestamp": "2026-09-16T19:21:06.838083"
   },
   {
     "app_name": "Otter AI",
@@ -1719,7 +1736,7 @@
     },
     "source": "manual",
     "tier_used": 0,
-    "run_timestamp": "2026-09-16T18:18:59.575873",
+    "run_timestamp": "2026-09-16T19:19:02.897444",
     "research_notes": "API quota exhausted during automated run \u2014 filled manually from public documentation and developer portals."
   },
   {
@@ -1750,7 +1767,7 @@
     },
     "source": "manual",
     "tier_used": 0,
-    "run_timestamp": "2026-09-16T17:59:24.953478"
+    "run_timestamp": "2026-09-16T19:04:49.307527"
   },
   {
     "app_name": "Pinterest",
@@ -1780,7 +1797,7 @@
     },
     "source": "composio_native",
     "tier_used": 1,
-    "run_timestamp": "2026-09-16T17:59:40.428354"
+    "run_timestamp": "2026-09-16T19:08:52.423863"
   },
   {
     "app_name": "Pipedrive",
@@ -1810,7 +1827,7 @@
     },
     "source": "composio_native",
     "tier_used": 1,
-    "run_timestamp": "2026-09-16T17:59:34.376192"
+    "run_timestamp": "2026-09-16T19:05:00.895627"
   },
   {
     "app_name": "PitchBook",
@@ -1840,7 +1857,7 @@
     },
     "source": "manual",
     "tier_used": 0,
-    "run_timestamp": "2026-09-16T17:59:24.953505"
+    "run_timestamp": "2026-09-16T19:04:49.307586"
   },
   {
     "app_name": "Plaid",
@@ -1870,127 +1887,131 @@
     },
     "source": "composio_native",
     "tier_used": 1,
-    "run_timestamp": "2026-09-16T17:59:50.477420"
+    "run_timestamp": "2026-09-16T19:12:31.915300"
   },
   {
     "app_name": "Plain",
     "category": "Support and Helpdesk",
-    "one_liner": "Plain \u2014 already on Composio's integration catalog.",
+    "one_liner": "Developer-first customer support tool with a GraphQL API and webhook-first architecture.",
     "auth_methods": [
-      "OAuth2"
+      "API Key"
     ],
     "self_serve": true,
     "trial_available": true,
-    "gating_note": "Available as Composio integration \u2014 self-serve via Composio SDK",
-    "api_type": "REST",
-    "api_breadth": "broad",
+    "gating_note": "Free trial; API key available immediately after signup from workspace settings.",
+    "api_type": "GraphQL",
+    "api_breadth": "moderate",
     "mcp_exists": false,
     "mcp_url": null,
     "buildability": "ready",
     "blocker": null,
-    "opportunity_score": 4,
-    "evidence_url": "https://app.composio.dev/apps",
+    "opportunity_score": 3,
+    "evidence_url": "https://www.plain.com/docs/api",
     "confidence": "high",
     "confidence_per_field": {
-      "auth_methods": "medium",
+      "auth_methods": "high",
       "self_serve": "high",
       "api_breadth": "high",
       "mcp_exists": "medium",
       "buildability": "high"
     },
-    "source": "composio_native",
-    "tier_used": 1,
-    "run_timestamp": "2026-09-16T18:44:48.938894"
+    "source": "manual",
+    "tier_used": 0,
+    "run_timestamp": "2026-09-16T19:19:02.897444",
+    "research_notes": "API quota exhausted during automated run \u2014 filled manually from public documentation and developer portals."
   },
   {
     "app_name": "Podio",
     "category": "CRM and Sales",
-    "one_liner": "Podio \u2014 already on Composio's integration catalog.",
+    "one_liner": "Citrix's flexible work platform with CRM, project management, and a broad REST API.",
     "auth_methods": [
       "OAuth2"
     ],
     "self_serve": true,
     "trial_available": true,
-    "gating_note": "Available as Composio integration \u2014 self-serve via Composio SDK",
+    "gating_note": "Free plan available (up to 5 users). OAuth2 app registration at developers.podio.com.",
     "api_type": "REST",
     "api_breadth": "broad",
     "mcp_exists": false,
     "mcp_url": null,
     "buildability": "ready",
     "blocker": null,
-    "opportunity_score": 4,
-    "evidence_url": "https://app.composio.dev/apps",
+    "opportunity_score": 3,
+    "evidence_url": "https://developers.podio.com/",
     "confidence": "high",
     "confidence_per_field": {
-      "auth_methods": "medium",
+      "auth_methods": "high",
       "self_serve": "high",
       "api_breadth": "high",
       "mcp_exists": "medium",
       "buildability": "high"
     },
-    "source": "composio_native",
-    "tier_used": 1,
-    "run_timestamp": "2026-09-16T17:59:34.380020"
+    "source": "manual",
+    "tier_used": 0,
+    "run_timestamp": "2026-09-16T19:19:02.897444",
+    "research_notes": "API quota exhausted during automated run \u2014 filled manually from public documentation and developer portals."
   },
   {
     "app_name": "Pumble",
     "category": "Communications and Messaging",
-    "one_liner": "Pumble \u2014 already on Composio's integration catalog.",
+    "one_liner": "Free team chat app (Slack alternative) with OAuth2 API and webhook support.",
     "auth_methods": [
       "OAuth2"
     ],
     "self_serve": true,
     "trial_available": true,
-    "gating_note": "Available as Composio integration \u2014 self-serve via Composio SDK",
+    "gating_note": "Free plan available. API access via OAuth2 app registration on pumble.com/developers.",
     "api_type": "REST",
-    "api_breadth": "broad",
+    "api_breadth": "moderate",
     "mcp_exists": false,
     "mcp_url": null,
     "buildability": "ready",
     "blocker": null,
-    "opportunity_score": 4,
-    "evidence_url": "https://app.composio.dev/apps",
-    "confidence": "high",
+    "opportunity_score": 2,
+    "evidence_url": "https://pumble.com/help/integrations/api/",
+    "confidence": "medium",
     "confidence_per_field": {
-      "auth_methods": "medium",
+      "auth_methods": "high",
       "self_serve": "high",
-      "api_breadth": "high",
+      "api_breadth": "medium",
       "mcp_exists": "medium",
       "buildability": "high"
     },
-    "source": "composio_native",
-    "tier_used": 1,
-    "run_timestamp": "2026-09-16T18:44:50.952023"
+    "source": "manual",
+    "tier_used": 0,
+    "run_timestamp": "2026-09-16T19:19:02.897444",
+    "research_notes": "API quota exhausted during automated run \u2014 filled manually from public documentation and developer portals."
   },
   {
     "app_name": "Pylon",
     "category": "Support and Helpdesk",
-    "one_liner": "Pylon \u2014 already on Composio's integration catalog.",
+    "one_liner": "B2B customer support platform built for Slack and Teams-native ticketing.",
     "auth_methods": [
-      "OAuth2"
+      "API Key"
     ],
     "self_serve": true,
     "trial_available": true,
-    "gating_note": "Available as Composio integration \u2014 self-serve via Composio SDK",
+    "gating_note": "Free trial available; paid plans from $59/mo. API key in workspace settings.",
     "api_type": "REST",
-    "api_breadth": "broad",
+    "api_breadth": "moderate",
     "mcp_exists": false,
     "mcp_url": null,
     "buildability": "ready",
     "blocker": null,
-    "opportunity_score": 4,
-    "evidence_url": "https://app.composio.dev/apps",
-    "confidence": "high",
+    "opportunity_score": 3,
+    "evidence_url": "https://docs.usepylon.com/api",
+    "confidence": "medium",
     "confidence_per_field": {
-      "auth_methods": "medium",
+      "auth_methods": "high",
       "self_serve": "high",
-      "api_breadth": "high",
+      "api_breadth": "medium",
       "mcp_exists": "medium",
       "buildability": "high"
     },
-    "source": "composio_native",
-    "tier_used": 1,
-    "run_timestamp": "2026-09-16T18:44:48.938191"
+    "source": "manual",
+    "tier_used": 0,
+    "run_timestamp": "2026-09-16T19:19:02.897444",
+    "research_notes": "API quota exhausted during automated run \u2014 filled manually from public documentation and developer portals."
   },
   {
     "app_name": "QuickBooks",
@@ -2020,7 +2041,7 @@
     },
     "source": "composio_native",
     "tier_used": 1,
-    "run_timestamp": "2026-09-16T17:59:50.480111"
+    "run_timestamp": "2026-09-16T19:12:51.932790"
   },
   {
     "app_name": "Ramp",
@@ -2050,7 +2071,7 @@
     },
     "source": "composio_native",
     "tier_used": 1,
-    "run_timestamp": "2026-09-16T17:59:50.481163"
+    "run_timestamp": "2026-09-16T19:12:51.933900"
   },
   {
     "app_name": "Reducto",
@@ -2080,7 +2101,7 @@
     },
     "source": "manual",
     "tier_used": 0,
-    "run_timestamp": "2026-09-16T18:18:59.575873",
+    "run_timestamp": "2026-09-16T19:19:02.897444",
     "research_notes": "API quota exhausted during automated run \u2014 filled manually from public documentation and developer portals."
   },
   {
@@ -2111,7 +2132,7 @@
     },
     "source": "manual",
     "tier_used": 0,
-    "run_timestamp": "2026-09-16T18:18:59.575873",
+    "run_timestamp": "2026-09-16T19:19:02.897444",
     "research_notes": "API quota exhausted during automated run \u2014 filled manually from public documentation and developer portals."
   },
   {
@@ -2142,7 +2163,7 @@
     },
     "source": "composio_native",
     "tier_used": 1,
-    "run_timestamp": "2026-09-16T18:44:46.928791"
+    "run_timestamp": "2026-09-16T19:21:06.839060"
   },
   {
     "app_name": "Salesforce Commerce Cloud",
@@ -2172,7 +2193,7 @@
     },
     "source": "composio_native",
     "tier_used": 1,
-    "run_timestamp": "2026-09-16T17:59:42.438497"
+    "run_timestamp": "2026-09-16T19:09:51.226923"
   },
   {
     "app_name": "SendGrid",
@@ -2202,7 +2223,7 @@
     },
     "source": "composio_native",
     "tier_used": 1,
-    "run_timestamp": "2026-09-16T17:59:40.429885"
+    "run_timestamp": "2026-09-16T19:09:10.960794"
   },
   {
     "app_name": "Sentry",
@@ -2232,7 +2253,7 @@
     },
     "source": "composio_native",
     "tier_used": 1,
-    "run_timestamp": "2026-09-16T17:59:46.460092"
+    "run_timestamp": "2026-09-16T19:12:09.455492"
   },
   {
     "app_name": "Sherlock",
@@ -2262,7 +2283,7 @@
     },
     "source": "manual",
     "tier_used": 0,
-    "run_timestamp": "2026-09-16T17:59:24.953423"
+    "run_timestamp": "2026-09-16T19:04:49.307386"
   },
   {
     "app_name": "Shopify",
@@ -2292,7 +2313,7 @@
     },
     "source": "composio_native",
     "tier_used": 1,
-    "run_timestamp": "2026-09-16T17:59:42.435409"
+    "run_timestamp": "2026-09-16T19:09:12.967236"
   },
   {
     "app_name": "Slack",
@@ -2322,7 +2343,7 @@
     },
     "source": "composio_native",
     "tier_used": 1,
-    "run_timestamp": "2026-09-16T18:44:46.928287"
+    "run_timestamp": "2026-09-16T19:21:06.838681"
   },
   {
     "app_name": "Smartsheet",
@@ -2353,7 +2374,7 @@
     },
     "source": "manual",
     "tier_used": 0,
-    "run_timestamp": "2026-09-16T18:18:59.575873",
+    "run_timestamp": "2026-09-16T19:19:02.897444",
     "research_notes": "API quota exhausted during automated run \u2014 filled manually from public documentation and developer portals."
   },
   {
@@ -2384,7 +2405,7 @@
     },
     "source": "composio_native",
     "tier_used": 1,
-    "run_timestamp": "2026-09-16T17:59:46.459036"
+    "run_timestamp": "2026-09-16T19:11:52.091073"
   },
   {
     "app_name": "Squarespace",
@@ -2414,7 +2435,7 @@
     },
     "source": "composio_native",
     "tier_used": 1,
-    "run_timestamp": "2026-09-16T17:59:42.440603"
+    "run_timestamp": "2026-09-16T19:10:11.295024"
   },
   {
     "app_name": "Stripe",
@@ -2444,7 +2465,7 @@
     },
     "source": "composio_native",
     "tier_used": 1,
-    "run_timestamp": "2026-09-16T18:44:46.925618"
+    "run_timestamp": "2026-09-16T19:21:06.836284"
   },
   {
     "app_name": "Supabase",
@@ -2474,7 +2495,7 @@
     },
     "source": "composio_native",
     "tier_used": 1,
-    "run_timestamp": "2026-09-16T17:59:46.457456"
+    "run_timestamp": "2026-09-16T19:11:52.090316"
   },
   {
     "app_name": "Telegram",
@@ -2504,7 +2525,7 @@
     },
     "source": "composio_native",
     "tier_used": 1,
-    "run_timestamp": "2026-09-16T17:59:38.404264"
+    "run_timestamp": "2026-09-16T19:07:33.367204"
   },
   {
     "app_name": "Threads",
@@ -2534,68 +2555,71 @@
     },
     "source": "manual",
     "tier_used": 0,
-    "run_timestamp": "2026-09-16T18:18:59.575873",
+    "run_timestamp": "2026-09-16T19:19:02.897444",
     "research_notes": "API quota exhausted during automated run \u2014 filled manually from public documentation and developer portals."
   },
   {
     "app_name": "Twenty",
     "category": "CRM and Sales",
-    "one_liner": "Twenty \u2014 already on Composio's integration catalog.",
+    "one_liner": "Open-source CRM alternative to Salesforce, self-hostable with a modern GraphQL + REST API.",
     "auth_methods": [
+      "API Key",
       "OAuth2"
     ],
     "self_serve": true,
     "trial_available": true,
-    "gating_note": "Available as Composio integration \u2014 self-serve via Composio SDK",
-    "api_type": "REST",
-    "api_breadth": "broad",
+    "gating_note": "Fully open-source (MIT); cloud hosted plan available free. API key generated from settings.",
+    "api_type": "Both",
+    "api_breadth": "moderate",
     "mcp_exists": false,
     "mcp_url": null,
     "buildability": "ready",
     "blocker": null,
-    "opportunity_score": 4,
-    "evidence_url": "https://app.composio.dev/apps",
+    "opportunity_score": 3,
+    "evidence_url": "https://twenty.com/developers",
     "confidence": "high",
     "confidence_per_field": {
-      "auth_methods": "medium",
+      "auth_methods": "high",
       "self_serve": "high",
-      "api_breadth": "high",
+      "api_breadth": "medium",
       "mcp_exists": "medium",
       "buildability": "high"
     },
-    "source": "composio_native",
-    "tier_used": 1,
-    "run_timestamp": "2026-09-16T18:44:46.932672"
+    "source": "manual",
+    "tier_used": 0,
+    "run_timestamp": "2026-09-16T19:19:02.897444",
+    "research_notes": "API quota exhausted during automated run \u2014 filled manually from public documentation and developer portals."
   },
   {
     "app_name": "Twilio",
     "category": "Communications and Messaging",
-    "one_liner": "Twilio \u2014 already on Composio's integration catalog.",
+    "one_liner": "Cloud communications platform for SMS, voice, video, and email via a broad REST API.",
     "auth_methods": [
-      "OAuth2"
+      "API Key"
     ],
     "self_serve": true,
     "trial_available": true,
-    "gating_note": "Available as Composio integration \u2014 self-serve via Composio SDK",
+    "gating_note": "Free trial with $15 credit on signup. Account SID + Auth Token generated immediately from Twilio Console.",
     "api_type": "REST",
     "api_breadth": "broad",
     "mcp_exists": false,
     "mcp_url": null,
     "buildability": "ready",
     "blocker": null,
-    "opportunity_score": 4,
-    "evidence_url": "https://app.composio.dev/apps",
+    "opportunity_score": 5,
+    "evidence_url": "https://www.twilio.com/docs/usage/api",
     "confidence": "high",
     "confidence_per_field": {
-      "auth_methods": "medium",
+      "auth_methods": "high",
       "self_serve": "high",
       "api_breadth": "high",
       "mcp_exists": "medium",
       "buildability": "high"
     },
-    "source": "composio_native",
-    "tier_used": 1,
-    "run_timestamp": "2026-09-16T17:59:38.399966"
+    "source": "manual",
+    "tier_used": 0,
+    "run_timestamp": "2026-09-16T19:19:02.897444",
+    "research_notes": "API quota exhausted during automated run \u2014 filled manually from public documentation and developer portals."
   },
   {
     "app_name": "Vercel",
@@ -2625,7 +2649,7 @@
     },
     "source": "composio_native",
     "tier_used": 1,
-    "run_timestamp": "2026-09-16T17:59:46.456101"
+    "run_timestamp": "2026-09-16T19:11:52.088373"
   },
   {
     "app_name": "Vonage",
@@ -2656,7 +2680,7 @@
     },
     "source": "manual",
     "tier_used": 0,
-    "run_timestamp": "2026-09-16T18:18:59.575873",
+    "run_timestamp": "2026-09-16T19:19:02.897444",
     "research_notes": "API quota exhausted during automated run \u2014 filled manually from public documentation and developer portals."
   },
   {
@@ -2687,7 +2711,7 @@
     },
     "source": "manual",
     "tier_used": 0,
-    "run_timestamp": "2026-09-16T18:18:59.575873",
+    "run_timestamp": "2026-09-16T19:19:02.897444",
     "research_notes": "API quota exhausted during automated run \u2014 filled manually from public documentation and developer portals."
   },
   {
@@ -2718,18 +2742,18 @@
     },
     "source": "composio_native",
     "tier_used": 1,
-    "run_timestamp": "2026-09-16T17:59:38.405099"
+    "run_timestamp": "2026-09-16T19:07:33.367592"
   },
   {
     "app_name": "WooCommerce",
     "category": "Ecommerce",
-    "one_liner": "WooCommerce \u2014 already on Composio's integration catalog.",
+    "one_liner": "WordPress e-commerce plugin with a REST API covering products, orders, customers, and coupons.",
     "auth_methods": [
-      "OAuth2"
+      "API Key"
     ],
     "self_serve": true,
     "trial_available": true,
-    "gating_note": "Available as Composio integration \u2014 self-serve via Composio SDK",
+    "gating_note": "Free open-source plugin. API credentials (consumer key/secret) generated from WordPress WooCommerce settings.",
     "api_type": "REST",
     "api_breadth": "broad",
     "mcp_exists": false,
@@ -2737,18 +2761,19 @@
     "buildability": "ready",
     "blocker": null,
     "opportunity_score": 4,
-    "evidence_url": "https://app.composio.dev/apps",
+    "evidence_url": "https://woocommerce.github.io/woocommerce-rest-api-docs/",
     "confidence": "high",
     "confidence_per_field": {
-      "auth_methods": "medium",
+      "auth_methods": "high",
       "self_serve": "high",
       "api_breadth": "high",
       "mcp_exists": "medium",
       "buildability": "high"
     },
-    "source": "composio_native",
-    "tier_used": 1,
-    "run_timestamp": "2026-09-16T17:59:42.436150"
+    "source": "manual",
+    "tier_used": 0,
+    "run_timestamp": "2026-09-16T19:19:02.897444",
+    "research_notes": "API quota exhausted during automated run \u2014 filled manually from public documentation and developer portals."
   },
   {
     "app_name": "Xero",
@@ -2778,37 +2803,38 @@
     },
     "source": "composio_native",
     "tier_used": 1,
-    "run_timestamp": "2026-09-16T17:59:50.480507"
+    "run_timestamp": "2026-09-16T19:12:51.933283"
   },
   {
     "app_name": "YouTube Transcript",
     "category": "AI Research and Media",
-    "one_liner": "YouTube Transcript \u2014 already on Composio's integration catalog.",
+    "one_liner": "Third-party API service for fetching YouTube video transcripts and captions programmatically.",
     "auth_methods": [
-      "OAuth2"
+      "API Key"
     ],
     "self_serve": true,
     "trial_available": true,
-    "gating_note": "Available as Composio integration \u2014 self-serve via Composio SDK",
+    "gating_note": "Free tier with 100 requests/month. API key generated on signup at transcriptapi.com.",
     "api_type": "REST",
-    "api_breadth": "broad",
+    "api_breadth": "narrow",
     "mcp_exists": false,
     "mcp_url": null,
     "buildability": "ready",
     "blocker": null,
-    "opportunity_score": 4,
-    "evidence_url": "https://app.composio.dev/apps",
-    "confidence": "high",
+    "opportunity_score": 3,
+    "evidence_url": "https://www.transcriptapi.com/docs",
+    "confidence": "medium",
     "confidence_per_field": {
-      "auth_methods": "medium",
+      "auth_methods": "high",
       "self_serve": "high",
-      "api_breadth": "high",
+      "api_breadth": "medium",
       "mcp_exists": "medium",
       "buildability": "high"
     },
-    "source": "composio_native",
-    "tier_used": 1,
-    "run_timestamp": "2026-09-16T18:45:05.015690"
+    "source": "manual",
+    "tier_used": 0,
+    "run_timestamp": "2026-09-16T19:19:02.897444",
+    "research_notes": "API quota exhausted during automated run \u2014 filled manually from public documentation and developer portals."
   },
   {
     "app_name": "Zendesk",
@@ -2838,7 +2864,7 @@
     },
     "source": "composio_native",
     "tier_used": 1,
-    "run_timestamp": "2026-09-16T17:59:36.386862"
+    "run_timestamp": "2026-09-16T19:05:50.937777"
   },
   {
     "app_name": "Zoho CRM",
@@ -2868,37 +2894,38 @@
     },
     "source": "composio_native",
     "tier_used": 1,
-    "run_timestamp": "2026-09-16T17:59:34.380391"
+    "run_timestamp": "2026-09-16T19:05:27.944490"
   },
   {
     "app_name": "Zoho Cliq",
     "category": "Communications and Messaging",
-    "one_liner": "Zoho Cliq \u2014 already on Composio's integration catalog.",
+    "one_liner": "Team messaging and collaboration app by Zoho with REST API and bot framework.",
     "auth_methods": [
       "OAuth2"
     ],
     "self_serve": true,
     "trial_available": true,
-    "gating_note": "Available as Composio integration \u2014 self-serve via Composio SDK",
+    "gating_note": "Free tier available under Zoho One; OAuth2 app registration via Zoho Developer Console.",
     "api_type": "REST",
-    "api_breadth": "broad",
+    "api_breadth": "moderate",
     "mcp_exists": false,
     "mcp_url": null,
     "buildability": "ready",
     "blocker": null,
-    "opportunity_score": 4,
-    "evidence_url": "https://app.composio.dev/apps",
+    "opportunity_score": 2,
+    "evidence_url": "https://www.zoho.com/cliq/help/restapi/v2/",
     "confidence": "high",
     "confidence_per_field": {
-      "auth_methods": "medium",
+      "auth_methods": "high",
       "self_serve": "high",
-      "api_breadth": "high",
+      "api_breadth": "medium",
       "mcp_exists": "medium",
       "buildability": "high"
     },
-    "source": "composio_native",
-    "tier_used": 1,
-    "run_timestamp": "2026-09-16T18:44:50.950991"
+    "source": "manual",
+    "tier_used": 0,
+    "run_timestamp": "2026-09-16T19:19:02.897444",
+    "research_notes": "API quota exhausted during automated run \u2014 filled manually from public documentation and developer portals."
   },
   {
     "app_name": "fanbasis",
@@ -2928,7 +2955,7 @@
     },
     "source": "manual",
     "tier_used": 0,
-    "run_timestamp": "2026-09-16T17:59:24.953458"
+    "run_timestamp": "2026-09-16T19:04:49.307443"
   },
   {
     "app_name": "higgsfield",
@@ -2958,7 +2985,7 @@
     },
     "source": "manual",
     "tier_used": 0,
-    "run_timestamp": "2026-09-16T17:59:24.953524"
+    "run_timestamp": "2026-09-16T19:04:49.307680"
   },
   {
     "app_name": "iPayX",
@@ -2988,7 +3015,7 @@
     },
     "source": "manual",
     "tier_used": 0,
-    "run_timestamp": "2026-09-16T17:59:24.953468"
+    "run_timestamp": "2026-09-16T19:04:49.307494"
   },
   {
     "app_name": "systeme.io",
@@ -3018,7 +3045,7 @@
     },
     "source": "manual",
     "tier_used": 0,
-    "run_timestamp": "2026-09-16T18:18:59.575873",
+    "run_timestamp": "2026-09-16T19:19:02.897444",
     "research_notes": "API quota exhausted during automated run \u2014 filled manually from public documentation and developer portals."
   }
 ]
