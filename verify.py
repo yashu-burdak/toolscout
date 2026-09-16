@@ -20,7 +20,7 @@ from datetime import datetime
 from pathlib import Path
 from typing import Any
 
-import anthropic
+import openai
 from dotenv import dotenv_values
 from rich.console import Console
 from rich.progress import Progress, SpinnerColumn, TextColumn
@@ -140,7 +140,7 @@ def pass1_estimate(results: list[dict]) -> dict[str, Any]:
 
 def pass2_verify(
     results: list[dict],
-    client: anthropic.Anthropic,
+    client: openai.OpenAI,
     sample_size: int = 20,
 ) -> dict[str, Any]:
     """
@@ -307,12 +307,12 @@ def pass3_human_check(results: list[dict], pass2_data: dict) -> list[dict]:
 # ---------------------------------------------------------------------------
 
 def run_verification() -> None:
-    api_key = os.getenv("ANTHROPIC_API_KEY")
+    api_key = os.getenv("OPENAI_API_KEY")
     if not api_key:
-        console.print("[red]ANTHROPIC_API_KEY not set — aborting.[/red]")
+        console.print("[red]OPENAI_API_KEY not set — aborting.[/red]")
         return
 
-    client = anthropic.Anthropic(api_key=api_key)
+    client = openai.OpenAI(api_key=api_key)
 
     console.rule("[bold cyan]ToolScout — Verification[/bold cyan]")
 

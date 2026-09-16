@@ -20,7 +20,7 @@ import time
 from datetime import datetime
 from pathlib import Path
 
-import anthropic
+import openai
 from dotenv import dotenv_values
 from rich.console import Console
 from rich.panel import Panel
@@ -343,7 +343,7 @@ def _write_edge_cases() -> None:
 # Pre-validation
 # ---------------------------------------------------------------------------
 
-def run_prevalidation(apps_by_name: dict[str, dict], client: anthropic.Anthropic) -> None:
+def run_prevalidation(apps_by_name: dict[str, dict], client: openai.OpenAI) -> None:
     console.print(Panel(
         "[bold indigo]ToolScout Pre-Validation (5 apps)[/bold indigo]\n"
         "Running on: Stripe, GitHub, Notion, Slack, Salesforce",
@@ -423,11 +423,11 @@ def main() -> None:
     _write_edge_cases()
 
     # Step 2: Pre-validation on 5 anchor apps
-    api_key = os.getenv("ANTHROPIC_API_KEY")
+    api_key = os.getenv("OPENAI_API_KEY")
     if not api_key:
-        console.print("[red]ANTHROPIC_API_KEY not set in .env — aborting.[/red]")
+        console.print("[red]OPENAI_API_KEY not set in .env — aborting.[/red]")
         sys.exit(1)
-    client = anthropic.Anthropic(api_key=api_key)
+    client = openai.OpenAI(api_key=api_key)
     console.print("\n[bold]Step 2/4[/bold] Pre-validation...")
     run_prevalidation(apps_by_name, client)
 

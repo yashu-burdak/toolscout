@@ -1,8 +1,8 @@
 """
 ToolScout — Core research agent.
 
-Uses Claude claude-sonnet-4-6 with Anthropic's native web_search tool to research
-each app and return a structured AppResearch result.
+Uses GPT-4o with OpenAI's web_search_preview tool to research each app
+and return a structured AppResearch result.
 
 Tier logic:
   Tier 1 — handled by composio_tier.py (skipped here)
@@ -16,7 +16,7 @@ import json
 import os
 from typing import Any
 
-import anthropic
+import openai
 from pydantic import ValidationError
 from rich.console import Console
 
@@ -100,9 +100,8 @@ def _parse_json_from_response(text: str) -> dict[str, Any]:
 
 def research_app(
     app: dict[str, Any],
-    client: anthropic.Anthropic,
+    client: openai.OpenAI,
     tier: int = 2,
-    max_continuations: int = 4,
     previous_result: dict | None = None,
 ) -> dict[str, Any]:
     """
@@ -110,9 +109,8 @@ def research_app(
 
     Args:
         app: dict with keys app, category, hint
-        client: Anthropic client
+        client: OpenAI client
         tier: 2 for normal research, 3 for deep verification
-        max_continuations: max pause_turn continuations for server-side tools
         previous_result: if set, runs the verification prompt (Pass 2)
 
     Returns:
@@ -136,68 +134,38 @@ def research_app(
             schema=_get_schema_str(),
         )
 
-    messages: list[dict] = [{"role": "user", "content": user_content}]
-
-    # Use web_search_20250305 as specified
-    tools = [{"type": "web_search_20250305", "name": "web_search"}]
-
-    # System prompt cached — stable across all 100 apps
-    system_blocks = [
-        {
-            "type": "text",
-            "text": SYSTEM_PROMPT,
-            "cache_control": {"type": "ephemeral"},
-        }
-    ]
-
     source = "web_search" if tier == 2 else "deep_fetch"
-    continuations = 0
 
-    while continuations < max_continuations:
-        response = client.messages.create(
-            model="claude-sonnet-4-6",
-            max_tokens=4096,
-            system=system_blocks,
-            tools=tools,
-            messages=messages,
-        )
-
-        if response.stop_reason == "pause_turn":
-            # Server-side tool hit iteration limit — append and continue
-            messages.append({"role": "assistant", "content": response.content})
-            continuations += 1
-            continue
-
-        # Extract the final text block
-        text = next(
-            (b.text for b in response.content if b.type == "text"),
-            None,
-        )
-        if not text:
-            raise ValueError(f"ToolScout got no text output for {app_name}")
-
-        # Parse JSON
-        raw = _parse_json_from_response(text)
-
-        # Inject metadata that the model may not set correctly
-        raw["app_name"] = app_name
-        raw["category"] = category
-        raw.setdefault("source", source)
-        raw.setdefault("tier_used", tier)
-
-        # Validate with Pydantic (raises on schema mismatch)
-        try:
-            validated = AppResearch.model_validate(raw)
-            return validated.model_dump()
-        except ValidationError as exc:
-            # Return raw dict with a note — better than crashing
-            console.print(
-                f"  [yellow]⚠[/yellow]  {app_name}: schema validation warning — {exc.error_count()} field(s)"
-            )
-            raw.setdefault("run_timestamp", "")
-            raw.setdefault("confidence_per_field", {})
-            return raw
-
-    raise RuntimeError(
-        f"ToolScout: {app_name} exceeded {max_continuations} continuations"
+    # OpenAI Responses API with built-in web search
+    response = client.responses.create(
+        model="gpt-4o",
+        tools=[{"type": "web_search_preview"}],
+        instructions=SYSTEM_PROMPT,
+        input=[{"role": "user", "content": user_content}],
     )
+
+    text = response.output_text
+    if not text:
+        raise ValueError(f"ToolScout got no text output for {app_name}")
+
+    # Parse JSON
+    raw = _parse_json_from_response(text)
+
+    # Inject metadata that the model may not set correctly
+    raw["app_name"] = app_name
+    raw["category"] = category
+    raw.setdefault("source", source)
+    raw.setdefault("tier_used", tier)
+
+    # Validate with Pydantic (raises on schema mismatch)
+    try:
+        validated = AppResearch.model_validate(raw)
+        return validated.model_dump()
+    except ValidationError as exc:
+        # Return raw dict with a note — better than crashing
+        console.print(
+            f"  [yellow]⚠[/yellow]  {app_name}: schema validation warning — {exc.error_count()} field(s)"
+        )
+        raw.setdefault("run_timestamp", "")
+        raw.setdefault("confidence_per_field", {})
+        return raw
