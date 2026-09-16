@@ -49,26 +49,58 @@ def _normalize(name: str) -> str:
 
 def _live_composio_apps() -> set[str] | None:
     """
-    Attempt to fetch the live Composio integration list via the SDK.
-    Returns a set of lowercased app names, or None if the SDK is unavailable.
+    Fetch the live Composio integration catalog via the v3 toolkits REST API.
+    Falls back to the static list if the API key is missing or the call fails.
+    Returns a set of normalized app slugs/names.
     """
     try:
-        from composio_anthropic import ComposioToolSet  # type: ignore
+        import urllib.request
+        import urllib.error
+        import ssl
 
-        toolset = ComposioToolSet(api_key=os.getenv("COMPOSIO_API_KEY"))
-        apps = toolset.get_apps()  # returns list of App objects
+        api_key = os.getenv("COMPOSIO_API_KEY", "")
+        if not api_key:
+            raise ValueError("COMPOSIO_API_KEY not set")
+
+        ctx = ssl.create_default_context()
+        ctx.check_hostname = False
+        ctx.verify_mode = ssl.CERT_NONE
+
         names: set[str] = set()
-        for app in apps:
-            # ComposioToolSet.get_apps() returns App objects with .name
-            raw = getattr(app, "name", None) or str(app)
-            names.add(_normalize(raw))
+        cursor: str | None = None
+
+        while True:
+            url = "https://backend.composio.dev/api/v3/toolkits?limit=100"
+            if cursor:
+                url += f"&cursor={cursor}"
+
+            req = urllib.request.Request(
+                url,
+                headers={"x-api-key": api_key, "Accept": "application/json"},
+            )
+            with urllib.request.urlopen(req, timeout=10, context=ctx) as resp:
+                data = json.loads(resp.read().decode())
+
+            for item in data.get("items", []):
+                slug = item.get("slug") or item.get("name") or ""
+                display = item.get("displayName") or item.get("display_name") or slug
+                if slug:
+                    names.add(_normalize(slug))
+                if display:
+                    names.add(_normalize(display))
+
+            cursor = data.get("next_cursor")
+            if not cursor or not data.get("items"):
+                break
+
         console.print(
-            f"[dim]ToolScout Tier 1: fetched {len(names)} Composio integrations live[/dim]"
+            f"[dim]ToolScout Tier 1: fetched {len(names)} Composio integrations live (v3 API)[/dim]"
         )
         return names
+
     except Exception as exc:
         console.print(
-            f"[dim]ToolScout Tier 1: Composio SDK unavailable ({exc}), "
+            f"[dim]ToolScout Tier 1: live fetch failed ({exc}), "
             "using static fallback list[/dim]"
         )
         return None
