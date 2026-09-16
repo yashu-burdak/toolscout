@@ -1,0 +1,152 @@
+[
+  {
+    "app_name": "Stripe",
+    "category": "Finance and Fintech",
+    "one_liner": "Stripe \u2014 already on Composio's integration catalog.",
+    "auth_methods": [
+      "OAuth2"
+    ],
+    "self_serve": true,
+    "trial_available": true,
+    "gating_note": "Available as Composio integration \u2014 self-serve via Composio SDK",
+    "api_type": "REST",
+    "api_breadth": "broad",
+    "mcp_exists": false,
+    "mcp_url": null,
+    "buildability": "ready",
+    "blocker": null,
+    "opportunity_score": 4,
+    "evidence_url": "https://app.composio.dev/apps",
+    "confidence": "high",
+    "confidence_per_field": {
+      "auth_methods": "medium",
+      "self_serve": "high",
+      "api_breadth": "high",
+      "mcp_exists": "medium",
+      "buildability": "high"
+    },
+    "source": "composio_native",
+    "tier_used": 1,
+    "run_timestamp": "2026-09-16T18:20:28.191042"
+  },
+  {
+    "app_name": "GitHub",
+    "category": "Developer Infra and Data",
+    "one_liner": "GitHub \u2014 already on Composio's integration catalog.",
+    "auth_methods": [
+      "OAuth2"
+    ],
+    "self_serve": true,
+    "trial_available": true,
+    "gating_note": "Available as Composio integration \u2014 self-serve via Composio SDK",
+    "api_type": "REST",
+    "api_breadth": "broad",
+    "mcp_exists": false,
+    "mcp_url": null,
+    "buildability": "ready",
+    "blocker": null,
+    "opportunity_score": 4,
+    "evidence_url": "https://app.composio.dev/apps",
+    "confidence": "high",
+    "confidence_per_field": {
+      "auth_methods": "medium",
+      "self_serve": "high",
+      "api_breadth": "high",
+      "mcp_exists": "medium",
+      "buildability": "high"
+    },
+    "source": "composio_native",
+    "tier_used": 1,
+    "run_timestamp": "2026-09-16T18:20:28.191902"
+  },
+  {
+    "app_name": "Notion",
+    "category": "Productivity and Project Management",
+    "one_liner": "Notion \u2014 already on Composio's integration catalog.",
+    "auth_methods": [
+      "OAuth2"
+    ],
+    "self_serve": true,
+    "trial_available": true,
+    "gating_note": "Available as Composio integration \u2014 self-serve via Composio SDK",
+    "api_type": "REST",
+    "api_breadth": "broad",
+    "mcp_exists": false,
+    "mcp_url": null,
+    "buildability": "ready",
+    "blocker": null,
+    "opportunity_score": 4,
+    "evidence_url": "https://app.composio.dev/apps",
+    "confidence": "high",
+    "confidence_per_field": {
+      "auth_methods": "medium",
+      "self_serve": "high",
+      "api_breadth": "high",
+      "mcp_exists": "medium",
+      "buildability": "high"
+    },
+    "source": "composio_native",
+    "tier_used": 1,
+    "run_timestamp": "2026-09-16T18:20:28.192474"
+  },
+  {
+    "app_name": "Slack",
+    "category": "Communications and Messaging",
+    "one_liner": "Slack \u2014 already on Composio's integration catalog.",
+    "auth_methods": [
+      "OAuth2"
+    ],
+    "self_serve": true,
+    "trial_available": true,
+    "gating_note": "Available as Composio integration \u2014 self-serve via Composio SDK",
+    "api_type": "REST",
+    "api_breadth": "broad",
+    "mcp_exists": false,
+    "mcp_url": null,
+    "buildability": "ready",
+    "blocker": null,
+    "opportunity_score": 4,
+    "evidence_url": "https://app.composio.dev/apps",
+    "confidence": "high",
+    "confidence_per_field": {
+      "auth_methods": "medium",
+      "self_serve": "high",
+      "api_breadth": "high",
+      "mcp_exists": "medium",
+      "buildability": "high"
+    },
+    "source": "composio_native",
+    "tier_used": 1,
+    "run_timestamp": "2026-09-16T18:20:28.193077"
+  },
+  {
+    "app_name": "Salesforce",
+    "category": "CRM and Sales",
+    "one_liner": "Salesforce \u2014 already on Composio's integration catalog.",
+    "auth_methods": [
+      "OAuth2"
+    ],
+    "self_serve": true,
+    "trial_available": true,
+    "gating_note": "Available as Composio integration \u2014 self-serve via Composio SDK",
+    "api_type": "REST",
+    "api_breadth": "broad",
+    "mcp_exists": false,
+    "mcp_url": null,
+    "buildability": "ready",
+    "blocker": null,
+    "opportunity_score": 4,
+    "evidence_url": "https://app.composio.dev/apps",
+    "confidence": "high",
+    "confidence_per_field": {
+      "auth_methods": "medium",
+      "self_serve": "high",
+      "api_breadth": "high",
+      "mcp_exists": "medium",
+      "buildability": "high"
+    },
+    "source": "composio_native",
+    "tier_used": 1,
+    "run_timestamp": "2026-09-16T18:20:28.193646"
+  }
+]

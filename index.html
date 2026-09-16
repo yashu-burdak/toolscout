@@ -1,0 +1,1649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>ToolScout — Composio Integration Intelligence Report</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#0A0A0A;color:#F5F5F5;font-family:-apple-system,BlinkMacSystemFont,
+  "Segoe UI",Roboto,sans-serif;line-height:1.6}
+::-webkit-scrollbar{width:6px;height:6px}
+::-webkit-scrollbar-track{background:#111111}
+::-webkit-scrollbar-thumb{background:#444444;border-radius:3px}
+a{color:#6C63FF}
+table tr:hover{background:#1A1A1A55}
+</style>
+</head>
+<body>
+
+<nav style="position:sticky;top:0;z-index:100;background:#0A0A0ACC;
+  backdrop-filter:blur(12px);border-bottom:1px solid #2A2A2A;
+  padding:12px 48px;display:flex;align-items:center;gap:8px;flex-wrap:wrap">
+  <span style="font-weight:800;color:#6C63FF;font-size:15px;margin-right:16px">
+    ToolScout
+  </span>
+  <a href="#how-it-works" style="color:#888888;text-decoration:none;font-size:13px;padding:6px 12px;border-radius:6px;transition:color 0.2s" onmouseover="this.style.color='#F5F5F5'" onmouseout="this.style.color='#888888'">How It Works</a><a href="#matrix" style="color:#888888;text-decoration:none;font-size:13px;padding:6px 12px;border-radius:6px;transition:color 0.2s" onmouseover="this.style.color='#F5F5F5'" onmouseout="this.style.color='#888888'">Opportunity Matrix</a><a href="#results" style="color:#888888;text-decoration:none;font-size:13px;padding:6px 12px;border-radius:6px;transition:color 0.2s" onmouseover="this.style.color='#F5F5F5'" onmouseout="this.style.color='#888888'">All Results</a><a href="#categories" style="color:#888888;text-decoration:none;font-size:13px;padding:6px 12px;border-radius:6px;transition:color 0.2s" onmouseover="this.style.color='#F5F5F5'" onmouseout="this.style.color='#888888'">Categories</a><a href="#auth" style="color:#888888;text-decoration:none;font-size:13px;padding:6px 12px;border-radius:6px;transition:color 0.2s" onmouseover="this.style.color='#F5F5F5'" onmouseout="this.style.color='#888888'">Auth Methods</a><a href="#mcp" style="color:#888888;text-decoration:none;font-size:13px;padding:6px 12px;border-radius:6px;transition:color 0.2s" onmouseover="this.style.color='#F5F5F5'" onmouseout="this.style.color='#888888'">MCP Landscape</a><a href="#misses" style="color:#888888;text-decoration:none;font-size:13px;padding:6px 12px;border-radius:6px;transition:color 0.2s" onmouseover="this.style.color='#F5F5F5'" onmouseout="this.style.color='#888888'">Honest Misses</a><a href="#verification" style="color:#888888;text-decoration:none;font-size:13px;padding:6px 12px;border-radius:6px;transition:color 0.2s" onmouseover="this.style.color='#F5F5F5'" onmouseout="this.style.color='#888888'">Verification</a>
+</nav>
+<main style="max-width:1100px;margin:0 auto;padding:48px 24px">
+
+<div style="background:linear-gradient(135deg,#1A1A1A 0%,#0A0A0A 100%);
+  border:1px solid #2A2A2A;border-radius:16px;padding:48px 36px;margin-bottom:48px">
+  <div style="font-size:13px;color:#6C63FF;font-weight:600;
+    letter-spacing:0.1em;text-transform:uppercase;margin-bottom:12px">
+    ToolScout by Composio
+  </div>
+  <h1 style="font-size:38px;font-weight:800;color:#F5F5F5;margin:0 0 12px;
+    line-height:1.2">100 App Integration Intelligence Report</h1>
+  <p style="color:#888888;font-size:16px;margin:0 0 36px;max-width:600px">
+    Which apps are ready to turn into AI agent tools? ToolScout researched 100 apps
+    across auth, API surface, self-serve access, and MCP availability.
+  </p>
+  <div style="display:flex;flex-wrap:wrap;gap:16px">
+<div style="background:#1A1A1A;border:1px solid #2A2A2A;
+  border-radius:12px;padding:24px 28px;flex:1;min-width:140px">
+  <div style="font-size:32px;font-weight:800;color:#6C63FF;font-variant-numeric:tabular-nums">100</div>
+  <div style="font-size:13px;color:#888888;margin-top:6px">Apps Researched</div>
+</div>
+<div style="background:#1A1A1A;border:1px solid #2A2A2A;
+  border-radius:12px;padding:24px 28px;flex:1;min-width:140px">
+  <div style="font-size:32px;font-weight:800;color:#22C55E;font-variant-numeric:tabular-nums">86</div>
+  <div style="font-size:13px;color:#888888;margin-top:6px">Ready to Build</div>
+</div>
+<div style="background:#1A1A1A;border:1px solid #2A2A2A;
+  border-radius:12px;padding:24px 28px;flex:1;min-width:140px">
+  <div style="font-size:32px;font-weight:800;color:#8B85FF;font-variant-numeric:tabular-nums">1</div>
+  <div style="font-size:13px;color:#888888;margin-top:6px">MCP Servers Found</div>
+</div>
+<div style="background:#1A1A1A;border:1px solid #2A2A2A;
+  border-radius:12px;padding:24px 28px;flex:1;min-width:140px">
+  <div style="font-size:32px;font-weight:800;color:#22C55E;font-variant-numeric:tabular-nums">86</div>
+  <div style="font-size:13px;color:#888888;margin-top:6px">Self-Serve APIs</div>
+</div>
+<div style="background:#1A1A1A;border:1px solid #2A2A2A;
+  border-radius:12px;padding:24px 28px;flex:1;min-width:140px">
+  <div style="font-size:32px;font-weight:800;color:#F59E0B;font-variant-numeric:tabular-nums">88%</div>
+  <div style="font-size:13px;color:#888888;margin-top:6px">Verification Accuracy</div>
+</div></div>
+</div>
+<section id="how-it-works" style="margin:48px 0">
+  <h2 style="font-size:22px;font-weight:700;margin:0 0 20px;color:#F5F5F5;
+     border-left:3px solid #6C63FF;padding-left:12px">How ToolScout Works</h2>
+  <div style="display:flex;gap:16px;flex-wrap:wrap">
+<div style="flex:1;min-width:200px;background:#1A1A1A;border:1px solid #2A2A2A;
+  border-top:3px solid #22C55E;border-radius:8px;padding:20px">
+  <div style="font-size:11px;font-weight:700;color:#22C55E;text-transform:uppercase;
+    letter-spacing:0.1em;margin-bottom:6px">Tier 1</div>
+  <div style="font-size:16px;font-weight:700;color:#F5F5F5;margin-bottom:8px">Composio Native</div>
+  <div style="font-size:13px;color:#888888;line-height:1.6">Is the app already an integration? Instant high-confidence result.</div>
+</div>
+<div style="flex:1;min-width:200px;background:#1A1A1A;border:1px solid #2A2A2A;
+  border-top:3px solid #6C63FF;border-radius:8px;padding:20px">
+  <div style="font-size:11px;font-weight:700;color:#6C63FF;text-transform:uppercase;
+    letter-spacing:0.1em;margin-bottom:6px">Tier 2</div>
+  <div style="font-size:16px;font-weight:700;color:#F5F5F5;margin-bottom:8px">Web Search</div>
+  <div style="font-size:13px;color:#888888;line-height:1.6">Uses Claude + web_search to find API docs, auth method, pricing, MCP.</div>
+</div>
+<div style="flex:1;min-width:200px;background:#1A1A1A;border:1px solid #2A2A2A;
+  border-top:3px solid #F59E0B;border-radius:8px;padding:20px">
+  <div style="font-size:11px;font-weight:700;color:#F59E0B;text-transform:uppercase;
+    letter-spacing:0.1em;margin-bottom:6px">Tier 3</div>
+  <div style="font-size:16px;font-weight:700;color:#F5F5F5;margin-bottom:8px">Deep Fetch</div>
+  <div style="font-size:13px;color:#888888;line-height:1.6">Triggered on low/medium confidence. Re-researches with verification prompt.</div>
+</div></div>
+</section>
+
+<section id="matrix" style="margin:48px 0">
+  <h2 style="font-size:22px;font-weight:700;margin:0 0 20px;color:#F5F5F5;
+     border-left:3px solid #6C63FF;padding-left:12px">Opportunity Matrix</h2>
+  
+<p style="color:#888888;font-size:14px;margin:0 0 20px">
+  Each dot is one app. X-axis = API breadth (narrow → broad).
+  Y-axis = access model (gated vs self-serve). Dot size = opportunity score.
+  Color = buildability.
+</p><svg viewBox="0 0 480 340" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:480px;background:#1A1A1A;border-radius:8px;border:1px solid #2A2A2A"><line x1="240.0" y1="48" x2="240.0" y2="292" stroke="#444444" stroke-width="1" stroke-dasharray="4,4"/><line x1="48" y1="170.0" x2="432" y2="170.0" stroke="#444444" stroke-width="1" stroke-dasharray="4,4"/><text x="48" y="334" fill="#888888" font-size="10" font-family="monospace">narrow</text><text x="402" y="334" fill="#888888" font-size="10" font-family="monospace">broad</text><text x="4" y="292" fill="#888888" font-size="10" font-family="monospace" text-anchor="start">gated</text><text x="4" y="60" fill="#888888" font-size="10" font-family="monospace" text-anchor="start">self-serve</text><circle cx="296.1" cy="227.8" r="7.6" fill="#F59E0B" fill-opacity="0.8" stroke="#2A2A2A" stroke-width="1"><title>Ahrefs | score=3 | needs_outreach</title></circle><circle cx="370.2" cy="112.2" r="8.8" fill="#22C55E" fill-opacity="0.8" stroke="#2A2A2A" stroke-width="1"><title>Aircall | score=4 | ready</title></circle><circle cx="378.2" cy="108.3" r="8.8" fill="#22C55E" fill-opacity="0.8" stroke="#2A2A2A" stroke-width="1"><title>Airtable | score=4 | ready</title></circle><circle cx="375.9" cy="107.8" r="8.8" fill="#22C55E" fill-opacity="0.8" stroke="#2A2A2A" stroke-width="1"><title>Amazon Selling Partner | score=4 | ready</title></circle><circle cx="379.8" cy="108.0" r="8.8" fill="#22C55E" fill-opacity="0.8" stroke="#2A2A2A" stroke-width="1"><title>Apify | score=4 | ready</title></circle><circle cx="373.6" cy="105.6" r="8.8" fill="#22C55E" fill-opacity="0.8" stroke="#2A2A2A" stroke-width="1"><title>Asana | score=4 | ready</title></circle><circle cx="377.1" cy="107.0" r="8.8" fill="#22C55E" fill-opacity="0.8" stroke="#2A2A2A" stroke-width="1"><title>Attio | score=4 | ready</title></circle><circle cx="373.2" cy="111.2" r="8.8" fill="#22C55E" fill-opacity="0.8" stroke="#2A2A2A" stroke-width="1"><title>BigCommerce | score=4 | ready</title></circle><circle cx="377.5" cy="109.5" r="8.8" fill="#22C55E" fill-opacity="0.8" stroke="#2A2A2A" stroke-width="1"><title>Binance | score=4 | ready</title></circle><circle cx="381.3" cy="107.3" r="8.8" fill="#22C55E" fill-opacity="0.8" stroke="#2A2A2A" stroke-width="1"><title>Brex | score=4 | ready</title></circle><circle cx="370.2" cy="104.9" r="8.8" fill="#22C55E" fill-opacity="0.8" stroke="#2A2A2A" stroke-width="1"><title>Bright Data | score=4 | ready</title></circle><circle cx="292.2" cy="104.4" r="8.8" fill="#22C55E" fill-opacity="0.8" stroke="#2A2A2A" stroke-width="1"><title>Clay | score=4 | ready</title></circle><circle cx="377.1" cy="113.6" r="8.8" fill="#22C55E" fill-opacity="0.8" stroke="#2A2A2A" stroke-width="1"><title>ClickUp | score=4 | ready</title></circle><circle cx="376.7" cy="105.3" r="8.8" fill="#22C55E" fill-opacity="0.8" stroke="#2A2A2A" stroke-width="1"><title>Close | score=4 | ready</title></circle><circle cx="372.5" cy="113.1" r="8.8" fill="#22C55E" fill-opacity="0.8" stroke="#2A2A2A" stroke-width="1"><title>Cloudflare | score=4 | ready</title></circle><circle cx="290.7" cy="111.0" r="7.6" fill="#22C55E" fill-opacity="0.8" stroke="#2A2A2A" stroke-width="1"><title>Coda | score=3 | ready</title></circle><circle cx="181.6" cy="104.6" r="7.6" fill="#22C55E" fill-opacity="0.8" stroke="#2A2A2A" stroke-width="1"><title>Consensus | score=3 | ready</title></circle><circle cx="379.4" cy="111.7" r="8.8" fill="#22C55E" fill-opacity="0.8" stroke="#2A2A2A" stroke-width="1"><title>Copper | score=4 | ready</title></circle><circle cx="381.7" cy="111.4" r="8.8" fill="#22C55E" fill-opacity="0.8" stroke="#2A2A2A" stroke-width="1"><title>DataForSEO | score=4 | ready</title></circle><circle cx="367.9" cy="111.9" r="8.8" fill="#22C55E" fill-opacity="0.8" stroke="#2A2A2A" stroke-width="1"><title>Datadog | score=4 | ready</title></circle><circle cx="300.3" cy="229.3" r="6.4" fill="#F59E0B" fill-opacity="0.8" stroke="#2A2A2A" stroke-width="1"><title>DealCloud | score=2 | needs_outreach</title></circle><circle cx="367.5" cy="113.6" r="8.8" fill="#22C55E" fill-opacity="0.8" stroke="#2A2A2A" stroke-width="1"><title>Devin | score=4 | ready</title></circle><circle cx="374.4" cy="104.9" r="8.8" fill="#22C55E" fill-opacity="0.8" stroke="#2A2A2A" stroke-width="1"><title>Discord | score=4 | ready</title></circle><circle cx="374.4" cy="109.2" r="7.6" fill="#22C55E" fill-opacity="0.8" stroke="#2A2A2A" stroke-width="1"><title>Ecwid | score=3 | ready</title></circle><circle cx="105.2" cy="232.0" r="5.2" fill="#EF4444" fill-opacity="0.8" stroke="#2A2A2A" stroke-width="1"><title>Fathom | score=1 | not_buildable</title></circle><circle cx="368.3" cy="104.4" r="8.8" fill="#22C55E" fill-opacity="0.8" stroke="#2A2A2A" stroke-width="1"><title>Firecrawl | score=4 | ready</title></circle><circle cx="377.1" cy="108.8" r="8.8" fill="#22C55E" fill-opacity="0.8" stroke="#2A2A2A" stroke-width="1"><title>Freshdesk | score=4 | ready</title></circle><circle cx="374.8" cy="112.9" r="8.8" fill="#22C55E" fill-opacity="0.8" stroke="#2A2A2A" stroke-width="1"><title>Front | score=4 | ready</title></circle><circle cx="381.7" cy="105.6" r="8.8" fill="#22C55E" fill-opacity="0.8" stroke="#2A2A2A" stroke-width="1"><title>GitHub | score=4 | ready</title></circle><circle cx="302.2" cy="232.2" r="6.4" fill="#F59E0B" fill-opacity="0.8" stroke="#2A2A2A" stroke-width="1"><title>Gladly | score=2 | needs_outreach</title></circle><circle cx="381.7" cy="111.4" r="8.8" fill="#22C55E" fill-opacity="0.8" stroke="#2A2A2A" stroke-width="1"><title>GoHighLevel | score=4 | ready</title></circle><circle cx="370.9" cy="106.3" r="8.8" fill="#22C55E" fill-opacity="0.8" stroke="#2A2A2A" stroke-width="1"><title>Google Ads | score=4 | ready</title></circle><circle cx="370.9" cy="111.9" r="8.8" fill="#22C55E" fill-opacity="0.8" stroke="#2A2A2A" stroke-width="1"><title>Gorgias | score=4 | ready</title></circle><circle cx="189.7" cy="235.1" r="6.4" fill="#F59E0B" fill-opacity="0.8" stroke="#2A2A2A" stroke-width="1"><title>Grain | score=2 | needs_outreach</title></circle><circle cx="296.1" cy="110.0" r="7.6" fill="#22C55E" fill-opacity="0.8" stroke="#2A2A2A" stroke-width="1"><title>Gumroad | score=3 | ready</title></circle><circle cx="367.1" cy="108.8" r="8.8" fill="#22C55E" fill-opacity="0.8" stroke="#2A2A2A" stroke-width="1"><title>Harvest | score=4 | ready</title></circle><circle cx="379.8" cy="112.9" r="8.8" fill="#22C55E" fill-opacity="0.8" stroke="#2A2A2A" stroke-width="1"><title>Help Scout | score=4 | ready</title></circle><circle cx="377.1" cy="108.5" r="8.8" fill="#22C55E" fill-opacity="0.8" stroke="#2A2A2A" stroke-width="1"><title>HubSpot | score=4 | ready</title></circle><circle cx="370.9" cy="108.3" r="8.8" fill="#22C55E" fill-opacity="0.8" stroke="#2A2A2A" stroke-width="1"><title>Intercom | score=4 | ready</title></circle><circle cx="366.7" cy="113.1" r="8.8" fill="#22C55E" fill-opacity="0.8" stroke="#2A2A2A" stroke-width="1"><title>Jira | score=4 | ready</title></circle><circle cx="372.5" cy="111.9" r="8.8" fill="#22C55E" fill-opacity="0.8" stroke="#2A2A2A" stroke-width="1"><title>Klaviyo | score=4 | ready</title></circle><circle cx="375.9" cy="111.0" r="7.6" fill="#22C55E" fill-opacity="0.8" stroke="#2A2A2A" stroke-width="1"><title>Lark | score=3 | ready</title></circle><circle cx="369.8" cy="112.9" r="8.8" fill="#22C55E" fill-opacity="0.8" stroke="#2A2A2A" stroke-width="1"><title>Linear | score=4 | ready</title></circle><circle cx="381.7" cy="112.4" r="8.8" fill="#22C55E" fill-opacity="0.8" stroke="#2A2A2A" stroke-width="1"><title>LinkedIn Ads | score=4 | ready</title></circle><circle cx="376.7" cy="111.0" r="7.6" fill="#22C55E" fill-opacity="0.8" stroke="#2A2A2A" stroke-width="1"><title>LiveAgent | score=3 | ready</title></circle><circle cx="369.4" cy="109.5" r="7.6" fill="#22C55E" fill-opacity="0.8" stroke="#2A2A2A" stroke-width="1"><title>Magento | score=3 | ready</title></circle><circle cx="371.3" cy="108.0" r="8.8" fill="#22C55E" fill-opacity="0.8" stroke="#2A2A2A" stroke-width="1"><title>Mailchimp | score=4 | ready</title></circle><circle cx="104.8" cy="233.2" r="5.2" fill="#6C63FF" fill-opacity="0.8" stroke="#2A2A2A" stroke-width="1"><title>Mermaid CLI | score=1 | non_standard</title></circle><circle cx="375.9" cy="108.3" r="8.8" fill="#22C55E" fill-opacity="0.8" stroke="#2A2A2A" stroke-width="1"><title>Meta Ads | score=4 | ready</title></circle><circle cx="375.6" cy="108.3" r="8.8" fill="#22C55E" fill-opacity="0.8" stroke="#2A2A2A" stroke-width="1"><title>Monday.com | score=4 | ready</title></circle><circle cx="367.1" cy="105.3" r="8.8" fill="#22C55E" fill-opacity="0.8" stroke="#2A2A2A" stroke-width="1"><title>MongoDB Atlas | score=4 | ready</title></circle><circle cx="290.7" cy="107.3" r="7.6" fill="#22C55E" fill-opacity="0.8" stroke="#2A2A2A" stroke-width="1"><title>MrScraper | score=3 | ready</title></circle><circle cx="369.0" cy="107.5" r="8.8" fill="#22C55E" fill-opacity="0.8" stroke="#2A2A2A" stroke-width="1"><title>Neo4j | score=4 | ready</title></circle><circle cx="381.3" cy="111.2" r="8.8" fill="#22C55E" fill-opacity="0.8" stroke="#2A2A2A" stroke-width="1"><title>Netlify | score=4 | ready</title></circle><circle cx="110.2" cy="228.3" r="5.2" fill="#EF4444" fill-opacity="0.8" stroke="#2A2A2A" stroke-width="1"><title>NotebookLM | score=1 | not_buildable</title></circle><circle cx="372.5" cy="109.7" r="8.8" fill="#22C55E" fill-opacity="0.8" stroke="#2A2A2A" stroke-width="1"><title>Notion | score=4 | ready</title></circle><circle cx="103.7" cy="230.0" r="5.2" fill="#EF4444" fill-opacity="0.8" stroke="#2A2A2A" stroke-width="1"><title>Otter AI | score=1 | not_buildable</title></circle><circle cx="177.0" cy="227.8" r="6.4" fill="#F59E0B" fill-opacity="0.8" stroke="#2A2A2A" stroke-width="1"><title>Paygent Connect | score=2 | needs_outreach</title></circle><circle cx="372.9" cy="109.0" r="8.8" fill="#22C55E" fill-opacity="0.8" stroke="#2A2A2A" stroke-width="1"><title>Pinterest | score=4 | ready</title></circle><circle cx="373.2" cy="106.8" r="8.8" fill="#22C55E" fill-opacity="0.8" stroke="#2A2A2A" stroke-width="1"><title>Pipedrive | score=4 | ready</title></circle><circle cx="381.7" cy="229.5" r="7.6" fill="#F59E0B" fill-opacity="0.8" stroke="#2A2A2A" stroke-width="1"><title>PitchBook | score=3 | needs_outreach</title></circle><circle cx="375.2" cy="109.0" r="8.8" fill="#22C55E" fill-opacity="0.8" stroke="#2A2A2A" stroke-width="1"><title>Plaid | score=4 | ready</title></circle><circle cx="302.2" cy="111.2" r="7.6" fill="#22C55E" fill-opacity="0.8" stroke="#2A2A2A" stroke-width="1"><title>Plain | score=3 | ready</title></circle><circle cx="380.5" cy="108.8" r="8.8" fill="#22C55E" fill-opacity="0.8" stroke="#2A2A2A" stroke-width="1"><title>Podio | score=4 | ready</title></circle><circle cx="294.9" cy="110.0" r="6.4" fill="#22C55E" fill-opacity="0.8" stroke="#2A2A2A" stroke-width="1"><title>Pumble | score=2 | ready</title></circle><circle cx="298.8" cy="105.8" r="7.6" fill="#22C55E" fill-opacity="0.8" stroke="#2A2A2A" stroke-width="1"><title>Pylon | score=3 | ready</title></circle><circle cx="371.7" cy="110.7" r="8.8" fill="#22C55E" fill-opacity="0.8" stroke="#2A2A2A" stroke-width="1"><title>QuickBooks | score=4 | ready</title></circle><circle cx="377.5" cy="108.3" r="8.8" fill="#22C55E" fill-opacity="0.8" stroke="#2A2A2A" stroke-width="1"><title>Ramp | score=4 | ready</title></circle><circle cx="293.8" cy="112.7" r="8.8" fill="#22C55E" fill-opacity="0.8" stroke="#2A2A2A" stroke-width="1"><title>Reducto | score=4 | ready</title></circle><circle cx="293.8" cy="108.8" r="7.6" fill="#22C55E" fill-opacity="0.8" stroke="#2A2A2A" stroke-width="1"><title>SE Ranking | score=3 | ready</title></circle><circle cx="371.7" cy="105.1" r="8.8" fill="#22C55E" fill-opacity="0.8" stroke="#2A2A2A" stroke-width="1"><title>Salesforce | score=4 | ready</title></circle><circle cx="378.2" cy="113.6" r="8.8" fill="#22C55E" fill-opacity="0.8" stroke="#2A2A2A" stroke-width="1"><title>Salesforce Commerce Cloud | score=4 | ready</title></circle><circle cx="377.9" cy="109.7" r="8.8" fill="#22C55E" fill-opacity="0.8" stroke="#2A2A2A" stroke-width="1"><title>SendGrid | score=4 | ready</title></circle><circle cx="375.9" cy="109.2" r="8.8" fill="#22C55E" fill-opacity="0.8" stroke="#2A2A2A" stroke-width="1"><title>Sentry | score=4 | ready</title></circle><circle cx="108.3" cy="232.7" r="5.2" fill="#6C63FF" fill-opacity="0.8" stroke="#2A2A2A" stroke-width="1"><title>Sherlock | score=1 | non_standard</title></circle><circle cx="370.2" cy="107.8" r="8.8" fill="#22C55E" fill-opacity="0.8" stroke="#2A2A2A" stroke-width="1"><title>Shopify | score=4 | ready</title></circle><circle cx="376.3" cy="108.8" r="8.8" fill="#22C55E" fill-opacity="0.8" stroke="#2A2A2A" stroke-width="1"><title>Slack | score=4 | ready</title></circle><circle cx="370.9" cy="110.0" r="7.6" fill="#22C55E" fill-opacity="0.8" stroke="#2A2A2A" stroke-width="1"><title>Smartsheet | score=3 | ready</title></circle><circle cx="379.4" cy="113.4" r="8.8" fill="#22C55E" fill-opacity="0.8" stroke="#2A2A2A" stroke-width="1"><title>Snowflake | score=4 | ready</title></circle><circle cx="374.4" cy="108.0" r="8.8" fill="#22C55E" fill-opacity="0.8" stroke="#2A2A2A" stroke-width="1"><title>Squarespace | score=4 | ready</title></circle><circle cx="371.7" cy="113.6" r="8.8" fill="#22C55E" fill-opacity="0.8" stroke="#2A2A2A" stroke-width="1"><title>Stripe | score=4 | ready</title></circle><circle cx="369.4" cy="113.9" r="8.8" fill="#22C55E" fill-opacity="0.8" stroke="#2A2A2A" stroke-width="1"><title>Supabase | score=4 | ready</title></circle><circle cx="380.9" cy="112.4" r="8.8" fill="#22C55E" fill-opacity="0.8" stroke="#2A2A2A" stroke-width="1"><title>Telegram | score=4 | ready</title></circle><circle cx="189.7" cy="108.3" r="7.6" fill="#22C55E" fill-opacity="0.8" stroke="#2A2A2A" stroke-width="1"><title>Threads | score=3 | ready</title></circle><circle cx="290.7" cy="112.2" r="7.6" fill="#22C55E" fill-opacity="0.8" stroke="#2A2A2A" stroke-width="1"><title>Twenty | score=3 | ready</title></circle><circle cx="369.4" cy="113.4" r="8.8" fill="#22C55E" fill-opacity="0.8" stroke="#2A2A2A" stroke-width="1"><title>Twilio | score=4 | ready</title></circle><circle cx="375.6" cy="111.9" r="8.8" fill="#22C55E" fill-opacity="0.8" stroke="#2A2A2A" stroke-width="1"><title>Vercel | score=4 | ready</title></circle><circle cx="372.5" cy="106.3" r="7.6" fill="#22C55E" fill-opacity="0.8" stroke="#2A2A2A" stroke-width="1"><title>Vonage | score=3 | ready</title></circle><circle cx="175.5" cy="105.1" r="7.6" fill="#22C55E" fill-opacity="0.8" stroke="#2A2A2A" stroke-width="1"><title>Waterfall.io | score=3 | ready</title></circle><circle cx="377.1" cy="112.2" r="8.8" fill="#22C55E" fill-opacity="0.8" stroke="#2A2A2A" stroke-width="1"><title>WhatsApp Business | score=4 | ready</title></circle><circle cx="374.4" cy="111.7" r="8.8" fill="#22C55E" fill-opacity="0.8" stroke="#2A2A2A" stroke-width="1"><title>WooCommerce | score=4 | ready</title></circle><circle cx="371.3" cy="104.9" r="8.8" fill="#22C55E" fill-opacity="0.8" stroke="#2A2A2A" stroke-width="1"><title>Xero | score=4 | ready</title></circle><circle cx="183.9" cy="113.1" r="7.6" fill="#22C55E" fill-opacity="0.8" stroke="#2A2A2A" stroke-width="1"><title>YouTube Transcript | score=3 | ready</title></circle><circle cx="373.2" cy="106.1" r="8.8" fill="#22C55E" fill-opacity="0.8" stroke="#2A2A2A" stroke-width="1"><title>Zendesk | score=4 | ready</title></circle><circle cx="381.3" cy="110.0" r="8.8" fill="#22C55E" fill-opacity="0.8" stroke="#2A2A2A" stroke-width="1"><title>Zoho CRM | score=4 | ready</title></circle><circle cx="293.0" cy="109.7" r="6.4" fill="#22C55E" fill-opacity="0.8" stroke="#2A2A2A" stroke-width="1"><title>Zoho Cliq | score=2 | ready</title></circle><circle cx="105.6" cy="227.8" r="5.2" fill="#EF4444" fill-opacity="0.8" stroke="#2A2A2A" stroke-width="1"><title>fanbasis | score=1 | not_buildable</title></circle><circle cx="187.4" cy="235.9" r="6.4" fill="#6C63FF" fill-opacity="0.8" stroke="#2A2A2A" stroke-width="1"><title>higgsfield | score=2 | non_standard</title></circle><circle cx="181.6" cy="230.5" r="6.4" fill="#F59E0B" fill-opacity="0.8" stroke="#2A2A2A" stroke-width="1"><title>iPayX | score=2 | needs_outreach</title></circle><circle cx="294.1" cy="104.4" r="6.4" fill="#22C55E" fill-opacity="0.8" stroke="#2A2A2A" stroke-width="1"><title>systeme.io | score=2 | ready</title></circle><circle cx="54" cy="322" r="5" fill="#22C55E"/><text x="62" y="326" fill="#888888" font-size="10" font-family="monospace">ready</text><circle cx="164" cy="322" r="5" fill="#F59E0B"/><text x="172" y="326" fill="#888888" font-size="10" font-family="monospace">needs_outreach</text><circle cx="274" cy="322" r="5" fill="#EF4444"/><text x="282" y="326" fill="#888888" font-size="10" font-family="monospace">not_buildable</text><circle cx="384" cy="322" r="5" fill="#6C63FF"/><text x="392" y="326" fill="#888888" font-size="10" font-family="monospace">non_standard</text></svg>
+</section>
+
+<section id="results" style="margin:48px 0">
+  <h2 style="font-size:22px;font-weight:700;margin:0 0 20px;color:#F5F5F5;
+     border-left:3px solid #6C63FF;padding-left:12px">All Results</h2>
+  
+<script>
+function filterTable(val) {
+  const q = val.toLowerCase();
+  document.querySelectorAll('#results-table tbody tr').forEach(row => {
+    row.style.display = row.textContent.toLowerCase().includes(q) ? '' : 'none';
+  });
+}
+function filterBuild(val) {
+  document.querySelectorAll('#results-table tbody tr').forEach(row => {
+    if (!val) { row.style.display = ''; return; }
+    row.style.display = row.children[2].textContent.trim().includes(val) ? '' : 'none';
+  });
+}
+</script>
+
+<div style="display:flex;gap:12px;margin-bottom:16px;flex-wrap:wrap">
+  <input type="text" placeholder="Filter apps…" oninput="filterTable(this.value)"
+    style="background:#1A1A1A;border:1px solid #2A2A2A;color:#F5F5F5;
+    padding:8px 12px;border-radius:6px;font-size:13px;width:220px;outline:none"/>
+  <select onchange="filterBuild(this.value)"
+    style="background:#1A1A1A;border:1px solid #2A2A2A;color:#F5F5F5;
+    padding:8px 12px;border-radius:6px;font-size:13px;cursor:pointer;outline:none">
+    <option value="">All buildability</option>
+    <option value="ready">Ready</option>
+    <option value="needs_outreach">Needs Outreach</option>
+    <option value="not_buildable">Not Buildable</option>
+    <option value="non_standard">Non-Standard</option>
+  </select>
+</div>
+<div style="overflow-x:auto">
+<table id="results-table" style="width:100%;border-collapse:collapse;font-size:13px">
+  
+<thead>
+  <tr>
+    <th style="padding:10px 12px;color:#888888;font-size:11px;text-transform:uppercase;letter-spacing:0.08em;text-align:left;border-bottom:1px solid #2A2A2A">App</th>
+    <th style="padding:10px 12px;color:#888888;font-size:11px;text-transform:uppercase;letter-spacing:0.08em;text-align:left;border-bottom:1px solid #2A2A2A">Category</th>
+    <th style="padding:10px 12px;color:#888888;font-size:11px;text-transform:uppercase;letter-spacing:0.08em;text-align:left;border-bottom:1px solid #2A2A2A">Buildability</th>
+    <th style="padding:10px 12px;color:#888888;font-size:11px;text-transform:uppercase;letter-spacing:0.08em;text-align:left;border-bottom:1px solid #2A2A2A">Score</th>
+    <th style="padding:10px 12px;color:#888888;font-size:11px;text-transform:uppercase;letter-spacing:0.08em;text-align:left;border-bottom:1px solid #2A2A2A">Auth</th>
+    <th style="padding:10px 12px;color:#888888;font-size:11px;text-transform:uppercase;letter-spacing:0.08em;text-align:left;border-bottom:1px solid #2A2A2A">MCP</th>
+    <th style="padding:10px 12px;color:#888888;font-size:11px;text-transform:uppercase;letter-spacing:0.08em;text-align:left;border-bottom:1px solid #2A2A2A">Confidence</th>
+    <th style="padding:10px 12px;color:#888888;font-size:11px;text-transform:uppercase;letter-spacing:0.08em;text-align:left;border-bottom:1px solid #2A2A2A">Docs</th>
+  </tr>
+</thead>
+  <tbody>
+<tr style="border-bottom:1px solid #2A2A2A">
+  <td style="padding:10px 12px;font-weight:600;color:#F5F5F5">Aircall</td>
+  <td style="padding:10px 12px;color:#888888;font-size:12px">Communications and Messaging</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">ready</span></td>
+  <td style="padding:10px 12px;color:#22C55E;font-weight:700;font-size:18px">4</td>
+  <td style="padding:10px 12px;color:#F5F5F5;font-size:12px">OAuth2</td>
+  <td style="padding:10px 12px;color:#6C63FF;font-size:14px">–</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">high</span></td>
+  <td style="padding:10px 12px">
+    <a href="https://app.composio.dev/apps" target="_blank" rel="noopener"
+       style="color:#6C63FF;font-size:11px;text-decoration:none">docs ↗</a>
+  </td>
+</tr>
+<tr style="border-bottom:1px solid #2A2A2A">
+  <td style="padding:10px 12px;font-weight:600;color:#F5F5F5">Airtable</td>
+  <td style="padding:10px 12px;color:#888888;font-size:12px">Productivity and Project Management</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">ready</span></td>
+  <td style="padding:10px 12px;color:#22C55E;font-weight:700;font-size:18px">4</td>
+  <td style="padding:10px 12px;color:#F5F5F5;font-size:12px">OAuth2</td>
+  <td style="padding:10px 12px;color:#6C63FF;font-size:14px">–</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">high</span></td>
+  <td style="padding:10px 12px">
+    <a href="https://app.composio.dev/apps" target="_blank" rel="noopener"
+       style="color:#6C63FF;font-size:11px;text-decoration:none">docs ↗</a>
+  </td>
+</tr>
+<tr style="border-bottom:1px solid #2A2A2A">
+  <td style="padding:10px 12px;font-weight:600;color:#F5F5F5">Amazon Selling Partner</td>
+  <td style="padding:10px 12px;color:#888888;font-size:12px">Ecommerce</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">ready</span></td>
+  <td style="padding:10px 12px;color:#22C55E;font-weight:700;font-size:18px">4</td>
+  <td style="padding:10px 12px;color:#F5F5F5;font-size:12px">OAuth2</td>
+  <td style="padding:10px 12px;color:#6C63FF;font-size:14px">–</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">high</span></td>
+  <td style="padding:10px 12px">
+    <a href="https://developer-docs.amazon.com/sp-api/docs/what-is-the-selling-partner-api" target="_blank" rel="noopener"
+       style="color:#6C63FF;font-size:11px;text-decoration:none">docs ↗</a>
+  </td>
+</tr>
+<tr style="border-bottom:1px solid #2A2A2A">
+  <td style="padding:10px 12px;font-weight:600;color:#F5F5F5">Apify</td>
+  <td style="padding:10px 12px;color:#888888;font-size:12px">Data SEO and Scraping</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">ready</span></td>
+  <td style="padding:10px 12px;color:#22C55E;font-weight:700;font-size:18px">4</td>
+  <td style="padding:10px 12px;color:#F5F5F5;font-size:12px">OAuth2</td>
+  <td style="padding:10px 12px;color:#6C63FF;font-size:14px">–</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">high</span></td>
+  <td style="padding:10px 12px">
+    <a href="https://app.composio.dev/apps" target="_blank" rel="noopener"
+       style="color:#6C63FF;font-size:11px;text-decoration:none">docs ↗</a>
+  </td>
+</tr>
+<tr style="border-bottom:1px solid #2A2A2A">
+  <td style="padding:10px 12px;font-weight:600;color:#F5F5F5">Asana</td>
+  <td style="padding:10px 12px;color:#888888;font-size:12px">Productivity and Project Management</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">ready</span></td>
+  <td style="padding:10px 12px;color:#22C55E;font-weight:700;font-size:18px">4</td>
+  <td style="padding:10px 12px;color:#F5F5F5;font-size:12px">OAuth2</td>
+  <td style="padding:10px 12px;color:#6C63FF;font-size:14px">–</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">high</span></td>
+  <td style="padding:10px 12px">
+    <a href="https://app.composio.dev/apps" target="_blank" rel="noopener"
+       style="color:#6C63FF;font-size:11px;text-decoration:none">docs ↗</a>
+  </td>
+</tr>
+<tr style="border-bottom:1px solid #2A2A2A">
+  <td style="padding:10px 12px;font-weight:600;color:#F5F5F5">Attio</td>
+  <td style="padding:10px 12px;color:#888888;font-size:12px">CRM and Sales</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">ready</span></td>
+  <td style="padding:10px 12px;color:#22C55E;font-weight:700;font-size:18px">4</td>
+  <td style="padding:10px 12px;color:#F5F5F5;font-size:12px">OAuth2</td>
+  <td style="padding:10px 12px;color:#6C63FF;font-size:14px">–</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">high</span></td>
+  <td style="padding:10px 12px">
+    <a href="https://app.composio.dev/apps" target="_blank" rel="noopener"
+       style="color:#6C63FF;font-size:11px;text-decoration:none">docs ↗</a>
+  </td>
+</tr>
+<tr style="border-bottom:1px solid #2A2A2A">
+  <td style="padding:10px 12px;font-weight:600;color:#F5F5F5">BigCommerce</td>
+  <td style="padding:10px 12px;color:#888888;font-size:12px">Ecommerce</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">ready</span></td>
+  <td style="padding:10px 12px;color:#22C55E;font-weight:700;font-size:18px">4</td>
+  <td style="padding:10px 12px;color:#F5F5F5;font-size:12px">OAuth2, API Key</td>
+  <td style="padding:10px 12px;color:#6C63FF;font-size:14px">–</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">high</span></td>
+  <td style="padding:10px 12px">
+    <a href="https://developer.bigcommerce.com/docs/rest-management" target="_blank" rel="noopener"
+       style="color:#6C63FF;font-size:11px;text-decoration:none">docs ↗</a>
+  </td>
+</tr>
+<tr style="border-bottom:1px solid #2A2A2A">
+  <td style="padding:10px 12px;font-weight:600;color:#F5F5F5">Binance</td>
+  <td style="padding:10px 12px;color:#888888;font-size:12px">Finance and Fintech</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">ready</span></td>
+  <td style="padding:10px 12px;color:#22C55E;font-weight:700;font-size:18px">4</td>
+  <td style="padding:10px 12px;color:#F5F5F5;font-size:12px">API Key</td>
+  <td style="padding:10px 12px;color:#6C63FF;font-size:14px">–</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">high</span></td>
+  <td style="padding:10px 12px">
+    <a href="https://binance-docs.github.io/apidocs/spot/en/" target="_blank" rel="noopener"
+       style="color:#6C63FF;font-size:11px;text-decoration:none">docs ↗</a>
+  </td>
+</tr>
+<tr style="border-bottom:1px solid #2A2A2A">
+  <td style="padding:10px 12px;font-weight:600;color:#F5F5F5">Brex</td>
+  <td style="padding:10px 12px;color:#888888;font-size:12px">Finance and Fintech</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">ready</span></td>
+  <td style="padding:10px 12px;color:#22C55E;font-weight:700;font-size:18px">4</td>
+  <td style="padding:10px 12px;color:#F5F5F5;font-size:12px">OAuth2</td>
+  <td style="padding:10px 12px;color:#6C63FF;font-size:14px">–</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">high</span></td>
+  <td style="padding:10px 12px">
+    <a href="https://app.composio.dev/apps" target="_blank" rel="noopener"
+       style="color:#6C63FF;font-size:11px;text-decoration:none">docs ↗</a>
+  </td>
+</tr>
+<tr style="border-bottom:1px solid #2A2A2A">
+  <td style="padding:10px 12px;font-weight:600;color:#F5F5F5">Bright Data</td>
+  <td style="padding:10px 12px;color:#888888;font-size:12px">Data SEO and Scraping</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">ready</span></td>
+  <td style="padding:10px 12px;color:#22C55E;font-weight:700;font-size:18px">4</td>
+  <td style="padding:10px 12px;color:#F5F5F5;font-size:12px">OAuth2</td>
+  <td style="padding:10px 12px;color:#6C63FF;font-size:14px">–</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">high</span></td>
+  <td style="padding:10px 12px">
+    <a href="https://app.composio.dev/apps" target="_blank" rel="noopener"
+       style="color:#6C63FF;font-size:11px;text-decoration:none">docs ↗</a>
+  </td>
+</tr>
+<tr style="border-bottom:1px solid #2A2A2A">
+  <td style="padding:10px 12px;font-weight:600;color:#F5F5F5">Clay</td>
+  <td style="padding:10px 12px;color:#888888;font-size:12px">Data SEO and Scraping</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">ready</span></td>
+  <td style="padding:10px 12px;color:#22C55E;font-weight:700;font-size:18px">4</td>
+  <td style="padding:10px 12px;color:#F5F5F5;font-size:12px">API Key</td>
+  <td style="padding:10px 12px;color:#6C63FF;font-size:14px">–</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">high</span></td>
+  <td style="padding:10px 12px">
+    <a href="https://docs.clay.com/api-reference/introduction" target="_blank" rel="noopener"
+       style="color:#6C63FF;font-size:11px;text-decoration:none">docs ↗</a>
+  </td>
+</tr>
+<tr style="border-bottom:1px solid #2A2A2A">
+  <td style="padding:10px 12px;font-weight:600;color:#F5F5F5">ClickUp</td>
+  <td style="padding:10px 12px;color:#888888;font-size:12px">Productivity and Project Management</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">ready</span></td>
+  <td style="padding:10px 12px;color:#22C55E;font-weight:700;font-size:18px">4</td>
+  <td style="padding:10px 12px;color:#F5F5F5;font-size:12px">OAuth2</td>
+  <td style="padding:10px 12px;color:#6C63FF;font-size:14px">–</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">high</span></td>
+  <td style="padding:10px 12px">
+    <a href="https://app.composio.dev/apps" target="_blank" rel="noopener"
+       style="color:#6C63FF;font-size:11px;text-decoration:none">docs ↗</a>
+  </td>
+</tr>
+<tr style="border-bottom:1px solid #2A2A2A">
+  <td style="padding:10px 12px;font-weight:600;color:#F5F5F5">Close</td>
+  <td style="padding:10px 12px;color:#888888;font-size:12px">CRM and Sales</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">ready</span></td>
+  <td style="padding:10px 12px;color:#22C55E;font-weight:700;font-size:18px">4</td>
+  <td style="padding:10px 12px;color:#F5F5F5;font-size:12px">OAuth2</td>
+  <td style="padding:10px 12px;color:#6C63FF;font-size:14px">–</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">high</span></td>
+  <td style="padding:10px 12px">
+    <a href="https://app.composio.dev/apps" target="_blank" rel="noopener"
+       style="color:#6C63FF;font-size:11px;text-decoration:none">docs ↗</a>
+  </td>
+</tr>
+<tr style="border-bottom:1px solid #2A2A2A">
+  <td style="padding:10px 12px;font-weight:600;color:#F5F5F5">Cloudflare</td>
+  <td style="padding:10px 12px;color:#888888;font-size:12px">Developer Infra and Data</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">ready</span></td>
+  <td style="padding:10px 12px;color:#22C55E;font-weight:700;font-size:18px">4</td>
+  <td style="padding:10px 12px;color:#F5F5F5;font-size:12px">OAuth2</td>
+  <td style="padding:10px 12px;color:#6C63FF;font-size:14px">–</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">high</span></td>
+  <td style="padding:10px 12px">
+    <a href="https://app.composio.dev/apps" target="_blank" rel="noopener"
+       style="color:#6C63FF;font-size:11px;text-decoration:none">docs ↗</a>
+  </td>
+</tr>
+<tr style="border-bottom:1px solid #2A2A2A">
+  <td style="padding:10px 12px;font-weight:600;color:#F5F5F5">Copper</td>
+  <td style="padding:10px 12px;color:#888888;font-size:12px">CRM and Sales</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">ready</span></td>
+  <td style="padding:10px 12px;color:#22C55E;font-weight:700;font-size:18px">4</td>
+  <td style="padding:10px 12px;color:#F5F5F5;font-size:12px">OAuth2</td>
+  <td style="padding:10px 12px;color:#6C63FF;font-size:14px">–</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">high</span></td>
+  <td style="padding:10px 12px">
+    <a href="https://app.composio.dev/apps" target="_blank" rel="noopener"
+       style="color:#6C63FF;font-size:11px;text-decoration:none">docs ↗</a>
+  </td>
+</tr>
+<tr style="border-bottom:1px solid #2A2A2A">
+  <td style="padding:10px 12px;font-weight:600;color:#F5F5F5">DataForSEO</td>
+  <td style="padding:10px 12px;color:#888888;font-size:12px">Data SEO and Scraping</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">ready</span></td>
+  <td style="padding:10px 12px;color:#22C55E;font-weight:700;font-size:18px">4</td>
+  <td style="padding:10px 12px;color:#F5F5F5;font-size:12px">Basic Auth</td>
+  <td style="padding:10px 12px;color:#6C63FF;font-size:14px">–</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">high</span></td>
+  <td style="padding:10px 12px">
+    <a href="https://docs.dataforseo.com/" target="_blank" rel="noopener"
+       style="color:#6C63FF;font-size:11px;text-decoration:none">docs ↗</a>
+  </td>
+</tr>
+<tr style="border-bottom:1px solid #2A2A2A">
+  <td style="padding:10px 12px;font-weight:600;color:#F5F5F5">Datadog</td>
+  <td style="padding:10px 12px;color:#888888;font-size:12px">Developer Infra and Data</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">ready</span></td>
+  <td style="padding:10px 12px;color:#22C55E;font-weight:700;font-size:18px">4</td>
+  <td style="padding:10px 12px;color:#F5F5F5;font-size:12px">OAuth2</td>
+  <td style="padding:10px 12px;color:#6C63FF;font-size:14px">–</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">high</span></td>
+  <td style="padding:10px 12px">
+    <a href="https://app.composio.dev/apps" target="_blank" rel="noopener"
+       style="color:#6C63FF;font-size:11px;text-decoration:none">docs ↗</a>
+  </td>
+</tr>
+<tr style="border-bottom:1px solid #2A2A2A">
+  <td style="padding:10px 12px;font-weight:600;color:#F5F5F5">Devin</td>
+  <td style="padding:10px 12px;color:#888888;font-size:12px">AI Research and Media</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">ready</span></td>
+  <td style="padding:10px 12px;color:#22C55E;font-weight:700;font-size:18px">4</td>
+  <td style="padding:10px 12px;color:#F5F5F5;font-size:12px">OAuth2</td>
+  <td style="padding:10px 12px;color:#6C63FF;font-size:14px">–</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">high</span></td>
+  <td style="padding:10px 12px">
+    <a href="https://app.composio.dev/apps" target="_blank" rel="noopener"
+       style="color:#6C63FF;font-size:11px;text-decoration:none">docs ↗</a>
+  </td>
+</tr>
+<tr style="border-bottom:1px solid #2A2A2A">
+  <td style="padding:10px 12px;font-weight:600;color:#F5F5F5">Discord</td>
+  <td style="padding:10px 12px;color:#888888;font-size:12px">Communications and Messaging</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">ready</span></td>
+  <td style="padding:10px 12px;color:#22C55E;font-weight:700;font-size:18px">4</td>
+  <td style="padding:10px 12px;color:#F5F5F5;font-size:12px">OAuth2</td>
+  <td style="padding:10px 12px;color:#6C63FF;font-size:14px">–</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">high</span></td>
+  <td style="padding:10px 12px">
+    <a href="https://app.composio.dev/apps" target="_blank" rel="noopener"
+       style="color:#6C63FF;font-size:11px;text-decoration:none">docs ↗</a>
+  </td>
+</tr>
+<tr style="border-bottom:1px solid #2A2A2A">
+  <td style="padding:10px 12px;font-weight:600;color:#F5F5F5">Firecrawl</td>
+  <td style="padding:10px 12px;color:#888888;font-size:12px">Data SEO and Scraping</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">ready</span></td>
+  <td style="padding:10px 12px;color:#22C55E;font-weight:700;font-size:18px">4</td>
+  <td style="padding:10px 12px;color:#F5F5F5;font-size:12px">OAuth2</td>
+  <td style="padding:10px 12px;color:#6C63FF;font-size:14px">–</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">high</span></td>
+  <td style="padding:10px 12px">
+    <a href="https://app.composio.dev/apps" target="_blank" rel="noopener"
+       style="color:#6C63FF;font-size:11px;text-decoration:none">docs ↗</a>
+  </td>
+</tr>
+<tr style="border-bottom:1px solid #2A2A2A">
+  <td style="padding:10px 12px;font-weight:600;color:#F5F5F5">Freshdesk</td>
+  <td style="padding:10px 12px;color:#888888;font-size:12px">Support and Helpdesk</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">ready</span></td>
+  <td style="padding:10px 12px;color:#22C55E;font-weight:700;font-size:18px">4</td>
+  <td style="padding:10px 12px;color:#F5F5F5;font-size:12px">OAuth2</td>
+  <td style="padding:10px 12px;color:#6C63FF;font-size:14px">–</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">high</span></td>
+  <td style="padding:10px 12px">
+    <a href="https://app.composio.dev/apps" target="_blank" rel="noopener"
+       style="color:#6C63FF;font-size:11px;text-decoration:none">docs ↗</a>
+  </td>
+</tr>
+<tr style="border-bottom:1px solid #2A2A2A">
+  <td style="padding:10px 12px;font-weight:600;color:#F5F5F5">Front</td>
+  <td style="padding:10px 12px;color:#888888;font-size:12px">Support and Helpdesk</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">ready</span></td>
+  <td style="padding:10px 12px;color:#22C55E;font-weight:700;font-size:18px">4</td>
+  <td style="padding:10px 12px;color:#F5F5F5;font-size:12px">OAuth2</td>
+  <td style="padding:10px 12px;color:#6C63FF;font-size:14px">–</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">high</span></td>
+  <td style="padding:10px 12px">
+    <a href="https://app.composio.dev/apps" target="_blank" rel="noopener"
+       style="color:#6C63FF;font-size:11px;text-decoration:none">docs ↗</a>
+  </td>
+</tr>
+<tr style="border-bottom:1px solid #2A2A2A">
+  <td style="padding:10px 12px;font-weight:600;color:#F5F5F5">GitHub</td>
+  <td style="padding:10px 12px;color:#888888;font-size:12px">Developer Infra and Data</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">ready</span></td>
+  <td style="padding:10px 12px;color:#22C55E;font-weight:700;font-size:18px">4</td>
+  <td style="padding:10px 12px;color:#F5F5F5;font-size:12px">OAuth2</td>
+  <td style="padding:10px 12px;color:#6C63FF;font-size:14px">–</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">high</span></td>
+  <td style="padding:10px 12px">
+    <a href="https://app.composio.dev/apps" target="_blank" rel="noopener"
+       style="color:#6C63FF;font-size:11px;text-decoration:none">docs ↗</a>
+  </td>
+</tr>
+<tr style="border-bottom:1px solid #2A2A2A">
+  <td style="padding:10px 12px;font-weight:600;color:#F5F5F5">GoHighLevel</td>
+  <td style="padding:10px 12px;color:#888888;font-size:12px">Marketing Ads Email and Social</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">ready</span></td>
+  <td style="padding:10px 12px;color:#22C55E;font-weight:700;font-size:18px">4</td>
+  <td style="padding:10px 12px;color:#F5F5F5;font-size:12px">OAuth2, API Key</td>
+  <td style="padding:10px 12px;color:#6C63FF;font-size:14px">–</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">high</span></td>
+  <td style="padding:10px 12px">
+    <a href="https://highlevel.stoplight.io/docs/integrations" target="_blank" rel="noopener"
+       style="color:#6C63FF;font-size:11px;text-decoration:none">docs ↗</a>
+  </td>
+</tr>
+<tr style="border-bottom:1px solid #2A2A2A">
+  <td style="padding:10px 12px;font-weight:600;color:#F5F5F5">Google Ads</td>
+  <td style="padding:10px 12px;color:#888888;font-size:12px">Marketing Ads Email and Social</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">ready</span></td>
+  <td style="padding:10px 12px;color:#22C55E;font-weight:700;font-size:18px">4</td>
+  <td style="padding:10px 12px;color:#F5F5F5;font-size:12px">OAuth2</td>
+  <td style="padding:10px 12px;color:#6C63FF;font-size:14px">–</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">high</span></td>
+  <td style="padding:10px 12px">
+    <a href="https://app.composio.dev/apps" target="_blank" rel="noopener"
+       style="color:#6C63FF;font-size:11px;text-decoration:none">docs ↗</a>
+  </td>
+</tr>
+<tr style="border-bottom:1px solid #2A2A2A">
+  <td style="padding:10px 12px;font-weight:600;color:#F5F5F5">Gorgias</td>
+  <td style="padding:10px 12px;color:#888888;font-size:12px">Support and Helpdesk</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">ready</span></td>
+  <td style="padding:10px 12px;color:#22C55E;font-weight:700;font-size:18px">4</td>
+  <td style="padding:10px 12px;color:#F5F5F5;font-size:12px">OAuth2</td>
+  <td style="padding:10px 12px;color:#6C63FF;font-size:14px">–</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">high</span></td>
+  <td style="padding:10px 12px">
+    <a href="https://app.composio.dev/apps" target="_blank" rel="noopener"
+       style="color:#6C63FF;font-size:11px;text-decoration:none">docs ↗</a>
+  </td>
+</tr>
+<tr style="border-bottom:1px solid #2A2A2A">
+  <td style="padding:10px 12px;font-weight:600;color:#F5F5F5">Harvest</td>
+  <td style="padding:10px 12px;color:#888888;font-size:12px">Productivity and Project Management</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">ready</span></td>
+  <td style="padding:10px 12px;color:#22C55E;font-weight:700;font-size:18px">4</td>
+  <td style="padding:10px 12px;color:#F5F5F5;font-size:12px">OAuth2</td>
+  <td style="padding:10px 12px;color:#6C63FF;font-size:14px">–</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">high</span></td>
+  <td style="padding:10px 12px">
+    <a href="https://app.composio.dev/apps" target="_blank" rel="noopener"
+       style="color:#6C63FF;font-size:11px;text-decoration:none">docs ↗</a>
+  </td>
+</tr>
+<tr style="border-bottom:1px solid #2A2A2A">
+  <td style="padding:10px 12px;font-weight:600;color:#F5F5F5">Help Scout</td>
+  <td style="padding:10px 12px;color:#888888;font-size:12px">Support and Helpdesk</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">ready</span></td>
+  <td style="padding:10px 12px;color:#22C55E;font-weight:700;font-size:18px">4</td>
+  <td style="padding:10px 12px;color:#F5F5F5;font-size:12px">OAuth2</td>
+  <td style="padding:10px 12px;color:#6C63FF;font-size:14px">–</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">high</span></td>
+  <td style="padding:10px 12px">
+    <a href="https://app.composio.dev/apps" target="_blank" rel="noopener"
+       style="color:#6C63FF;font-size:11px;text-decoration:none">docs ↗</a>
+  </td>
+</tr>
+<tr style="border-bottom:1px solid #2A2A2A">
+  <td style="padding:10px 12px;font-weight:600;color:#F5F5F5">HubSpot</td>
+  <td style="padding:10px 12px;color:#888888;font-size:12px">CRM and Sales</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">ready</span></td>
+  <td style="padding:10px 12px;color:#22C55E;font-weight:700;font-size:18px">4</td>
+  <td style="padding:10px 12px;color:#F5F5F5;font-size:12px">OAuth2</td>
+  <td style="padding:10px 12px;color:#6C63FF;font-size:14px">–</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">high</span></td>
+  <td style="padding:10px 12px">
+    <a href="https://app.composio.dev/apps" target="_blank" rel="noopener"
+       style="color:#6C63FF;font-size:11px;text-decoration:none">docs ↗</a>
+  </td>
+</tr>
+<tr style="border-bottom:1px solid #2A2A2A">
+  <td style="padding:10px 12px;font-weight:600;color:#F5F5F5">Intercom</td>
+  <td style="padding:10px 12px;color:#888888;font-size:12px">Support and Helpdesk</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">ready</span></td>
+  <td style="padding:10px 12px;color:#22C55E;font-weight:700;font-size:18px">4</td>
+  <td style="padding:10px 12px;color:#F5F5F5;font-size:12px">OAuth2</td>
+  <td style="padding:10px 12px;color:#6C63FF;font-size:14px">–</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">high</span></td>
+  <td style="padding:10px 12px">
+    <a href="https://app.composio.dev/apps" target="_blank" rel="noopener"
+       style="color:#6C63FF;font-size:11px;text-decoration:none">docs ↗</a>
+  </td>
+</tr>
+<tr style="border-bottom:1px solid #2A2A2A">
+  <td style="padding:10px 12px;font-weight:600;color:#F5F5F5">Jira</td>
+  <td style="padding:10px 12px;color:#888888;font-size:12px">Productivity and Project Management</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">ready</span></td>
+  <td style="padding:10px 12px;color:#22C55E;font-weight:700;font-size:18px">4</td>
+  <td style="padding:10px 12px;color:#F5F5F5;font-size:12px">OAuth2</td>
+  <td style="padding:10px 12px;color:#6C63FF;font-size:14px">–</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">high</span></td>
+  <td style="padding:10px 12px">
+    <a href="https://app.composio.dev/apps" target="_blank" rel="noopener"
+       style="color:#6C63FF;font-size:11px;text-decoration:none">docs ↗</a>
+  </td>
+</tr>
+<tr style="border-bottom:1px solid #2A2A2A">
+  <td style="padding:10px 12px;font-weight:600;color:#F5F5F5">Klaviyo</td>
+  <td style="padding:10px 12px;color:#888888;font-size:12px">Marketing Ads Email and Social</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">ready</span></td>
+  <td style="padding:10px 12px;color:#22C55E;font-weight:700;font-size:18px">4</td>
+  <td style="padding:10px 12px;color:#F5F5F5;font-size:12px">OAuth2</td>
+  <td style="padding:10px 12px;color:#6C63FF;font-size:14px">–</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">high</span></td>
+  <td style="padding:10px 12px">
+    <a href="https://app.composio.dev/apps" target="_blank" rel="noopener"
+       style="color:#6C63FF;font-size:11px;text-decoration:none">docs ↗</a>
+  </td>
+</tr>
+<tr style="border-bottom:1px solid #2A2A2A">
+  <td style="padding:10px 12px;font-weight:600;color:#F5F5F5">Linear</td>
+  <td style="padding:10px 12px;color:#888888;font-size:12px">Productivity and Project Management</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">ready</span></td>
+  <td style="padding:10px 12px;color:#22C55E;font-weight:700;font-size:18px">4</td>
+  <td style="padding:10px 12px;color:#F5F5F5;font-size:12px">OAuth2</td>
+  <td style="padding:10px 12px;color:#6C63FF;font-size:14px">–</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">high</span></td>
+  <td style="padding:10px 12px">
+    <a href="https://app.composio.dev/apps" target="_blank" rel="noopener"
+       style="color:#6C63FF;font-size:11px;text-decoration:none">docs ↗</a>
+  </td>
+</tr>
+<tr style="border-bottom:1px solid #2A2A2A">
+  <td style="padding:10px 12px;font-weight:600;color:#F5F5F5">LinkedIn Ads</td>
+  <td style="padding:10px 12px;color:#888888;font-size:12px">Marketing Ads Email and Social</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">ready</span></td>
+  <td style="padding:10px 12px;color:#22C55E;font-weight:700;font-size:18px">4</td>
+  <td style="padding:10px 12px;color:#F5F5F5;font-size:12px">OAuth2</td>
+  <td style="padding:10px 12px;color:#6C63FF;font-size:14px">–</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">high</span></td>
+  <td style="padding:10px 12px">
+    <a href="https://app.composio.dev/apps" target="_blank" rel="noopener"
+       style="color:#6C63FF;font-size:11px;text-decoration:none">docs ↗</a>
+  </td>
+</tr>
+<tr style="border-bottom:1px solid #2A2A2A">
+  <td style="padding:10px 12px;font-weight:600;color:#F5F5F5">Mailchimp</td>
+  <td style="padding:10px 12px;color:#888888;font-size:12px">Marketing Ads Email and Social</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">ready</span></td>
+  <td style="padding:10px 12px;color:#22C55E;font-weight:700;font-size:18px">4</td>
+  <td style="padding:10px 12px;color:#F5F5F5;font-size:12px">OAuth2</td>
+  <td style="padding:10px 12px;color:#6C63FF;font-size:14px">–</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">high</span></td>
+  <td style="padding:10px 12px">
+    <a href="https://app.composio.dev/apps" target="_blank" rel="noopener"
+       style="color:#6C63FF;font-size:11px;text-decoration:none">docs ↗</a>
+  </td>
+</tr>
+<tr style="border-bottom:1px solid #2A2A2A">
+  <td style="padding:10px 12px;font-weight:600;color:#F5F5F5">Meta Ads</td>
+  <td style="padding:10px 12px;color:#888888;font-size:12px">Marketing Ads Email and Social</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">ready</span></td>
+  <td style="padding:10px 12px;color:#22C55E;font-weight:700;font-size:18px">4</td>
+  <td style="padding:10px 12px;color:#F5F5F5;font-size:12px">OAuth2</td>
+  <td style="padding:10px 12px;color:#6C63FF;font-size:14px">–</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">high</span></td>
+  <td style="padding:10px 12px">
+    <a href="https://app.composio.dev/apps" target="_blank" rel="noopener"
+       style="color:#6C63FF;font-size:11px;text-decoration:none">docs ↗</a>
+  </td>
+</tr>
+<tr style="border-bottom:1px solid #2A2A2A">
+  <td style="padding:10px 12px;font-weight:600;color:#F5F5F5">Monday.com</td>
+  <td style="padding:10px 12px;color:#888888;font-size:12px">Productivity and Project Management</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">ready</span></td>
+  <td style="padding:10px 12px;color:#22C55E;font-weight:700;font-size:18px">4</td>
+  <td style="padding:10px 12px;color:#F5F5F5;font-size:12px">OAuth2</td>
+  <td style="padding:10px 12px;color:#6C63FF;font-size:14px">–</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">high</span></td>
+  <td style="padding:10px 12px">
+    <a href="https://app.composio.dev/apps" target="_blank" rel="noopener"
+       style="color:#6C63FF;font-size:11px;text-decoration:none">docs ↗</a>
+  </td>
+</tr>
+<tr style="border-bottom:1px solid #2A2A2A">
+  <td style="padding:10px 12px;font-weight:600;color:#F5F5F5">MongoDB Atlas</td>
+  <td style="padding:10px 12px;color:#888888;font-size:12px">Developer Infra and Data</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">ready</span></td>
+  <td style="padding:10px 12px;color:#22C55E;font-weight:700;font-size:18px">4</td>
+  <td style="padding:10px 12px;color:#F5F5F5;font-size:12px">OAuth2</td>
+  <td style="padding:10px 12px;color:#6C63FF;font-size:14px">–</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">high</span></td>
+  <td style="padding:10px 12px">
+    <a href="https://app.composio.dev/apps" target="_blank" rel="noopener"
+       style="color:#6C63FF;font-size:11px;text-decoration:none">docs ↗</a>
+  </td>
+</tr>
+<tr style="border-bottom:1px solid #2A2A2A">
+  <td style="padding:10px 12px;font-weight:600;color:#F5F5F5">Neo4j</td>
+  <td style="padding:10px 12px;color:#888888;font-size:12px">Developer Infra and Data</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">ready</span></td>
+  <td style="padding:10px 12px;color:#22C55E;font-weight:700;font-size:18px">4</td>
+  <td style="padding:10px 12px;color:#F5F5F5;font-size:12px">Basic Auth, Bearer Token</td>
+  <td style="padding:10px 12px;color:#6C63FF;font-size:14px">✓</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">high</span></td>
+  <td style="padding:10px 12px">
+    <a href="https://neo4j.com/docs/http-api/current/" target="_blank" rel="noopener"
+       style="color:#6C63FF;font-size:11px;text-decoration:none">docs ↗</a>
+  </td>
+</tr>
+<tr style="border-bottom:1px solid #2A2A2A">
+  <td style="padding:10px 12px;font-weight:600;color:#F5F5F5">Netlify</td>
+  <td style="padding:10px 12px;color:#888888;font-size:12px">Developer Infra and Data</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">ready</span></td>
+  <td style="padding:10px 12px;color:#22C55E;font-weight:700;font-size:18px">4</td>
+  <td style="padding:10px 12px;color:#F5F5F5;font-size:12px">OAuth2</td>
+  <td style="padding:10px 12px;color:#6C63FF;font-size:14px">–</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">high</span></td>
+  <td style="padding:10px 12px">
+    <a href="https://app.composio.dev/apps" target="_blank" rel="noopener"
+       style="color:#6C63FF;font-size:11px;text-decoration:none">docs ↗</a>
+  </td>
+</tr>
+<tr style="border-bottom:1px solid #2A2A2A">
+  <td style="padding:10px 12px;font-weight:600;color:#F5F5F5">Notion</td>
+  <td style="padding:10px 12px;color:#888888;font-size:12px">Productivity and Project Management</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">ready</span></td>
+  <td style="padding:10px 12px;color:#22C55E;font-weight:700;font-size:18px">4</td>
+  <td style="padding:10px 12px;color:#F5F5F5;font-size:12px">OAuth2</td>
+  <td style="padding:10px 12px;color:#6C63FF;font-size:14px">–</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">high</span></td>
+  <td style="padding:10px 12px">
+    <a href="https://app.composio.dev/apps" target="_blank" rel="noopener"
+       style="color:#6C63FF;font-size:11px;text-decoration:none">docs ↗</a>
+  </td>
+</tr>
+<tr style="border-bottom:1px solid #2A2A2A">
+  <td style="padding:10px 12px;font-weight:600;color:#F5F5F5">Pinterest</td>
+  <td style="padding:10px 12px;color:#888888;font-size:12px">Marketing Ads Email and Social</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">ready</span></td>
+  <td style="padding:10px 12px;color:#22C55E;font-weight:700;font-size:18px">4</td>
+  <td style="padding:10px 12px;color:#F5F5F5;font-size:12px">OAuth2</td>
+  <td style="padding:10px 12px;color:#6C63FF;font-size:14px">–</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">high</span></td>
+  <td style="padding:10px 12px">
+    <a href="https://app.composio.dev/apps" target="_blank" rel="noopener"
+       style="color:#6C63FF;font-size:11px;text-decoration:none">docs ↗</a>
+  </td>
+</tr>
+<tr style="border-bottom:1px solid #2A2A2A">
+  <td style="padding:10px 12px;font-weight:600;color:#F5F5F5">Pipedrive</td>
+  <td style="padding:10px 12px;color:#888888;font-size:12px">CRM and Sales</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">ready</span></td>
+  <td style="padding:10px 12px;color:#22C55E;font-weight:700;font-size:18px">4</td>
+  <td style="padding:10px 12px;color:#F5F5F5;font-size:12px">OAuth2</td>
+  <td style="padding:10px 12px;color:#6C63FF;font-size:14px">–</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">high</span></td>
+  <td style="padding:10px 12px">
+    <a href="https://app.composio.dev/apps" target="_blank" rel="noopener"
+       style="color:#6C63FF;font-size:11px;text-decoration:none">docs ↗</a>
+  </td>
+</tr>
+<tr style="border-bottom:1px solid #2A2A2A">
+  <td style="padding:10px 12px;font-weight:600;color:#F5F5F5">Plaid</td>
+  <td style="padding:10px 12px;color:#888888;font-size:12px">Finance and Fintech</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">ready</span></td>
+  <td style="padding:10px 12px;color:#22C55E;font-weight:700;font-size:18px">4</td>
+  <td style="padding:10px 12px;color:#F5F5F5;font-size:12px">OAuth2</td>
+  <td style="padding:10px 12px;color:#6C63FF;font-size:14px">–</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">high</span></td>
+  <td style="padding:10px 12px">
+    <a href="https://app.composio.dev/apps" target="_blank" rel="noopener"
+       style="color:#6C63FF;font-size:11px;text-decoration:none">docs ↗</a>
+  </td>
+</tr>
+<tr style="border-bottom:1px solid #2A2A2A">
+  <td style="padding:10px 12px;font-weight:600;color:#F5F5F5">Podio</td>
+  <td style="padding:10px 12px;color:#888888;font-size:12px">CRM and Sales</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">ready</span></td>
+  <td style="padding:10px 12px;color:#22C55E;font-weight:700;font-size:18px">4</td>
+  <td style="padding:10px 12px;color:#F5F5F5;font-size:12px">OAuth2</td>
+  <td style="padding:10px 12px;color:#6C63FF;font-size:14px">–</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">high</span></td>
+  <td style="padding:10px 12px">
+    <a href="https://app.composio.dev/apps" target="_blank" rel="noopener"
+       style="color:#6C63FF;font-size:11px;text-decoration:none">docs ↗</a>
+  </td>
+</tr>
+<tr style="border-bottom:1px solid #2A2A2A">
+  <td style="padding:10px 12px;font-weight:600;color:#F5F5F5">QuickBooks</td>
+  <td style="padding:10px 12px;color:#888888;font-size:12px">Finance and Fintech</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">ready</span></td>
+  <td style="padding:10px 12px;color:#22C55E;font-weight:700;font-size:18px">4</td>
+  <td style="padding:10px 12px;color:#F5F5F5;font-size:12px">OAuth2</td>
+  <td style="padding:10px 12px;color:#6C63FF;font-size:14px">–</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">high</span></td>
+  <td style="padding:10px 12px">
+    <a href="https://app.composio.dev/apps" target="_blank" rel="noopener"
+       style="color:#6C63FF;font-size:11px;text-decoration:none">docs ↗</a>
+  </td>
+</tr>
+<tr style="border-bottom:1px solid #2A2A2A">
+  <td style="padding:10px 12px;font-weight:600;color:#F5F5F5">Ramp</td>
+  <td style="padding:10px 12px;color:#888888;font-size:12px">Finance and Fintech</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">ready</span></td>
+  <td style="padding:10px 12px;color:#22C55E;font-weight:700;font-size:18px">4</td>
+  <td style="padding:10px 12px;color:#F5F5F5;font-size:12px">OAuth2</td>
+  <td style="padding:10px 12px;color:#6C63FF;font-size:14px">–</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">high</span></td>
+  <td style="padding:10px 12px">
+    <a href="https://app.composio.dev/apps" target="_blank" rel="noopener"
+       style="color:#6C63FF;font-size:11px;text-decoration:none">docs ↗</a>
+  </td>
+</tr>
+<tr style="border-bottom:1px solid #2A2A2A">
+  <td style="padding:10px 12px;font-weight:600;color:#F5F5F5">Reducto</td>
+  <td style="padding:10px 12px;color:#888888;font-size:12px">AI Research and Media</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">ready</span></td>
+  <td style="padding:10px 12px;color:#22C55E;font-weight:700;font-size:18px">4</td>
+  <td style="padding:10px 12px;color:#F5F5F5;font-size:12px">API Key</td>
+  <td style="padding:10px 12px;color:#6C63FF;font-size:14px">–</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">high</span></td>
+  <td style="padding:10px 12px">
+    <a href="https://docs.reducto.ai/" target="_blank" rel="noopener"
+       style="color:#6C63FF;font-size:11px;text-decoration:none">docs ↗</a>
+  </td>
+</tr>
+<tr style="border-bottom:1px solid #2A2A2A">
+  <td style="padding:10px 12px;font-weight:600;color:#F5F5F5">Salesforce</td>
+  <td style="padding:10px 12px;color:#888888;font-size:12px">CRM and Sales</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">ready</span></td>
+  <td style="padding:10px 12px;color:#22C55E;font-weight:700;font-size:18px">4</td>
+  <td style="padding:10px 12px;color:#F5F5F5;font-size:12px">OAuth2</td>
+  <td style="padding:10px 12px;color:#6C63FF;font-size:14px">–</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">high</span></td>
+  <td style="padding:10px 12px">
+    <a href="https://app.composio.dev/apps" target="_blank" rel="noopener"
+       style="color:#6C63FF;font-size:11px;text-decoration:none">docs ↗</a>
+  </td>
+</tr>
+<tr style="border-bottom:1px solid #2A2A2A">
+  <td style="padding:10px 12px;font-weight:600;color:#F5F5F5">Salesforce Commerce Cloud</td>
+  <td style="padding:10px 12px;color:#888888;font-size:12px">Ecommerce</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">ready</span></td>
+  <td style="padding:10px 12px;color:#22C55E;font-weight:700;font-size:18px">4</td>
+  <td style="padding:10px 12px;color:#F5F5F5;font-size:12px">OAuth2</td>
+  <td style="padding:10px 12px;color:#6C63FF;font-size:14px">–</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">high</span></td>
+  <td style="padding:10px 12px">
+    <a href="https://app.composio.dev/apps" target="_blank" rel="noopener"
+       style="color:#6C63FF;font-size:11px;text-decoration:none">docs ↗</a>
+  </td>
+</tr>
+<tr style="border-bottom:1px solid #2A2A2A">
+  <td style="padding:10px 12px;font-weight:600;color:#F5F5F5">SendGrid</td>
+  <td style="padding:10px 12px;color:#888888;font-size:12px">Marketing Ads Email and Social</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">ready</span></td>
+  <td style="padding:10px 12px;color:#22C55E;font-weight:700;font-size:18px">4</td>
+  <td style="padding:10px 12px;color:#F5F5F5;font-size:12px">OAuth2</td>
+  <td style="padding:10px 12px;color:#6C63FF;font-size:14px">–</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">high</span></td>
+  <td style="padding:10px 12px">
+    <a href="https://app.composio.dev/apps" target="_blank" rel="noopener"
+       style="color:#6C63FF;font-size:11px;text-decoration:none">docs ↗</a>
+  </td>
+</tr>
+<tr style="border-bottom:1px solid #2A2A2A">
+  <td style="padding:10px 12px;font-weight:600;color:#F5F5F5">Sentry</td>
+  <td style="padding:10px 12px;color:#888888;font-size:12px">Developer Infra and Data</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">ready</span></td>
+  <td style="padding:10px 12px;color:#22C55E;font-weight:700;font-size:18px">4</td>
+  <td style="padding:10px 12px;color:#F5F5F5;font-size:12px">OAuth2</td>
+  <td style="padding:10px 12px;color:#6C63FF;font-size:14px">–</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">high</span></td>
+  <td style="padding:10px 12px">
+    <a href="https://app.composio.dev/apps" target="_blank" rel="noopener"
+       style="color:#6C63FF;font-size:11px;text-decoration:none">docs ↗</a>
+  </td>
+</tr>
+<tr style="border-bottom:1px solid #2A2A2A">
+  <td style="padding:10px 12px;font-weight:600;color:#F5F5F5">Shopify</td>
+  <td style="padding:10px 12px;color:#888888;font-size:12px">Ecommerce</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">ready</span></td>
+  <td style="padding:10px 12px;color:#22C55E;font-weight:700;font-size:18px">4</td>
+  <td style="padding:10px 12px;color:#F5F5F5;font-size:12px">OAuth2</td>
+  <td style="padding:10px 12px;color:#6C63FF;font-size:14px">–</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">high</span></td>
+  <td style="padding:10px 12px">
+    <a href="https://app.composio.dev/apps" target="_blank" rel="noopener"
+       style="color:#6C63FF;font-size:11px;text-decoration:none">docs ↗</a>
+  </td>
+</tr>
+<tr style="border-bottom:1px solid #2A2A2A">
+  <td style="padding:10px 12px;font-weight:600;color:#F5F5F5">Slack</td>
+  <td style="padding:10px 12px;color:#888888;font-size:12px">Communications and Messaging</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">ready</span></td>
+  <td style="padding:10px 12px;color:#22C55E;font-weight:700;font-size:18px">4</td>
+  <td style="padding:10px 12px;color:#F5F5F5;font-size:12px">OAuth2</td>
+  <td style="padding:10px 12px;color:#6C63FF;font-size:14px">–</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">high</span></td>
+  <td style="padding:10px 12px">
+    <a href="https://app.composio.dev/apps" target="_blank" rel="noopener"
+       style="color:#6C63FF;font-size:11px;text-decoration:none">docs ↗</a>
+  </td>
+</tr>
+<tr style="border-bottom:1px solid #2A2A2A">
+  <td style="padding:10px 12px;font-weight:600;color:#F5F5F5">Snowflake</td>
+  <td style="padding:10px 12px;color:#888888;font-size:12px">Developer Infra and Data</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">ready</span></td>
+  <td style="padding:10px 12px;color:#22C55E;font-weight:700;font-size:18px">4</td>
+  <td style="padding:10px 12px;color:#F5F5F5;font-size:12px">OAuth2</td>
+  <td style="padding:10px 12px;color:#6C63FF;font-size:14px">–</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">high</span></td>
+  <td style="padding:10px 12px">
+    <a href="https://app.composio.dev/apps" target="_blank" rel="noopener"
+       style="color:#6C63FF;font-size:11px;text-decoration:none">docs ↗</a>
+  </td>
+</tr>
+<tr style="border-bottom:1px solid #2A2A2A">
+  <td style="padding:10px 12px;font-weight:600;color:#F5F5F5">Squarespace</td>
+  <td style="padding:10px 12px;color:#888888;font-size:12px">Ecommerce</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">ready</span></td>
+  <td style="padding:10px 12px;color:#22C55E;font-weight:700;font-size:18px">4</td>
+  <td style="padding:10px 12px;color:#F5F5F5;font-size:12px">OAuth2</td>
+  <td style="padding:10px 12px;color:#6C63FF;font-size:14px">–</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">high</span></td>
+  <td style="padding:10px 12px">
+    <a href="https://app.composio.dev/apps" target="_blank" rel="noopener"
+       style="color:#6C63FF;font-size:11px;text-decoration:none">docs ↗</a>
+  </td>
+</tr>
+<tr style="border-bottom:1px solid #2A2A2A">
+  <td style="padding:10px 12px;font-weight:600;color:#F5F5F5">Stripe</td>
+  <td style="padding:10px 12px;color:#888888;font-size:12px">Finance and Fintech</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">ready</span></td>
+  <td style="padding:10px 12px;color:#22C55E;font-weight:700;font-size:18px">4</td>
+  <td style="padding:10px 12px;color:#F5F5F5;font-size:12px">OAuth2</td>
+  <td style="padding:10px 12px;color:#6C63FF;font-size:14px">–</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">high</span></td>
+  <td style="padding:10px 12px">
+    <a href="https://app.composio.dev/apps" target="_blank" rel="noopener"
+       style="color:#6C63FF;font-size:11px;text-decoration:none">docs ↗</a>
+  </td>
+</tr>
+<tr style="border-bottom:1px solid #2A2A2A">
+  <td style="padding:10px 12px;font-weight:600;color:#F5F5F5">Supabase</td>
+  <td style="padding:10px 12px;color:#888888;font-size:12px">Developer Infra and Data</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">ready</span></td>
+  <td style="padding:10px 12px;color:#22C55E;font-weight:700;font-size:18px">4</td>
+  <td style="padding:10px 12px;color:#F5F5F5;font-size:12px">OAuth2</td>
+  <td style="padding:10px 12px;color:#6C63FF;font-size:14px">–</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">high</span></td>
+  <td style="padding:10px 12px">
+    <a href="https://app.composio.dev/apps" target="_blank" rel="noopener"
+       style="color:#6C63FF;font-size:11px;text-decoration:none">docs ↗</a>
+  </td>
+</tr>
+<tr style="border-bottom:1px solid #2A2A2A">
+  <td style="padding:10px 12px;font-weight:600;color:#F5F5F5">Telegram</td>
+  <td style="padding:10px 12px;color:#888888;font-size:12px">Communications and Messaging</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">ready</span></td>
+  <td style="padding:10px 12px;color:#22C55E;font-weight:700;font-size:18px">4</td>
+  <td style="padding:10px 12px;color:#F5F5F5;font-size:12px">OAuth2</td>
+  <td style="padding:10px 12px;color:#6C63FF;font-size:14px">–</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">high</span></td>
+  <td style="padding:10px 12px">
+    <a href="https://app.composio.dev/apps" target="_blank" rel="noopener"
+       style="color:#6C63FF;font-size:11px;text-decoration:none">docs ↗</a>
+  </td>
+</tr>
+<tr style="border-bottom:1px solid #2A2A2A">
+  <td style="padding:10px 12px;font-weight:600;color:#F5F5F5">Twilio</td>
+  <td style="padding:10px 12px;color:#888888;font-size:12px">Communications and Messaging</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">ready</span></td>
+  <td style="padding:10px 12px;color:#22C55E;font-weight:700;font-size:18px">4</td>
+  <td style="padding:10px 12px;color:#F5F5F5;font-size:12px">OAuth2</td>
+  <td style="padding:10px 12px;color:#6C63FF;font-size:14px">–</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">high</span></td>
+  <td style="padding:10px 12px">
+    <a href="https://app.composio.dev/apps" target="_blank" rel="noopener"
+       style="color:#6C63FF;font-size:11px;text-decoration:none">docs ↗</a>
+  </td>
+</tr>
+<tr style="border-bottom:1px solid #2A2A2A">
+  <td style="padding:10px 12px;font-weight:600;color:#F5F5F5">Vercel</td>
+  <td style="padding:10px 12px;color:#888888;font-size:12px">Developer Infra and Data</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">ready</span></td>
+  <td style="padding:10px 12px;color:#22C55E;font-weight:700;font-size:18px">4</td>
+  <td style="padding:10px 12px;color:#F5F5F5;font-size:12px">OAuth2</td>
+  <td style="padding:10px 12px;color:#6C63FF;font-size:14px">–</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">high</span></td>
+  <td style="padding:10px 12px">
+    <a href="https://app.composio.dev/apps" target="_blank" rel="noopener"
+       style="color:#6C63FF;font-size:11px;text-decoration:none">docs ↗</a>
+  </td>
+</tr>
+<tr style="border-bottom:1px solid #2A2A2A">
+  <td style="padding:10px 12px;font-weight:600;color:#F5F5F5">WhatsApp Business</td>
+  <td style="padding:10px 12px;color:#888888;font-size:12px">Communications and Messaging</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">ready</span></td>
+  <td style="padding:10px 12px;color:#22C55E;font-weight:700;font-size:18px">4</td>
+  <td style="padding:10px 12px;color:#F5F5F5;font-size:12px">OAuth2</td>
+  <td style="padding:10px 12px;color:#6C63FF;font-size:14px">–</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">high</span></td>
+  <td style="padding:10px 12px">
+    <a href="https://app.composio.dev/apps" target="_blank" rel="noopener"
+       style="color:#6C63FF;font-size:11px;text-decoration:none">docs ↗</a>
+  </td>
+</tr>
+<tr style="border-bottom:1px solid #2A2A2A">
+  <td style="padding:10px 12px;font-weight:600;color:#F5F5F5">WooCommerce</td>
+  <td style="padding:10px 12px;color:#888888;font-size:12px">Ecommerce</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">ready</span></td>
+  <td style="padding:10px 12px;color:#22C55E;font-weight:700;font-size:18px">4</td>
+  <td style="padding:10px 12px;color:#F5F5F5;font-size:12px">OAuth2</td>
+  <td style="padding:10px 12px;color:#6C63FF;font-size:14px">–</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">high</span></td>
+  <td style="padding:10px 12px">
+    <a href="https://app.composio.dev/apps" target="_blank" rel="noopener"
+       style="color:#6C63FF;font-size:11px;text-decoration:none">docs ↗</a>
+  </td>
+</tr>
+<tr style="border-bottom:1px solid #2A2A2A">
+  <td style="padding:10px 12px;font-weight:600;color:#F5F5F5">Xero</td>
+  <td style="padding:10px 12px;color:#888888;font-size:12px">Finance and Fintech</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">ready</span></td>
+  <td style="padding:10px 12px;color:#22C55E;font-weight:700;font-size:18px">4</td>
+  <td style="padding:10px 12px;color:#F5F5F5;font-size:12px">OAuth2</td>
+  <td style="padding:10px 12px;color:#6C63FF;font-size:14px">–</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">high</span></td>
+  <td style="padding:10px 12px">
+    <a href="https://app.composio.dev/apps" target="_blank" rel="noopener"
+       style="color:#6C63FF;font-size:11px;text-decoration:none">docs ↗</a>
+  </td>
+</tr>
+<tr style="border-bottom:1px solid #2A2A2A">
+  <td style="padding:10px 12px;font-weight:600;color:#F5F5F5">Zendesk</td>
+  <td style="padding:10px 12px;color:#888888;font-size:12px">Support and Helpdesk</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">ready</span></td>
+  <td style="padding:10px 12px;color:#22C55E;font-weight:700;font-size:18px">4</td>
+  <td style="padding:10px 12px;color:#F5F5F5;font-size:12px">OAuth2</td>
+  <td style="padding:10px 12px;color:#6C63FF;font-size:14px">–</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">high</span></td>
+  <td style="padding:10px 12px">
+    <a href="https://app.composio.dev/apps" target="_blank" rel="noopener"
+       style="color:#6C63FF;font-size:11px;text-decoration:none">docs ↗</a>
+  </td>
+</tr>
+<tr style="border-bottom:1px solid #2A2A2A">
+  <td style="padding:10px 12px;font-weight:600;color:#F5F5F5">Zoho CRM</td>
+  <td style="padding:10px 12px;color:#888888;font-size:12px">CRM and Sales</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">ready</span></td>
+  <td style="padding:10px 12px;color:#22C55E;font-weight:700;font-size:18px">4</td>
+  <td style="padding:10px 12px;color:#F5F5F5;font-size:12px">OAuth2</td>
+  <td style="padding:10px 12px;color:#6C63FF;font-size:14px">–</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">high</span></td>
+  <td style="padding:10px 12px">
+    <a href="https://app.composio.dev/apps" target="_blank" rel="noopener"
+       style="color:#6C63FF;font-size:11px;text-decoration:none">docs ↗</a>
+  </td>
+</tr>
+<tr style="border-bottom:1px solid #2A2A2A">
+  <td style="padding:10px 12px;font-weight:600;color:#F5F5F5">Ahrefs</td>
+  <td style="padding:10px 12px;color:#888888;font-size:12px">Data SEO and Scraping</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#F59E0B22;color:#F59E0B;font-size:11px;font-weight:600;font-family:monospace">needs_outreach</span></td>
+  <td style="padding:10px 12px;color:#F59E0B;font-weight:700;font-size:18px">3</td>
+  <td style="padding:10px 12px;color:#F5F5F5;font-size:12px">API Key</td>
+  <td style="padding:10px 12px;color:#6C63FF;font-size:14px">–</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">high</span></td>
+  <td style="padding:10px 12px">
+    <a href="https://ahrefs.com/api" target="_blank" rel="noopener"
+       style="color:#6C63FF;font-size:11px;text-decoration:none">docs ↗</a>
+  </td>
+</tr>
+<tr style="border-bottom:1px solid #2A2A2A">
+  <td style="padding:10px 12px;font-weight:600;color:#F5F5F5">Coda</td>
+  <td style="padding:10px 12px;color:#888888;font-size:12px">Productivity and Project Management</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">ready</span></td>
+  <td style="padding:10px 12px;color:#F59E0B;font-weight:700;font-size:18px">3</td>
+  <td style="padding:10px 12px;color:#F5F5F5;font-size:12px">API Key</td>
+  <td style="padding:10px 12px;color:#6C63FF;font-size:14px">–</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">high</span></td>
+  <td style="padding:10px 12px">
+    <a href="https://coda.io/developers/apis/v1" target="_blank" rel="noopener"
+       style="color:#6C63FF;font-size:11px;text-decoration:none">docs ↗</a>
+  </td>
+</tr>
+<tr style="border-bottom:1px solid #2A2A2A">
+  <td style="padding:10px 12px;font-weight:600;color:#F5F5F5">Consensus</td>
+  <td style="padding:10px 12px;color:#888888;font-size:12px">AI Research and Media</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">ready</span></td>
+  <td style="padding:10px 12px;color:#F59E0B;font-weight:700;font-size:18px">3</td>
+  <td style="padding:10px 12px;color:#F5F5F5;font-size:12px">API Key</td>
+  <td style="padding:10px 12px;color:#6C63FF;font-size:14px">–</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#F59E0B22;color:#F59E0B;font-size:11px;font-weight:600;font-family:monospace">medium</span></td>
+  <td style="padding:10px 12px">
+    <a href="https://consensus.app/home/blog/consensus-api/" target="_blank" rel="noopener"
+       style="color:#6C63FF;font-size:11px;text-decoration:none">docs ↗</a>
+  </td>
+</tr>
+<tr style="border-bottom:1px solid #2A2A2A">
+  <td style="padding:10px 12px;font-weight:600;color:#F5F5F5">Ecwid</td>
+  <td style="padding:10px 12px;color:#888888;font-size:12px">Ecommerce</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">ready</span></td>
+  <td style="padding:10px 12px;color:#F59E0B;font-weight:700;font-size:18px">3</td>
+  <td style="padding:10px 12px;color:#F5F5F5;font-size:12px">OAuth2, API Key</td>
+  <td style="padding:10px 12px;color:#6C63FF;font-size:14px">–</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">high</span></td>
+  <td style="padding:10px 12px">
+    <a href="https://api-docs.ecwid.com/reference/overview" target="_blank" rel="noopener"
+       style="color:#6C63FF;font-size:11px;text-decoration:none">docs ↗</a>
+  </td>
+</tr>
+<tr style="border-bottom:1px solid #2A2A2A">
+  <td style="padding:10px 12px;font-weight:600;color:#F5F5F5">Gumroad</td>
+  <td style="padding:10px 12px;color:#888888;font-size:12px">Ecommerce</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">ready</span></td>
+  <td style="padding:10px 12px;color:#F59E0B;font-weight:700;font-size:18px">3</td>
+  <td style="padding:10px 12px;color:#F5F5F5;font-size:12px">OAuth2, API Key</td>
+  <td style="padding:10px 12px;color:#6C63FF;font-size:14px">–</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">high</span></td>
+  <td style="padding:10px 12px">
+    <a href="https://gumroad.com/api" target="_blank" rel="noopener"
+       style="color:#6C63FF;font-size:11px;text-decoration:none">docs ↗</a>
+  </td>
+</tr>
+<tr style="border-bottom:1px solid #2A2A2A">
+  <td style="padding:10px 12px;font-weight:600;color:#F5F5F5">Lark</td>
+  <td style="padding:10px 12px;color:#888888;font-size:12px">Communications and Messaging</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">ready</span></td>
+  <td style="padding:10px 12px;color:#F59E0B;font-weight:700;font-size:18px">3</td>
+  <td style="padding:10px 12px;color:#F5F5F5;font-size:12px">OAuth2, API Key</td>
+  <td style="padding:10px 12px;color:#6C63FF;font-size:14px">–</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">high</span></td>
+  <td style="padding:10px 12px">
+    <a href="https://open.larksuite.com/document/home/index" target="_blank" rel="noopener"
+       style="color:#6C63FF;font-size:11px;text-decoration:none">docs ↗</a>
+  </td>
+</tr>
+<tr style="border-bottom:1px solid #2A2A2A">
+  <td style="padding:10px 12px;font-weight:600;color:#F5F5F5">LiveAgent</td>
+  <td style="padding:10px 12px;color:#888888;font-size:12px">Support and Helpdesk</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">ready</span></td>
+  <td style="padding:10px 12px;color:#F59E0B;font-weight:700;font-size:18px">3</td>
+  <td style="padding:10px 12px;color:#F5F5F5;font-size:12px">API Key</td>
+  <td style="padding:10px 12px;color:#6C63FF;font-size:14px">–</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">high</span></td>
+  <td style="padding:10px 12px">
+    <a href="https://www.liveagent.com/developers/" target="_blank" rel="noopener"
+       style="color:#6C63FF;font-size:11px;text-decoration:none">docs ↗</a>
+  </td>
+</tr>
+<tr style="border-bottom:1px solid #2A2A2A">
+  <td style="padding:10px 12px;font-weight:600;color:#F5F5F5">Magento</td>
+  <td style="padding:10px 12px;color:#888888;font-size:12px">Ecommerce</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">ready</span></td>
+  <td style="padding:10px 12px;color:#F59E0B;font-weight:700;font-size:18px">3</td>
+  <td style="padding:10px 12px;color:#F5F5F5;font-size:12px">OAuth2, Bearer Token</td>
+  <td style="padding:10px 12px;color:#6C63FF;font-size:14px">–</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">high</span></td>
+  <td style="padding:10px 12px">
+    <a href="https://developer.adobe.com/commerce/webapi/rest/" target="_blank" rel="noopener"
+       style="color:#6C63FF;font-size:11px;text-decoration:none">docs ↗</a>
+  </td>
+</tr>
+<tr style="border-bottom:1px solid #2A2A2A">
+  <td style="padding:10px 12px;font-weight:600;color:#F5F5F5">MrScraper</td>
+  <td style="padding:10px 12px;color:#888888;font-size:12px">Data SEO and Scraping</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">ready</span></td>
+  <td style="padding:10px 12px;color:#F59E0B;font-weight:700;font-size:18px">3</td>
+  <td style="padding:10px 12px;color:#F5F5F5;font-size:12px">API Key</td>
+  <td style="padding:10px 12px;color:#6C63FF;font-size:14px">–</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#F59E0B22;color:#F59E0B;font-size:11px;font-weight:600;font-family:monospace">medium</span></td>
+  <td style="padding:10px 12px">
+    <a href="https://docs.mrscraper.com/" target="_blank" rel="noopener"
+       style="color:#6C63FF;font-size:11px;text-decoration:none">docs ↗</a>
+  </td>
+</tr>
+<tr style="border-bottom:1px solid #2A2A2A">
+  <td style="padding:10px 12px;font-weight:600;color:#F5F5F5">PitchBook</td>
+  <td style="padding:10px 12px;color:#888888;font-size:12px">Finance and Fintech</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#F59E0B22;color:#F59E0B;font-size:11px;font-weight:600;font-family:monospace">needs_outreach</span></td>
+  <td style="padding:10px 12px;color:#F59E0B;font-weight:700;font-size:18px">3</td>
+  <td style="padding:10px 12px;color:#F5F5F5;font-size:12px">API Key</td>
+  <td style="padding:10px 12px;color:#6C63FF;font-size:14px">–</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">high</span></td>
+  <td style="padding:10px 12px">
+    <a href="https://pitchbook.com/about/api-data-feeds" target="_blank" rel="noopener"
+       style="color:#6C63FF;font-size:11px;text-decoration:none">docs ↗</a>
+  </td>
+</tr>
+<tr style="border-bottom:1px solid #2A2A2A">
+  <td style="padding:10px 12px;font-weight:600;color:#F5F5F5">Plain</td>
+  <td style="padding:10px 12px;color:#888888;font-size:12px">Support and Helpdesk</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">ready</span></td>
+  <td style="padding:10px 12px;color:#F59E0B;font-weight:700;font-size:18px">3</td>
+  <td style="padding:10px 12px;color:#F5F5F5;font-size:12px">API Key</td>
+  <td style="padding:10px 12px;color:#6C63FF;font-size:14px">–</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">high</span></td>
+  <td style="padding:10px 12px">
+    <a href="https://www.plain.com/docs/api" target="_blank" rel="noopener"
+       style="color:#6C63FF;font-size:11px;text-decoration:none">docs ↗</a>
+  </td>
+</tr>
+<tr style="border-bottom:1px solid #2A2A2A">
+  <td style="padding:10px 12px;font-weight:600;color:#F5F5F5">Pylon</td>
+  <td style="padding:10px 12px;color:#888888;font-size:12px">Support and Helpdesk</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">ready</span></td>
+  <td style="padding:10px 12px;color:#F59E0B;font-weight:700;font-size:18px">3</td>
+  <td style="padding:10px 12px;color:#F5F5F5;font-size:12px">API Key</td>
+  <td style="padding:10px 12px;color:#6C63FF;font-size:14px">–</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#F59E0B22;color:#F59E0B;font-size:11px;font-weight:600;font-family:monospace">medium</span></td>
+  <td style="padding:10px 12px">
+    <a href="https://docs.usepylon.com/api" target="_blank" rel="noopener"
+       style="color:#6C63FF;font-size:11px;text-decoration:none">docs ↗</a>
+  </td>
+</tr>
+<tr style="border-bottom:1px solid #2A2A2A">
+  <td style="padding:10px 12px;font-weight:600;color:#F5F5F5">SE Ranking</td>
+  <td style="padding:10px 12px;color:#888888;font-size:12px">Data SEO and Scraping</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">ready</span></td>
+  <td style="padding:10px 12px;color:#F59E0B;font-weight:700;font-size:18px">3</td>
+  <td style="padding:10px 12px;color:#F5F5F5;font-size:12px">API Key</td>
+  <td style="padding:10px 12px;color:#6C63FF;font-size:14px">–</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">high</span></td>
+  <td style="padding:10px 12px">
+    <a href="https://seranking.com/api.html" target="_blank" rel="noopener"
+       style="color:#6C63FF;font-size:11px;text-decoration:none">docs ↗</a>
+  </td>
+</tr>
+<tr style="border-bottom:1px solid #2A2A2A">
+  <td style="padding:10px 12px;font-weight:600;color:#F5F5F5">Smartsheet</td>
+  <td style="padding:10px 12px;color:#888888;font-size:12px">Productivity and Project Management</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">ready</span></td>
+  <td style="padding:10px 12px;color:#F59E0B;font-weight:700;font-size:18px">3</td>
+  <td style="padding:10px 12px;color:#F5F5F5;font-size:12px">OAuth2, API Key</td>
+  <td style="padding:10px 12px;color:#6C63FF;font-size:14px">–</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">high</span></td>
+  <td style="padding:10px 12px">
+    <a href="https://smartsheet.com/developers/api-documentation" target="_blank" rel="noopener"
+       style="color:#6C63FF;font-size:11px;text-decoration:none">docs ↗</a>
+  </td>
+</tr>
+<tr style="border-bottom:1px solid #2A2A2A">
+  <td style="padding:10px 12px;font-weight:600;color:#F5F5F5">Threads</td>
+  <td style="padding:10px 12px;color:#888888;font-size:12px">Marketing Ads Email and Social</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">ready</span></td>
+  <td style="padding:10px 12px;color:#F59E0B;font-weight:700;font-size:18px">3</td>
+  <td style="padding:10px 12px;color:#F5F5F5;font-size:12px">OAuth2</td>
+  <td style="padding:10px 12px;color:#6C63FF;font-size:14px">–</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">high</span></td>
+  <td style="padding:10px 12px">
+    <a href="https://developers.facebook.com/docs/threads" target="_blank" rel="noopener"
+       style="color:#6C63FF;font-size:11px;text-decoration:none">docs ↗</a>
+  </td>
+</tr>
+<tr style="border-bottom:1px solid #2A2A2A">
+  <td style="padding:10px 12px;font-weight:600;color:#F5F5F5">Twenty</td>
+  <td style="padding:10px 12px;color:#888888;font-size:12px">CRM and Sales</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">ready</span></td>
+  <td style="padding:10px 12px;color:#F59E0B;font-weight:700;font-size:18px">3</td>
+  <td style="padding:10px 12px;color:#F5F5F5;font-size:12px">API Key, OAuth2</td>
+  <td style="padding:10px 12px;color:#6C63FF;font-size:14px">–</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">high</span></td>
+  <td style="padding:10px 12px">
+    <a href="https://twenty.com/developers" target="_blank" rel="noopener"
+       style="color:#6C63FF;font-size:11px;text-decoration:none">docs ↗</a>
+  </td>
+</tr>
+<tr style="border-bottom:1px solid #2A2A2A">
+  <td style="padding:10px 12px;font-weight:600;color:#F5F5F5">Vonage</td>
+  <td style="padding:10px 12px;color:#888888;font-size:12px">Communications and Messaging</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">ready</span></td>
+  <td style="padding:10px 12px;color:#F59E0B;font-weight:700;font-size:18px">3</td>
+  <td style="padding:10px 12px;color:#F5F5F5;font-size:12px">API Key, Bearer Token</td>
+  <td style="padding:10px 12px;color:#6C63FF;font-size:14px">–</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">high</span></td>
+  <td style="padding:10px 12px">
+    <a href="https://developer.vonage.com/en/api" target="_blank" rel="noopener"
+       style="color:#6C63FF;font-size:11px;text-decoration:none">docs ↗</a>
+  </td>
+</tr>
+<tr style="border-bottom:1px solid #2A2A2A">
+  <td style="padding:10px 12px;font-weight:600;color:#F5F5F5">Waterfall.io</td>
+  <td style="padding:10px 12px;color:#888888;font-size:12px">Data SEO and Scraping</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">ready</span></td>
+  <td style="padding:10px 12px;color:#F59E0B;font-weight:700;font-size:18px">3</td>
+  <td style="padding:10px 12px;color:#F5F5F5;font-size:12px">API Key</td>
+  <td style="padding:10px 12px;color:#6C63FF;font-size:14px">–</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#F59E0B22;color:#F59E0B;font-size:11px;font-weight:600;font-family:monospace">medium</span></td>
+  <td style="padding:10px 12px">
+    <a href="https://waterfall.io/docs" target="_blank" rel="noopener"
+       style="color:#6C63FF;font-size:11px;text-decoration:none">docs ↗</a>
+  </td>
+</tr>
+<tr style="border-bottom:1px solid #2A2A2A">
+  <td style="padding:10px 12px;font-weight:600;color:#F5F5F5">YouTube Transcript</td>
+  <td style="padding:10px 12px;color:#888888;font-size:12px">AI Research and Media</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">ready</span></td>
+  <td style="padding:10px 12px;color:#F59E0B;font-weight:700;font-size:18px">3</td>
+  <td style="padding:10px 12px;color:#F5F5F5;font-size:12px">API Key</td>
+  <td style="padding:10px 12px;color:#6C63FF;font-size:14px">–</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#F59E0B22;color:#F59E0B;font-size:11px;font-weight:600;font-family:monospace">medium</span></td>
+  <td style="padding:10px 12px">
+    <a href="https://www.transcriptapi.com/docs" target="_blank" rel="noopener"
+       style="color:#6C63FF;font-size:11px;text-decoration:none">docs ↗</a>
+  </td>
+</tr>
+<tr style="border-bottom:1px solid #2A2A2A">
+  <td style="padding:10px 12px;font-weight:600;color:#F5F5F5">DealCloud</td>
+  <td style="padding:10px 12px;color:#888888;font-size:12px">CRM and Sales</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#F59E0B22;color:#F59E0B;font-size:11px;font-weight:600;font-family:monospace">needs_outreach</span></td>
+  <td style="padding:10px 12px;color:#EF4444;font-weight:700;font-size:18px">2</td>
+  <td style="padding:10px 12px;color:#F5F5F5;font-size:12px">OAuth2</td>
+  <td style="padding:10px 12px;color:#6C63FF;font-size:14px">–</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">high</span></td>
+  <td style="padding:10px 12px">
+    <a href="https://intapp.com/products/dealcloud" target="_blank" rel="noopener"
+       style="color:#6C63FF;font-size:11px;text-decoration:none">docs ↗</a>
+  </td>
+</tr>
+<tr style="border-bottom:1px solid #2A2A2A">
+  <td style="padding:10px 12px;font-weight:600;color:#F5F5F5">Gladly</td>
+  <td style="padding:10px 12px;color:#888888;font-size:12px">Support and Helpdesk</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#F59E0B22;color:#F59E0B;font-size:11px;font-weight:600;font-family:monospace">needs_outreach</span></td>
+  <td style="padding:10px 12px;color:#EF4444;font-weight:700;font-size:18px">2</td>
+  <td style="padding:10px 12px;color:#F5F5F5;font-size:12px">API Key</td>
+  <td style="padding:10px 12px;color:#6C63FF;font-size:14px">–</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">high</span></td>
+  <td style="padding:10px 12px">
+    <a href="https://developer.gladly.com" target="_blank" rel="noopener"
+       style="color:#6C63FF;font-size:11px;text-decoration:none">docs ↗</a>
+  </td>
+</tr>
+<tr style="border-bottom:1px solid #2A2A2A">
+  <td style="padding:10px 12px;font-weight:600;color:#F5F5F5">Grain</td>
+  <td style="padding:10px 12px;color:#888888;font-size:12px">AI Research and Media</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#F59E0B22;color:#F59E0B;font-size:11px;font-weight:600;font-family:monospace">needs_outreach</span></td>
+  <td style="padding:10px 12px;color:#EF4444;font-weight:700;font-size:18px">2</td>
+  <td style="padding:10px 12px;color:#F5F5F5;font-size:12px">OAuth2</td>
+  <td style="padding:10px 12px;color:#6C63FF;font-size:14px">–</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#F59E0B22;color:#F59E0B;font-size:11px;font-weight:600;font-family:monospace">medium</span></td>
+  <td style="padding:10px 12px">
+    <a href="https://grain.com/developers" target="_blank" rel="noopener"
+       style="color:#6C63FF;font-size:11px;text-decoration:none">docs ↗</a>
+  </td>
+</tr>
+<tr style="border-bottom:1px solid #2A2A2A">
+  <td style="padding:10px 12px;font-weight:600;color:#F5F5F5">Paygent Connect</td>
+  <td style="padding:10px 12px;color:#888888;font-size:12px">Finance and Fintech</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#F59E0B22;color:#F59E0B;font-size:11px;font-weight:600;font-family:monospace">needs_outreach</span></td>
+  <td style="padding:10px 12px;color:#EF4444;font-weight:700;font-size:18px">2</td>
+  <td style="padding:10px 12px;color:#F5F5F5;font-size:12px">API Key</td>
+  <td style="padding:10px 12px;color:#6C63FF;font-size:14px">–</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#EF444422;color:#EF4444;font-size:11px;font-weight:600;font-family:monospace">low</span></td>
+  <td style="padding:10px 12px">
+    <a href="https://nmi.com" target="_blank" rel="noopener"
+       style="color:#6C63FF;font-size:11px;text-decoration:none">docs ↗</a>
+  </td>
+</tr>
+<tr style="border-bottom:1px solid #2A2A2A">
+  <td style="padding:10px 12px;font-weight:600;color:#F5F5F5">Pumble</td>
+  <td style="padding:10px 12px;color:#888888;font-size:12px">Communications and Messaging</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">ready</span></td>
+  <td style="padding:10px 12px;color:#EF4444;font-weight:700;font-size:18px">2</td>
+  <td style="padding:10px 12px;color:#F5F5F5;font-size:12px">OAuth2</td>
+  <td style="padding:10px 12px;color:#6C63FF;font-size:14px">–</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#F59E0B22;color:#F59E0B;font-size:11px;font-weight:600;font-family:monospace">medium</span></td>
+  <td style="padding:10px 12px">
+    <a href="https://pumble.com/help/integrations/api/" target="_blank" rel="noopener"
+       style="color:#6C63FF;font-size:11px;text-decoration:none">docs ↗</a>
+  </td>
+</tr>
+<tr style="border-bottom:1px solid #2A2A2A">
+  <td style="padding:10px 12px;font-weight:600;color:#F5F5F5">Zoho Cliq</td>
+  <td style="padding:10px 12px;color:#888888;font-size:12px">Communications and Messaging</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">ready</span></td>
+  <td style="padding:10px 12px;color:#EF4444;font-weight:700;font-size:18px">2</td>
+  <td style="padding:10px 12px;color:#F5F5F5;font-size:12px">OAuth2</td>
+  <td style="padding:10px 12px;color:#6C63FF;font-size:14px">–</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">high</span></td>
+  <td style="padding:10px 12px">
+    <a href="https://www.zoho.com/cliq/help/restapi/v2/" target="_blank" rel="noopener"
+       style="color:#6C63FF;font-size:11px;text-decoration:none">docs ↗</a>
+  </td>
+</tr>
+<tr style="border-bottom:1px solid #2A2A2A">
+  <td style="padding:10px 12px;font-weight:600;color:#F5F5F5">higgsfield</td>
+  <td style="padding:10px 12px;color:#888888;font-size:12px">AI Research and Media</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#6C63FF22;color:#6C63FF;font-size:11px;font-weight:600;font-family:monospace">non_standard</span></td>
+  <td style="padding:10px 12px;color:#EF4444;font-weight:700;font-size:18px">2</td>
+  <td style="padding:10px 12px;color:#F5F5F5;font-size:12px">API Key</td>
+  <td style="padding:10px 12px;color:#6C63FF;font-size:14px">–</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">high</span></td>
+  <td style="padding:10px 12px">
+    <a href="https://higgsfield.ai" target="_blank" rel="noopener"
+       style="color:#6C63FF;font-size:11px;text-decoration:none">docs ↗</a>
+  </td>
+</tr>
+<tr style="border-bottom:1px solid #2A2A2A">
+  <td style="padding:10px 12px;font-weight:600;color:#F5F5F5">iPayX</td>
+  <td style="padding:10px 12px;color:#888888;font-size:12px">Finance and Fintech</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#F59E0B22;color:#F59E0B;font-size:11px;font-weight:600;font-family:monospace">needs_outreach</span></td>
+  <td style="padding:10px 12px;color:#EF4444;font-weight:700;font-size:18px">2</td>
+  <td style="padding:10px 12px;color:#F5F5F5;font-size:12px">API Key</td>
+  <td style="padding:10px 12px;color:#6C63FF;font-size:14px">–</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#EF444422;color:#EF4444;font-size:11px;font-weight:600;font-family:monospace">low</span></td>
+  <td style="padding:10px 12px">
+    <a href="https://ipayx.ai" target="_blank" rel="noopener"
+       style="color:#6C63FF;font-size:11px;text-decoration:none">docs ↗</a>
+  </td>
+</tr>
+<tr style="border-bottom:1px solid #2A2A2A">
+  <td style="padding:10px 12px;font-weight:600;color:#F5F5F5">systeme.io</td>
+  <td style="padding:10px 12px;color:#888888;font-size:12px">Marketing Ads Email and Social</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">ready</span></td>
+  <td style="padding:10px 12px;color:#EF4444;font-weight:700;font-size:18px">2</td>
+  <td style="padding:10px 12px;color:#F5F5F5;font-size:12px">API Key</td>
+  <td style="padding:10px 12px;color:#6C63FF;font-size:14px">–</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#F59E0B22;color:#F59E0B;font-size:11px;font-weight:600;font-family:monospace">medium</span></td>
+  <td style="padding:10px 12px">
+    <a href="https://systeme.io/blog/api" target="_blank" rel="noopener"
+       style="color:#6C63FF;font-size:11px;text-decoration:none">docs ↗</a>
+  </td>
+</tr>
+<tr style="border-bottom:1px solid #2A2A2A">
+  <td style="padding:10px 12px;font-weight:600;color:#F5F5F5">Fathom</td>
+  <td style="padding:10px 12px;color:#888888;font-size:12px">AI Research and Media</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#EF444422;color:#EF4444;font-size:11px;font-weight:600;font-family:monospace">not_buildable</span></td>
+  <td style="padding:10px 12px;color:#EF4444;font-weight:700;font-size:18px">1</td>
+  <td style="padding:10px 12px;color:#F5F5F5;font-size:12px">None</td>
+  <td style="padding:10px 12px;color:#6C63FF;font-size:14px">–</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">high</span></td>
+  <td style="padding:10px 12px">
+    <a href="https://fathom.video/integrations" target="_blank" rel="noopener"
+       style="color:#6C63FF;font-size:11px;text-decoration:none">docs ↗</a>
+  </td>
+</tr>
+<tr style="border-bottom:1px solid #2A2A2A">
+  <td style="padding:10px 12px;font-weight:600;color:#F5F5F5">Mermaid CLI</td>
+  <td style="padding:10px 12px;color:#888888;font-size:12px">AI Research and Media</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#6C63FF22;color:#6C63FF;font-size:11px;font-weight:600;font-family:monospace">non_standard</span></td>
+  <td style="padding:10px 12px;color:#EF4444;font-weight:700;font-size:18px">1</td>
+  <td style="padding:10px 12px;color:#F5F5F5;font-size:12px">None</td>
+  <td style="padding:10px 12px;color:#6C63FF;font-size:14px">–</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">high</span></td>
+  <td style="padding:10px 12px">
+    <a href="https://github.com/mermaid-js/mermaid-cli" target="_blank" rel="noopener"
+       style="color:#6C63FF;font-size:11px;text-decoration:none">docs ↗</a>
+  </td>
+</tr>
+<tr style="border-bottom:1px solid #2A2A2A">
+  <td style="padding:10px 12px;font-weight:600;color:#F5F5F5">NotebookLM</td>
+  <td style="padding:10px 12px;color:#888888;font-size:12px">AI Research and Media</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#EF444422;color:#EF4444;font-size:11px;font-weight:600;font-family:monospace">not_buildable</span></td>
+  <td style="padding:10px 12px;color:#EF4444;font-weight:700;font-size:18px">1</td>
+  <td style="padding:10px 12px;color:#F5F5F5;font-size:12px">None</td>
+  <td style="padding:10px 12px;color:#6C63FF;font-size:14px">–</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">high</span></td>
+  <td style="padding:10px 12px">
+    <a href="https://notebooklm.google.com" target="_blank" rel="noopener"
+       style="color:#6C63FF;font-size:11px;text-decoration:none">docs ↗</a>
+  </td>
+</tr>
+<tr style="border-bottom:1px solid #2A2A2A">
+  <td style="padding:10px 12px;font-weight:600;color:#F5F5F5">Otter AI</td>
+  <td style="padding:10px 12px;color:#888888;font-size:12px">AI Research and Media</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#EF444422;color:#EF4444;font-size:11px;font-weight:600;font-family:monospace">not_buildable</span></td>
+  <td style="padding:10px 12px;color:#EF4444;font-weight:700;font-size:18px">1</td>
+  <td style="padding:10px 12px;color:#F5F5F5;font-size:12px">None</td>
+  <td style="padding:10px 12px;color:#6C63FF;font-size:14px">–</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">high</span></td>
+  <td style="padding:10px 12px">
+    <a href="https://help.otter.ai/hc/en-us/articles/360060426892" target="_blank" rel="noopener"
+       style="color:#6C63FF;font-size:11px;text-decoration:none">docs ↗</a>
+  </td>
+</tr>
+<tr style="border-bottom:1px solid #2A2A2A">
+  <td style="padding:10px 12px;font-weight:600;color:#F5F5F5">Sherlock</td>
+  <td style="padding:10px 12px;color:#888888;font-size:12px">Data SEO and Scraping</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#6C63FF22;color:#6C63FF;font-size:11px;font-weight:600;font-family:monospace">non_standard</span></td>
+  <td style="padding:10px 12px;color:#EF4444;font-weight:700;font-size:18px">1</td>
+  <td style="padding:10px 12px;color:#F5F5F5;font-size:12px">None</td>
+  <td style="padding:10px 12px;color:#6C63FF;font-size:14px">–</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">high</span></td>
+  <td style="padding:10px 12px">
+    <a href="https://github.com/sherlock-project/sherlock" target="_blank" rel="noopener"
+       style="color:#6C63FF;font-size:11px;text-decoration:none">docs ↗</a>
+  </td>
+</tr>
+<tr style="border-bottom:1px solid #2A2A2A">
+  <td style="padding:10px 12px;font-weight:600;color:#F5F5F5">fanbasis</td>
+  <td style="padding:10px 12px;color:#888888;font-size:12px">Ecommerce</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#EF444422;color:#EF4444;font-size:11px;font-weight:600;font-family:monospace">not_buildable</span></td>
+  <td style="padding:10px 12px;color:#EF4444;font-weight:700;font-size:18px">1</td>
+  <td style="padding:10px 12px;color:#F5F5F5;font-size:12px">Unknown</td>
+  <td style="padding:10px 12px;color:#6C63FF;font-size:14px">–</td>
+  <td style="padding:10px 12px"><span style="display:inline-block;padding:2px 8px;border-radius:4px;background:#22C55E22;color:#22C55E;font-size:11px;font-weight:600;font-family:monospace">high</span></td>
+  <td style="padding:10px 12px">
+    <a href="https://fanbasis.com" target="_blank" rel="noopener"
+       style="color:#6C63FF;font-size:11px;text-decoration:none">docs ↗</a>
+  </td>
+</tr></tbody>
+</table>
+</div>
+</section>
+
+<section id="categories" style="margin:48px 0">
+  <h2 style="font-size:22px;font-weight:700;margin:0 0 20px;color:#F5F5F5;
+     border-left:3px solid #6C63FF;padding-left:12px">Apps by Category</h2>
+  <svg viewBox="0 0 460 304" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:460px"><text x="174" y="25" fill="#F5F5F5" font-size="11" font-family="sans-serif" text-anchor="end">Data SEO and Scraping</text><rect x="180" y="14" width="220.0" height="18" fill="#6C63FF" rx="3"/><text x="404.0" y="26" fill="#888888" font-size="10" font-family="monospace">10</text><text x="174" y="53" fill="#F5F5F5" font-size="11" font-family="sans-serif" text-anchor="end">Communications and Messaging</text><rect x="180" y="42" width="220.0" height="18" fill="#6C63FF" rx="3"/><text x="404.0" y="54" fill="#888888" font-size="10" font-family="monospace">10</text><text x="174" y="81" fill="#F5F5F5" font-size="11" font-family="sans-serif" text-anchor="end">Productivity and Project Man</text><rect x="180" y="70" width="220.0" height="18" fill="#6C63FF" rx="3"/><text x="404.0" y="82" fill="#888888" font-size="10" font-family="monospace">10</text><text x="174" y="109" fill="#F5F5F5" font-size="11" font-family="sans-serif" text-anchor="end">Ecommerce</text><rect x="180" y="98" width="220.0" height="18" fill="#6C63FF" rx="3"/><text x="404.0" y="110" fill="#888888" font-size="10" font-family="monospace">10</text><text x="174" y="137" fill="#F5F5F5" font-size="11" font-family="sans-serif" text-anchor="end">CRM and Sales</text><rect x="180" y="126" width="220.0" height="18" fill="#6C63FF" rx="3"/><text x="404.0" y="138" fill="#888888" font-size="10" font-family="monospace">10</text><text x="174" y="165" fill="#F5F5F5" font-size="11" font-family="sans-serif" text-anchor="end">Finance and Fintech</text><rect x="180" y="154" width="220.0" height="18" fill="#6C63FF" rx="3"/><text x="404.0" y="166" fill="#888888" font-size="10" font-family="monospace">10</text><text x="174" y="193" fill="#F5F5F5" font-size="11" font-family="sans-serif" text-anchor="end">Developer Infra and Data</text><rect x="180" y="182" width="220.0" height="18" fill="#6C63FF" rx="3"/><text x="404.0" y="194" fill="#888888" font-size="10" font-family="monospace">10</text><text x="174" y="221" fill="#F5F5F5" font-size="11" font-family="sans-serif" text-anchor="end">AI Research and Media</text><rect x="180" y="210" width="220.0" height="18" fill="#6C63FF" rx="3"/><text x="404.0" y="222" fill="#888888" font-size="10" font-family="monospace">10</text><text x="174" y="249" fill="#F5F5F5" font-size="11" font-family="sans-serif" text-anchor="end">Support and Helpdesk</text><rect x="180" y="238" width="220.0" height="18" fill="#6C63FF" rx="3"/><text x="404.0" y="250" fill="#888888" font-size="10" font-family="monospace">10</text><text x="174" y="277" fill="#F5F5F5" font-size="11" font-family="sans-serif" text-anchor="end">Marketing Ads Email and Soci</text><rect x="180" y="266" width="220.0" height="18" fill="#6C63FF" rx="3"/><text x="404.0" y="278" fill="#888888" font-size="10" font-family="monospace">10</text></svg>
+</section>
+
+<section id="auth" style="margin:48px 0">
+  <h2 style="font-size:22px;font-weight:700;margin:0 0 20px;color:#F5F5F5;
+     border-left:3px solid #6C63FF;padding-left:12px">Auth Method Distribution</h2>
+  <svg viewBox="0 0 460 192" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:460px"><text x="174" y="25" fill="#F5F5F5" font-size="11" font-family="sans-serif" text-anchor="end">OAuth2</text><rect x="180" y="14" width="220.0" height="18" fill="#8B85FF" rx="3"/><text x="404.0" y="26" fill="#888888" font-size="10" font-family="monospace">72</text><text x="174" y="53" fill="#F5F5F5" font-size="11" font-family="sans-serif" text-anchor="end">API Key</text><rect x="180" y="42" width="82.5" height="18" fill="#8B85FF" rx="3"/><text x="266.5" y="54" fill="#888888" font-size="10" font-family="monospace">27</text><text x="174" y="81" fill="#F5F5F5" font-size="11" font-family="sans-serif" text-anchor="end">None</text><rect x="180" y="70" width="15.3" height="18" fill="#8B85FF" rx="3"/><text x="199.27777777777777" y="82" fill="#888888" font-size="10" font-family="monospace">5</text><text x="174" y="109" fill="#F5F5F5" font-size="11" font-family="sans-serif" text-anchor="end">Bearer Token</text><rect x="180" y="98" width="9.2" height="18" fill="#8B85FF" rx="3"/><text x="193.16666666666666" y="110" fill="#888888" font-size="10" font-family="monospace">3</text><text x="174" y="137" fill="#F5F5F5" font-size="11" font-family="sans-serif" text-anchor="end">Basic Auth</text><rect x="180" y="126" width="6.1" height="18" fill="#8B85FF" rx="3"/><text x="190.11111111111111" y="138" fill="#888888" font-size="10" font-family="monospace">2</text><text x="174" y="165" fill="#F5F5F5" font-size="11" font-family="sans-serif" text-anchor="end">Unknown</text><rect x="180" y="154" width="3.1" height="18" fill="#8B85FF" rx="3"/><text x="187.05555555555554" y="166" fill="#888888" font-size="10" font-family="monospace">1</text></svg>
+</section>
+
+<section id="mcp" style="margin:48px 0">
+  <h2 style="font-size:22px;font-weight:700;margin:0 0 20px;color:#F5F5F5;
+     border-left:3px solid #6C63FF;padding-left:12px">MCP Landscape</h2>
+  
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;flex-wrap:wrap">
+  <div>
+    <h3 style="font-size:15px;font-weight:600;color:#22C55E;margin:0 0 12px">
+      1 Apps With MCP Servers
+    </h3>
+    <div style="overflow-x:auto">
+    <table style="width:100%;border-collapse:collapse;font-size:13px">
+      <thead><tr><th style="padding:8px 12px;color:#888888;font-size:11px;text-transform:uppercase;border-bottom:1px solid #2A2A2A;text-align:left">App</th><th style="padding:8px 12px;color:#888888;font-size:11px;text-transform:uppercase;border-bottom:1px solid #2A2A2A;text-align:left">MCP URL</th></tr></thead>
+      <tbody>
+<tr style="border-bottom:1px solid #2A2A2A">
+  <td style="padding:8px 12px;font-weight:600;color:#F5F5F5">Neo4j</td>
+  <td style="padding:8px 12px">
+    <a href="https://github.com/neo4j-contrib/mcp-neo4j" target="_blank" rel="noopener"
+       style="color:#6C63FF;font-size:12px">https://github.com/neo4j-contrib/mcp-neo4j</a>
+  </td>
+</tr></tbody>
+    </table>
+    </div>
+  </div>
+  <div>
+    <h3 style="font-size:15px;font-weight:600;color:#F59E0B;margin:0 0 12px">
+      Top MCP Gaps (ready but no MCP)
+    </h3>
+    <div style="overflow-x:auto">
+    <table style="width:100%;border-collapse:collapse;font-size:13px">
+      <thead><tr><th style="padding:8px 12px;color:#888888;font-size:11px;text-transform:uppercase;border-bottom:1px solid #2A2A2A;text-align:left">App</th><th style="padding:8px 12px;color:#888888;font-size:11px;text-transform:uppercase;border-bottom:1px solid #2A2A2A;text-align:left">Category</th><th style="padding:8px 12px;color:#888888;font-size:11px;text-transform:uppercase;border-bottom:1px solid #2A2A2A;text-align:left">API Breadth</th></tr></thead>
+      <tbody>
+<tr style="border-bottom:1px solid #2A2A2A">
+  <td style="padding:8px 12px;color:#F5F5F5">Aircall</td>
+  <td style="padding:8px 12px;color:#888888;font-size:12px">Communications and Messaging</td>
+  <td style="padding:8px 12px;color:#F59E0B;font-size:12px">
+    broad</td>
+</tr>
+<tr style="border-bottom:1px solid #2A2A2A">
+  <td style="padding:8px 12px;color:#F5F5F5">Airtable</td>
+  <td style="padding:8px 12px;color:#888888;font-size:12px">Productivity and Project Management</td>
+  <td style="padding:8px 12px;color:#F59E0B;font-size:12px">
+    broad</td>
+</tr>
+<tr style="border-bottom:1px solid #2A2A2A">
+  <td style="padding:8px 12px;color:#F5F5F5">Amazon Selling Partner</td>
+  <td style="padding:8px 12px;color:#888888;font-size:12px">Ecommerce</td>
+  <td style="padding:8px 12px;color:#F59E0B;font-size:12px">
+    broad</td>
+</tr>
+<tr style="border-bottom:1px solid #2A2A2A">
+  <td style="padding:8px 12px;color:#F5F5F5">Apify</td>
+  <td style="padding:8px 12px;color:#888888;font-size:12px">Data SEO and Scraping</td>
+  <td style="padding:8px 12px;color:#F59E0B;font-size:12px">
+    broad</td>
+</tr>
+<tr style="border-bottom:1px solid #2A2A2A">
+  <td style="padding:8px 12px;color:#F5F5F5">Asana</td>
+  <td style="padding:8px 12px;color:#888888;font-size:12px">Productivity and Project Management</td>
+  <td style="padding:8px 12px;color:#F59E0B;font-size:12px">
+    broad</td>
+</tr>
+<tr style="border-bottom:1px solid #2A2A2A">
+  <td style="padding:8px 12px;color:#F5F5F5">Attio</td>
+  <td style="padding:8px 12px;color:#888888;font-size:12px">CRM and Sales</td>
+  <td style="padding:8px 12px;color:#F59E0B;font-size:12px">
+    broad</td>
+</tr>
+<tr style="border-bottom:1px solid #2A2A2A">
+  <td style="padding:8px 12px;color:#F5F5F5">BigCommerce</td>
+  <td style="padding:8px 12px;color:#888888;font-size:12px">Ecommerce</td>
+  <td style="padding:8px 12px;color:#F59E0B;font-size:12px">
+    broad</td>
+</tr>
+<tr style="border-bottom:1px solid #2A2A2A">
+  <td style="padding:8px 12px;color:#F5F5F5">Binance</td>
+  <td style="padding:8px 12px;color:#888888;font-size:12px">Finance and Fintech</td>
+  <td style="padding:8px 12px;color:#F59E0B;font-size:12px">
+    broad</td>
+</tr>
+<tr style="border-bottom:1px solid #2A2A2A">
+  <td style="padding:8px 12px;color:#F5F5F5">Brex</td>
+  <td style="padding:8px 12px;color:#888888;font-size:12px">Finance and Fintech</td>
+  <td style="padding:8px 12px;color:#F59E0B;font-size:12px">
+    broad</td>
+</tr>
+<tr style="border-bottom:1px solid #2A2A2A">
+  <td style="padding:8px 12px;color:#F5F5F5">Bright Data</td>
+  <td style="padding:8px 12px;color:#888888;font-size:12px">Data SEO and Scraping</td>
+  <td style="padding:8px 12px;color:#F59E0B;font-size:12px">
+    broad</td>
+</tr>
+<tr style="border-bottom:1px solid #2A2A2A">
+  <td style="padding:8px 12px;color:#F5F5F5">Clay</td>
+  <td style="padding:8px 12px;color:#888888;font-size:12px">Data SEO and Scraping</td>
+  <td style="padding:8px 12px;color:#F59E0B;font-size:12px">
+    moderate</td>
+</tr>
+<tr style="border-bottom:1px solid #2A2A2A">
+  <td style="padding:8px 12px;color:#F5F5F5">ClickUp</td>
+  <td style="padding:8px 12px;color:#888888;font-size:12px">Productivity and Project Management</td>
+  <td style="padding:8px 12px;color:#F59E0B;font-size:12px">
+    broad</td>
+</tr>
+<tr style="border-bottom:1px solid #2A2A2A">
+  <td style="padding:8px 12px;color:#F5F5F5">Close</td>
+  <td style="padding:8px 12px;color:#888888;font-size:12px">CRM and Sales</td>
+  <td style="padding:8px 12px;color:#F59E0B;font-size:12px">
+    broad</td>
+</tr>
+<tr style="border-bottom:1px solid #2A2A2A">
+  <td style="padding:8px 12px;color:#F5F5F5">Cloudflare</td>
+  <td style="padding:8px 12px;color:#888888;font-size:12px">Developer Infra and Data</td>
+  <td style="padding:8px 12px;color:#F59E0B;font-size:12px">
+    broad</td>
+</tr>
+<tr style="border-bottom:1px solid #2A2A2A">
+  <td style="padding:8px 12px;color:#F5F5F5">Coda</td>
+  <td style="padding:8px 12px;color:#888888;font-size:12px">Productivity and Project Management</td>
+  <td style="padding:8px 12px;color:#F59E0B;font-size:12px">
+    moderate</td>
+</tr></tbody>
+    </table>
+    </div>
+  </div>
+</div>
+</section>
+
+<section id="misses" style="margin:48px 0">
+  <h2 style="font-size:22px;font-weight:700;margin:0 0 20px;color:#F5F5F5;
+     border-left:3px solid #6C63FF;padding-left:12px">Honest Misses</h2>
+  <p style="color:#888888">No misses recorded — verification pass not yet run.</p>
+</section>
+
+<section id="verification" style="margin:48px 0">
+  <h2 style="font-size:22px;font-weight:700;margin:0 0 20px;color:#F5F5F5;
+     border-left:3px solid #6C63FF;padding-left:12px">Verification Accuracy</h2>
+  
+<div style="display:flex;gap:16px;flex-wrap:wrap;margin-bottom:24px">
+<div style="flex:1;min-width:200px;background:#1A1A1A;border:1px solid #2A2A2A;
+  border-top:3px solid #F59E0B;border-radius:8px;padding:20px">
+  <div style="font-size:11px;font-weight:700;color:#F59E0B;text-transform:uppercase;
+    letter-spacing:0.1em;margin-bottom:4px">Pass 1</div>
+  <div style="font-size:12px;color:#888888;margin-bottom:12px">Confidence-weighted estimate</div>
+  <div style="font-size:36px;font-weight:800;color:#F5F5F5;margin-bottom:8px">88%</div>
+  <div style="font-size:12px;color:#888888;line-height:1.5">Accuracy inferred from agent's own confidence scores (high=90%, medium=70%, low=50%)</div>
+</div>
+<div style="flex:1;min-width:200px;background:#1A1A1A;border:1px solid #2A2A2A;
+  border-top:3px solid #6C63FF;border-radius:8px;padding:20px">
+  <div style="font-size:11px;font-weight:700;color:#6C63FF;text-transform:uppercase;
+    letter-spacing:0.1em;margin-bottom:4px">Pass 2</div>
+  <div style="font-size:12px;color:#888888;margin-bottom:12px">Re-research sample (0 apps)</div>
+  <div style="font-size:36px;font-weight:800;color:#F5F5F5;margin-bottom:8px">—</div>
+  <div style="font-size:12px;color:#888888;line-height:1.5">Randomly sampled 20 apps (biased toward low/medium), re-ran research, compared 4 key fields</div>
+</div>
+<div style="flex:1;min-width:200px;background:#1A1A1A;border:1px solid #2A2A2A;
+  border-top:3px solid #22C55E;border-radius:8px;padding:20px">
+  <div style="font-size:11px;font-weight:700;color:#22C55E;text-transform:uppercase;
+    letter-spacing:0.1em;margin-bottom:4px">Pass 3</div>
+  <div style="font-size:12px;color:#888888;margin-bottom:12px">Human review</div>
+  <div style="font-size:36px;font-weight:800;color:#F5F5F5;margin-bottom:8px">Pending</div>
+  <div style="font-size:12px;color:#888888;line-height:1.5">Manual spot-check of flagged apps. See data/needs_human_check.json.</div>
+</div></div>
+<div style="background:#1A1A1A;border:1px solid #2A2A2A;border-radius:8px;
+  padding:20px;display:inline-block">
+  <div style="font-size:13px;font-weight:600;color:#F5F5F5;margin-bottom:12px">
+    Confidence Distribution (100 apps)
+  </div>
+  <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px"><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#22C55E"></span><span style="color:#F5F5F5;font-size:13px;width:60px">high</span><span style="color:#888888;font-size:13px">90 apps</span></div><div style="display:flex;align-items:center;gap:8px;margin-bottom:6px"><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#F59E0B"></span><span style="color:#F5F5F5;font-size:13px;width:60px">medium</span><span style="color:#888888;font-size:13px">8 apps</span></div><div style="display:flex;align-items:center;gap:8px;margin-bottom:6px"><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#EF4444"></span><span style="color:#F5F5F5;font-size:13px;width:60px">low</span><span style="color:#888888;font-size:13px">2 apps</span></div><div style="display:flex;align-items:center;gap:8px;margin-bottom:6px"><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#444444"></span><span style="color:#F5F5F5;font-size:13px;width:60px">unknown</span><span style="color:#888888;font-size:13px">0 apps</span></div>
+</div>
+</section>
+
+<footer style="margin-top:64px;padding-top:24px;border-top:1px solid #2A2A2A;
+  color:#888888;font-size:12px;text-align:center">
+  Generated by ToolScout for Composio — 2026-09-16
+</footer>
+</main>
+</body>
+</html>
