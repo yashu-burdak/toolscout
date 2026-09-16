@@ -24,16 +24,6 @@
     "buildability": "needs_outreach"
   },
   {
-    "app": "Ahrefs",
-    "score": 1,
-    "reasons": [
-      "buildability=needs_outreach"
-    ],
-    "evidence_url": "https://ahrefs.com/api",
-    "confidence": "high",
-    "buildability": "needs_outreach"
-  },
-  {
     "app": "DealCloud",
     "score": 1,
     "reasons": [
@@ -50,16 +40,6 @@
       "buildability=not_buildable"
     ],
     "evidence_url": "https://fanbasis.com",
-    "confidence": "high",
-    "buildability": "not_buildable"
-  },
-  {
-    "app": "Fathom",
-    "score": 1,
-    "reasons": [
-      "buildability=not_buildable"
-    ],
-    "evidence_url": "https://fathom.video/integrations",
     "confidence": "high",
     "buildability": "not_buildable"
   },
@@ -102,5 +82,25 @@
     "evidence_url": "https://help.otter.ai/hc/en-us/articles/360060426892",
     "confidence": "high",
     "buildability": "not_buildable"
+  },
+  {
+    "app": "PitchBook",
+    "score": 1,
+    "reasons": [
+      "buildability=needs_outreach"
+    ],
+    "evidence_url": "https://pitchbook.com/about/api-data-feeds",
+    "confidence": "high",
+    "buildability": "needs_outreach"
+  },
+  {
+    "app": "systeme.io",
+    "score": 1,
+    "reasons": [
+      "low confidence on: mcp_exists"
+    ],
+    "evidence_url": "https://systeme.io/blog/api",
+    "confidence": "medium",
+    "buildability": "ready"
   }
 ]

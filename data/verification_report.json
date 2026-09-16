@@ -1,15 +1,15 @@
 {
-  "pass1_accuracy_estimate": 0.876,
+  "pass1_accuracy_estimate": 0.886,
   "pass2_accuracy_estimate": null,
   "pass3_accuracy_final": null,
   "total_apps": 100,
   "total_checked_pass2": 0,
   "confidence_breakdown": {
-    "high": 90,
-    "medium": 8,
+    "high": 95,
+    "medium": 3,
     "low": 2,
     "unknown": 0
   },
-  "timestamp": "2026-09-16T18:23:39.615306",
+  "timestamp": "2026-09-16T18:45:12.083651",
   "results": []
 }
